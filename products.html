@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0b0e" />
+  <title>Products | Valortek — Intelligence Information Systems & Equipment</title>
+  <meta name="description" content="Browse Valortek products by category and search by name: Portable Equipment, Geofence Data Crawler, Continuous Data Intelligence, Data Mining Intelligence, Cyber Threat, and Virtual Reality." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="products">
+
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__grid" aria-hidden="true"></div>
+    <div class="page-hero__glow" aria-hidden="true"></div>
+    <div class="page-hero__inner">
+      <nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>Products</nav>
+      <span class="page-hero__eyebrow">Products</span>
+      <h1>Intelligence Information Systems &amp; Equipment</h1>
+      <p>Browse our solutions by category or search by product name. Six categories built for Indonesia, designed to support a wide range of intelligence operations.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Search + category filter -->
+      <div class="catalog__controls">
+        <div class="catalog__search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="catalogSearch" type="search" placeholder="Search products by name…" aria-label="Search products" autocomplete="off" />
+        </div>
+        <div class="catalog__filter">
+          <label for="catalogCategory">Category</label>
+          <select id="catalogCategory" aria-label="Filter by category"></select>
+        </div>
+      </div>
+
+      <!-- Rendered by catalog.js -->
+      <div id="catalog"></div>
+      <p id="catalogEmpty" class="catalog__empty" hidden>No products match your search. Try a different keyword or category.</p>
+    </div>
+  </section>
+
+  <section class="cta cta--compact">
+    <div class="cta__glow" aria-hidden="true"></div>
+    <div class="container cta__inner">
+      <h2>Need the right solution for your mission?</h2>
+      <p>Our team is ready to adapt our technology to your specific operational requirements.</p>
+      <a href="contact.html" class="btn btn--primary btn--lg">Contact Us <i class="ico-arrow"></i></a>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="js/products-data.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

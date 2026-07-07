@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0b0e" />
+  <title>Contact | PT. Valortek Ratanika Utama</title>
+  <meta name="description" content="Contact PT. Valortek Ratanika Utama. STC Senayan Lt. 2 Room 89, Jl. Asia Afrika Pintu IX Gelora Senayan, Jakarta. Email: info@valortek.co.id." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="contact">
+
+  <div id="site-header"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__grid" aria-hidden="true"></div>
+    <div class="page-hero__glow" aria-hidden="true"></div>
+    <div class="page-hero__inner">
+      <nav class="breadcrumb" data-reveal><a href="index.html">Home</a><span>/</span>Contact</nav>
+      <span class="page-hero__eyebrow" data-reveal>Contact Us</span>
+      <h1 data-reveal>Let's discuss what you need</h1>
+      <p data-reveal>Tell us about your intelligence technology, operational equipment, or services requirements. Our team will get back to you promptly.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact">
+
+        <div class="contact__info" data-reveal>
+          <h3>Contact &amp; Address</h3>
+          <p>We welcome enquiries about our products, services, partnerships, and collaboration opportunities.</p>
+
+          <div class="contact__item">
+            <span class="ci-ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div>
+              <b>Address</b>
+              <span>STC Senayan Lt. 2 Room 89, Jl. Asia Afrika Pintu IX, Gelora Senayan, Jakarta</span>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <span class="ci-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg></span>
+            <div>
+              <b>Email</b>
+              <span>info@valortek.co.id</span>
+            </div>
+          </div>
+
+          <div class="contact__item">
+            <span class="ci-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div>
+              <b>Office Hours</b>
+              <span>Monday – Friday, 09:00 – 18:00 WIB</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="company">Organization / Company</label>
+              <input id="company" name="company" type="text" placeholder="Organization" required />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@organization.go.id" required />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="+62 …" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="interest">I am interested in</label>
+            <select id="interest" name="interest">
+              <option>Portable Equipment</option>
+              <option>Geofence Data Crawler</option>
+              <option>Continuous Data Intelligence</option>
+              <option>Data Mining Intelligence</option>
+              <option>Cyber Threat</option>
+              <option>Virtual Reality</option>
+              <option>Services (Integration, Maintenance, Training)</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Briefly describe your requirements…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send message <i class="ico-arrow"></i></button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="js/products-data.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
