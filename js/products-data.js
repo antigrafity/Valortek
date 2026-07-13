@@ -119,7 +119,7 @@ window.VALORTEK_PRODUCTS = [
   {
     id: 'mbd', cat: 'cyber', sub: 'MBD', name: 'Malware Blocking Data',
     short: 'Neutralizes file-based threats including APTs and ransomware.',
-    full: 'Malware Blocking Data (MBD) enhances security by treating every file as potentially suspicious — performing deep scanning, removing hazardous elements from the file, and producing a neutralized (safe) copy. MBD helps prevent advanced, hard-to-detect file-based attacks including Advanced Persistent Threats (APTs), Zero Days, and ransomware, while preserving the file's full usability, visibility, and functionality.'
+    full: 'Malware Blocking Data (MBD) enhances security by treating every file as potentially suspicious — performing deep scanning, removing hazardous elements from the file, and producing a neutralized (safe) copy. MBD helps prevent advanced, hard-to-detect file-based attacks including Advanced Persistent Threats (APTs), Zero Days, and ransomware, while preserving the file\u2019s full usability, visibility, and functionality.'
   },
   {
     id: 'osd', cat: 'cyber', sub: 'OSD', name: 'Cyber Defense Platform',
