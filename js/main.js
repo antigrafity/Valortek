@@ -41,7 +41,7 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Valortek" class="footer__logo" />
-          <p>PT. Valortek Ratanika Utama — Intelligence Information Technology &amp; Intelligence Equipment (Matsusintel), proudly built for Indonesia since 1995.</p>
+          <p>PT. Valortek Ratanika Utama — Providing Innovative Information Technology and Digital Solutions, proudly supporting Indonesia since 1995.</p>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
@@ -52,12 +52,12 @@
         </div>
         <div class="footer__col">
           <h4>Products</h4>
-          <a href="products.html#portable">Portable Equipment</a>
-          <a href="products.html#geofence">Geofence Data Crawler</a>
-          <a href="products.html#cdi">Continuous Data Intelligence</a>
-          <a href="products.html#dmi">Data Mining Intelligence</a>
-          <a href="products.html#cyber">Cyber Threat</a>
-          <a href="products.html#vr">Virtual Reality</a>
+          <a href="products.html#portable">Portable Technology Solutions</a>
+          <a href="products.html#geofence">Geospatial Data Solutions</a>
+          <a href="products.html#cdi">Data Platforms</a>
+          <a href="products.html#dmi">Data Analytics</a>
+          <a href="products.html#cyber">Cybersecurity Solutions</a>
+          <a href="products.html#vr">Immersive Digital Solutions</a>
         </div>
         <div class="footer__col">
           <h4>Get in Touch</h4>
