@@ -629,3 +629,50 @@ section{ position:relative; }
   .catalog__controls{ position:static; }
 }
 @media (max-width:600px){ .pgrid{ grid-template-columns:1fr; } }
+
+/* =========================================================
+   About — Introduction two-column layout
+   ========================================================= */
+.about-intro{
+  display:grid; grid-template-columns:1.1fr .9fr; gap:clamp(2rem,5vw,4.5rem);
+  align-items:center;
+}
+.about-intro__text .tag{ margin-bottom:1rem; }
+.about-intro__title{ text-align:left; font-size:clamp(1.9rem,3.6vw,2.6rem); margin-bottom:1.4rem; }
+.about-intro__text p{ color:var(--muted); margin-bottom:1.1rem; }
+.about-intro__text p:last-child{ margin-bottom:0; }
+
+.about-intro__media{
+  position:relative; border-radius:24px; overflow:hidden;
+  aspect-ratio:4/5; box-shadow:var(--shadow-lg); border:1px solid var(--paper-3);
+}
+.about-intro__media img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .8s var(--ease); }
+.about-intro__media:hover img{ transform:scale(1.05); }
+.about-intro__media::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(10,11,14,.1) 0%, transparent 40%, rgba(10,11,14,.55) 100%),
+             radial-gradient(70% 60% at 30% 20%, rgba(203,116,41,.28), transparent 70%);
+}
+.about-intro__badge{
+  position:absolute; z-index:2; left:20px; bottom:20px;
+  background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.28); backdrop-filter:blur(12px);
+  border-radius:16px; padding:.9rem 1.3rem; color:#fff;
+}
+.about-intro__badge b{ font-family:'Sora',sans-serif; font-size:1.9rem; font-weight:800; display:block; line-height:1; }
+.about-intro__badge span{ font-size:.82rem; color:rgba(255,255,255,.75); }
+
+.about-stats{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:clamp(2.5rem,5vw,4rem);
+  border-top:1px solid var(--paper-3); padding-top:clamp(2rem,4vw,2.6rem);
+}
+.about-stat{ text-align:center; }
+.about-stat b{ font-family:'Sora',sans-serif; font-size:clamp(2rem,4vw,2.8rem); font-weight:800; color:var(--copper); display:block; line-height:1; }
+.about-stat span{ color:var(--muted); font-size:.92rem; }
+
+@media (max-width:860px){
+  .about-intro{ grid-template-columns:1fr; }
+  .about-intro__media{ order:-1; aspect-ratio:16/10; }
+}
+@media (max-width:560px){
+  .about-stats{ grid-template-columns:1fr; gap:1.6rem; text-align:center; }
+}
