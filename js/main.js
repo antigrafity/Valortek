@@ -61,8 +61,8 @@
         </div>
         <div class="footer__col">
           <h4>Get in Touch</h4>
-          <a href="#">STC Senayan Lt. 2 Room 89</a>
-          <a href="#">Jl. Asia Afrika Pintu IX, Gelora Senayan</a>
+          <a href="#">Jalan Tebet Barat Dalam Raya IX No. 54</a>
+          <a href="#">Tebet Barat, Tebet, Jakarta Selatan, DKI Jakarta</a>
           <a href="mailto:info@valortek.co.id">info@valortek.co.id</a>
         </div>
       </div>
