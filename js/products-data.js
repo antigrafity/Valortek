@@ -2,140 +2,420 @@
    Valortek — product catalog data (single source of truth)
    Used by products.html (listing/search) and product.html (detail)
    Positioning: enterprise / commercial / civilian technology.
-   NOTE: Product names & subtitles are kept exactly as-is.
+   Wording follows the approved "SUGGESTIONS" spec (Sept 2026).
    ========================================================= */
 window.VALORTEK_CATEGORIES = [
-  { id: 'software', name: 'Software & Digital Platforms', tagline: 'Applications, platforms, workflow tools, dashboards, and digital services designed around real organizational needs.', img: 'assets/img/portable.png' },
-  { id: 'data',      name: 'Data & Analytics',            tagline: 'Data integration, processing, visualization, reporting, and AI-enabled tools that support better business decisions.', img: 'assets/img/dmi.jpg' },
-  { id: 'connected', name: 'Connected Systems',           tagline: 'Connected devices, electronic systems, sensors, and integrated technologies for reliable information flow and equipment visibility.', img: 'assets/img/geofence.png' },
-  { id: 'cyber',     name: 'Cybersecurity & Resilience',   tagline: 'Defensive security, secure architecture, monitoring, risk management, and technology resilience for business continuity.', img: 'assets/img/cyber.jpg' },
-  { id: 'immersive', name: 'Immersive Technology & Training', tagline: 'Interactive and immersive technology for technical learning, product familiarization, visualization, and professional training.', img: 'assets/img/immersive.jpg' },
+  { id: 'software', name: 'Software & Digital Platforms', tagline: 'Applications, platforms, workflow tools, dashboards, and digital services designed around real organizational needs.', img: 'assets/img/cat-software.jpg' },
+  { id: 'data',      name: 'Data & Analytics',            tagline: 'AI-powered data analytics across digital channels, providing trend analysis, performance insights, reporting, and visualization.', img: 'assets/img/cat-data.jpg' },
+  { id: 'connected', name: 'Connected Systems',           tagline: 'Connected devices, electronic systems, sensors, and integrated technologies for reliable information flow and equipment visibility.', img: 'assets/img/cat-connected.jpg' },
+  { id: 'infra',     name: 'Infrastructure & Integration', tagline: 'Integrated data platforms and access, providing comprehensive information, analysis, and AI-powered insights to support informed decision making.', img: 'assets/img/cat-infra.jpg' },
+  { id: 'cyber',     name: 'Cybersecurity & Resilience',   tagline: 'Solutions designed to strengthen digital resilience through risk identification, data protection, secure infrastructure, and cybersecurity management.', img: 'assets/img/cat-cyber.jpg' },
+  { id: 'immersive', name: 'Immersive Technology & Training', tagline: 'Virtual Reality (VR), Digital Twin, and Virtual Tour technologies supporting training, visualization, collaboration, and interactive experiences.', img: 'assets/img/cat-immersive.jpg' },
 ];
 
 window.VALORTEK_PRODUCTS = [
   /* ---------- Software & Digital Platforms ---------- */
   {
-    id: 'brahma', cat: 'software', sub: 'BRAHMA', name: 'Broadcast WhatsApp Massive',
-    short: 'Large-scale messaging platform for WhatsApp and Telegram communications.',
-    full: 'BRAHMA (Broadcast WhatsApp Massive) is a messaging platform designed to help organizations deliver notifications, announcements, and customer engagement messages at scale across WhatsApp and Telegram. It supports audience segmentation, scheduled delivery, and message management to streamline organizational communications.'
+    id: 'hawk-deep-eye', cat: 'software', sub: 'Hawk Deep Eye', name: 'Comprehensive Data Analysis',
+    tagline: 'Connecting diverse information for a more comprehensive view of data.',
+    short: 'Consolidates available information into a structured, comprehensive view.',
+    full: 'Hawk Deep Eye is a data analysis solution that consolidates available information into a structured format. It can organize relevant personal, demographic, social, and financial information to provide a more comprehensive view of available data and support research, analysis, and decision making.',
+    capabilities: [
+      'Multi-source information consolidation',
+      'Structured data organization',
+      'Personal, demographic, social, and financial data analysis'
+    ],
+    useCases: [
+      'Research and information analysis',
+      'Data-driven decision making',
+      'Comprehensive data review'
+    ]
+  },
+  {
+    id: 'dmc', cat: 'software', sub: 'DMC', name: 'Digital Media Campaign',
+    tagline: 'Structured digital campaign planning, coordination, and performance analysis.',
+    short: 'Digital campaign platform for planning, scheduling, and performance analysis.',
+    full: 'Digital Media Campaign (DMC) is a campaign and content management platform that helps organizations plan, organize, and analyze digital media programs. It supports content scheduling and distribution across multiple channels, enabling users to coordinate content and evaluate campaign performance in a structured environment for public communication, digital outreach, information campaigns, and general communication planning.',
+    capabilities: [
+      'Digital campaign planning and organization',
+      'Content scheduling and distribution',
+      'Campaign performance assessment',
+      'Multi-channel content coordination'
+    ],
+    useCases: [
+      'Public communication campaigns',
+      'Digital outreach and engagement',
+      'Information campaigns',
+      'Communication planning and performance analysis'
+    ]
   },
 
   /* ---------- Data & Analytics ---------- */
   {
-    id: 'follow-the-dots', cat: 'data', sub: 'Follow the Dots', name: 'Movement Analysis',
-    short: 'Movement and pattern analytics for logistics and operational planning.',
-    full: 'Follow the Dots is a data analytics solution designed to help organizations understand movement and positional patterns from authorized datasets. It supports logistics planning, service coverage analysis, and operational reporting through clear visualization of movement patterns.'
+    id: 'follow-the-dots', cat: 'data', sub: 'Follow the Dots', name: 'Movement Pattern Analysis',
+    tagline: 'Visualizing mobility patterns for better planning and informed decision making.',
+    short: 'Identifies and visualizes movement patterns of individuals or groups.',
+    full: 'Follow the Dots is a movement analysis solution designed to identify and visualize movement patterns of individuals or groups. It can analyze positional data and highlight patterns that may require further review, supporting situational awareness, mobility analysis, and operational / logistics planning.',
+    capabilities: [
+      'Movement pattern visualization',
+      'Positional data analysis',
+      'Pattern identification and analysis',
+      'Visual presentation of mobility trends'
+    ],
+    useCases: [
+      'Mobility and transportation analysis',
+      'Logistics and route planning',
+      'Spatial planning and decision support'
+    ]
   },
   {
-    id: 'hawk-deep-eye', cat: 'data', sub: 'Hawk Deep Eye', name: 'Deep Profiling',
-    short: 'Audience and customer data enrichment and analytics.',
-    full: 'Hawk Deep Eye is a data enrichment and analytics solution designed to help organizations consolidate and understand authorized customer and audience data. It combines available attributes into aggregated profiles that support segmentation, engagement planning, and better business decisions.'
-  },
-  {
-    id: 'ai-grouping-record', cat: 'data', sub: 'AI Grouping Record', name: 'Group Monitoring',
-    short: 'Community and channel engagement analytics.',
-    full: 'AI Grouping Record is an analytics solution designed to help organizations understand engagement and activity across their own community channels and groups. It provides aggregated activity insights and trend awareness to support community management and communication planning.'
-  },
-  {
-    id: 'gpd', cat: 'data', sub: 'GPD', name: 'Geospatial Portal Data',
-    short: 'Geospatial platform for vessel and maritime traffic awareness.',
-    full: 'Geospatial Portal Data (GPD) is a geospatial analytics platform designed to help organizations monitor vessel activity and maritime traffic using authorized AIS data. It overlays multiple data sources such as weather, ocean currents, and satellite imagery to support logistics, maritime awareness, and operational planning.'
-  },
-  {
-    id: 'aipd', cat: 'data', sub: 'AIPD', name: 'Artificial Intelligence Portal Data',
-    short: 'AI data portal for search, linking, visualization, and reporting.',
-    full: 'Artificial Intelligence Portal Data (AIPD) is a data portal that enables users to search, explore, link, download, and reuse data within a repository, with visualization tools for creating data presentations. It helps organizations turn distributed datasets into accessible, reusable information for analysis and reporting.'
+    id: 'ai-grouping-record', cat: 'data', sub: 'AI Grouping Record', name: 'Group Activity Analysis',
+    tagline: 'Structured insights into online group activity and communication patterns.',
+    short: 'Organizes and analyzes activity within online groups.',
+    full: 'AI Grouping Record is a communication activity analysis solution designed to organize and analyze activity within online groups. It provides structured information on group activity and communication patterns, supporting research, reporting, and general information analysis.',
+    capabilities: [
+      'Online group activity analysis',
+      'Communication pattern analysis',
+      'Structured information organization'
+    ],
+    useCases: [
+      'Communication research',
+      'Group activity analysis',
+      'Reporting and information analysis'
+    ]
   },
   {
     id: 'fdm', cat: 'data', sub: 'FDM', name: 'Flight Data Monitoring',
-    short: 'Flight and logistics data for planning and movement analysis.',
-    full: 'Flight Data Monitoring (FDM) is a data analytics solution that organizes authorized flight, passenger, and cargo information to support logistics planning, scheduling analysis, and operational reporting for organizations that manage air-transport-related workflows.'
+    tagline: 'Comprehensive aviation data for informed analysis and planning.',
+    short: 'Organizes aircraft, passenger, and cargo information for aviation analysis.',
+    full: 'Flight Data Monitoring (FDM) is a data platform designed to provide information on aircraft operating within Indonesian airspace. It can organize flight information together with relevant passenger and cargo documentation, supporting aviation data analysis, travel pattern assessment, and operational planning.',
+    capabilities: [
+      'Aircraft and flight information organization',
+      'Passenger and cargo documentation management',
+      'Aviation data analysis',
+      'Travel pattern assessment'
+    ],
+    useCases: [
+      'Aviation data analysis',
+      'Travel and mobility planning',
+      'Operational planning and reporting'
+    ]
   },
   {
-    id: 'smc', cat: 'data', sub: 'SMC', name: 'Social Media Collector',
-    short: 'Media monitoring across 3,000+ outlets with AI analytics.',
-    full: 'Social Media Collector (SMC) monitors mainstream media, both online and print, across more than 3,000 international, national, and local outlets. It uses AI for analysis across timeline, influencers, media, sentiment, and comparison, presented in a monitoring dashboard that helps brand, communications, and PR teams grasp trends quickly.'
+    id: 'mia', cat: 'data', sub: 'MIA', name: 'Media Insight & Analysis',
+    tagline: 'AI-powered media insights for understanding trends, coverage, and public information.',
+    short: 'Media analytics across 3,000+ online and print sources with AI analysis.',
+    full: 'Media Insight & Analysis is a media analytics platform that collects information from online and print media across more than 3,000 international, national, and local sources. It uses AI to analyze timelines, influential sources, media coverage, sentiment, comparisons, and reported subjects. Its centralized dashboard provides an overview of key analytical findings, helping users identify trends and developments efficiently and support media research, public information analysis, communication planning, and data-driven decision making.',
+    capabilities: [
+      'Multi-source media data collection and analysis',
+      'AI-powered sentiment and trend analysis',
+      'Media coverage comparison and visualization',
+      'Centralized analytical dashboard'
+    ],
+    useCases: [
+      'Media and market research',
+      'Public information analysis',
+      'Communication planning',
+      'Trend and media coverage analysis'
+    ]
   },
   {
-    id: 'sma', cat: 'data', sub: 'SMA', name: 'Social Media Analytic',
-    short: 'Real-time social media analytics and sentiment insights.',
-    full: 'Social Media Analytic (SMA) is a monitoring and analysis solution for social media that performs real-time processing using semantic processing and AI. It analyzes public sentiment and audience perception by region, helping organizations understand conversations and reputation trends across social platforms.'
+    id: 'sma', cat: 'data', sub: 'SMA', name: 'Social Media Insight & Analysis',
+    tagline: 'AI-powered social media insights for understanding public discussions and emerging trends.',
+    short: 'Real-time social media analytics across public platforms.',
+    full: 'Social Media Insight & Analysis (SMA) is a social media analytics platform designed to process information from public social media sources, including Facebook, Twitter, and Instagram. Using semantic processing and AI, it analyzes public discussions, sentiment, and emerging issues across different regions, supporting social research, public opinion analysis, communication planning, trend assessment, and data-driven decision making.',
+    capabilities: [
+      'Public social media data analysis',
+      'Semantic and AI-powered analysis',
+      'Sentiment and discussion analysis',
+      'Regional trend and issue assessment'
+    ],
+    useCases: [
+      'Social and public opinion research',
+      'Communication planning',
+      'Trend and issue analysis',
+      'Public information analysis'
+    ]
   },
   {
-    id: 'ais', cat: 'data', sub: 'AIS', name: 'Avatar Intelligence Social Media',
-    short: 'Content credibility analytics and misinformation detection.',
-    full: 'Avatar Intelligence Social Media (AIS) is a real-time content analytics solution that helps organizations assess online information quality. It supports detection of misinformation, hate speech, and harmful content, and rates source reliability and information credibility to support content moderation and trust-and-safety workflows.'
-  },
-  {
-    id: 'cma', cat: 'data', sub: 'CMA', name: 'Cyber Army Media Analytic',
-    short: 'Social media campaign and content management platform.',
-    full: 'Cyber Army Media Analytic (CMA) is a campaign and content management platform designed to help organizations plan and run social media programs. It provides multi-account management, scheduling, automated posting, and campaign analytics to help marketing and communications teams manage their presence efficiently.'
+    id: 'ais', cat: 'data', sub: 'AIS', name: 'Media & Social Information Analysis',
+    tagline: 'AI-powered insights for evaluating information quality, trends, and credibility.',
+    short: 'Real-time analysis of information quality, patterns, and credibility.',
+    full: 'Media & Social Information Analysis is a real-time information analysis platform designed to observe and analyze information from media and social media sources within short processing timeframes. It can identify and classify content patterns such as misinformation, hate speech, bias, and other potentially sensitive content, while assessing information quality and potential distortion. The system also provides source reliability and information credibility ratings, helping users evaluate information from a wide range of media sources and support media research, information verification, public information assessment, and informed decision making.',
+    capabilities: [
+      'Real-time media and social information analysis',
+      'Content pattern identification and classification',
+      'Information quality and credibility assessment',
+      'Source reliability and information credibility ratings'
+    ],
+    useCases: [
+      'Media research and analysis',
+      'Information verification',
+      'Public information assessment',
+      'Trend and content analysis'
+    ]
   },
 
   /* ---------- Connected Systems ---------- */
   {
     id: 'emb', cat: 'connected', sub: 'EMB', name: 'Electronic Message Broadcast',
-    short: 'Area-based SMS broadcasting system for mass notifications.',
-    full: 'Electronic Message Broadcast (EMB) is a connected communication system that delivers SMS notifications and announcements to recipients within a defined area. It helps organizations reach people quickly for operational updates, alerts, and public information messaging.'
+    tagline: 'Location-based mobile messaging for public information and service notifications.',
+    short: 'Location-based SMS messaging over compatible cellular infrastructure.',
+    full: 'Electronic Message Broadcast (EMB) is a communication solution designed to support location-based mobile messaging through compatible cellular communication infrastructure. It can identify active mobile connections within a designated coverage area and support the distribution of SMS messages for public information, service notifications, and other general communication purposes.',
+    capabilities: [
+      'Location-based mobile messaging',
+      'Active mobile connection identification within a coverage area',
+      'SMS distribution for public information and notifications'
+    ],
+    useCases: [
+      'Public information and service notifications',
+      'Localized communication within designated areas'
+    ]
   },
   {
-    id: 'xplorer-s23', cat: 'connected', sub: 'Xplorer S23', name: 'Tactical SMS Broadcasting',
-    short: 'Portable SMS broadcasting across GSM networks without internet.',
-    full: 'Xplorer S23 is a portable SMS broadcasting system capable of sending messages across multiple GSM networks. It requires no internet connection, no number database, and no per-SMS cost, making it efficient for large-scale area notifications. Supporting 2G, 3G, and 4G (GSM, WCDMA, LTE), it offers a rugged, portable design suited to field communications in varied conditions.'
+    id: 'brahma', cat: 'connected', sub: 'BRAHMA', name: 'Broadcast WhatsApp Massive',
+    tagline: 'Location-based messaging over WhatsApp and Telegram for general communication.',
+    short: 'Location-based messaging via WhatsApp and Telegram.',
+    full: 'BRAHMA (Broadcast WhatsApp Massive) is a communication solution designed to support location-based messaging through WhatsApp and Telegram. It can identify active mobile connections within a designated coverage area and facilitate the distribution of messages for public information, service notifications, and other general communication purposes.',
+    capabilities: [
+      'Location-based messaging via WhatsApp and Telegram',
+      'Active mobile connection identification within a coverage area',
+      'Message distribution for public information and notifications'
+    ],
+    useCases: [
+      'Public information and service notifications',
+      'Localized communication within designated areas'
+    ]
   },
   {
-    id: 'xplorer-w23', cat: 'connected', sub: 'Xplorer W23', name: 'Tactical WhatsApp Broadcasting',
-    short: 'AI-powered portable WhatsApp broadcasting to a defined area.',
-    full: 'Xplorer W23 is a portable broadcasting device designed to send WhatsApp messages — text, images, and video — to users within a defined area. Powered by AI and machine learning, it optimizes delivery for reliability. Built for field use, the W23 is portable and shock-resistant, and supports 3G and 4G connectivity.'
+    id: 'xplorer-s23', cat: 'connected', sub: 'Xplorer S23', name: 'SMS Broadcasting System',
+    tagline: 'Reliable large-scale mobile communication without internet dependency.',
+    short: 'High-performance SMS broadcasting across 2G/3G/4G GSM networks.',
+    full: 'Xplorer S23 is a high-performance SMS broadcasting system designed for large-scale mobile communication across multiple GSM networks. It operates independently of an internet connection and does not require a pre-existing recipient database or per-message SMS charges. Supporting 2G, 3G, and 4G technologies (GSM, WCDMA, LTE), the system provides coverage of up to 300 meters and supports up to 1,500 SMS messages per hour. It includes configurable sender identification options (numeric and alphanumeric) and laptop-based control. Its portable and rugged design allows flexible deployment for public information, service communication, event notifications, and other general-purpose applications.',
+    capabilities: [
+      'Multi-network SMS communication across 2G, 3G, and 4G',
+      'Up to 1,500 SMS messages per hour',
+      'Up to 300-meter coverage',
+      'Numeric and alphanumeric sender identification',
+      'Laptop-based control and portable deployment'
+    ],
+    useCases: [
+      'Public information and service notifications',
+      'Event communication',
+      'Localized communication within designated areas'
+    ]
   },
   {
-    id: 'catcher', cat: 'connected', sub: 'Catcher', name: 'Fake BTS Interceptor',
-    short: 'Mobile network testing and signal analysis device.',
-    full: 'Catcher is a mobile network testing device used to analyze communication between mobile phones and operator networks. It supports network diagnostics and signal analysis to help technical teams evaluate coverage, connectivity, and network behavior in a controlled environment.'
+    id: 'xplorer-w23', cat: 'connected', sub: 'Xplorer W23', name: 'WhatsApp Broadcasting Device',
+    tagline: 'Flexible mobile communication for localized information and engagement.',
+    short: 'Portable WhatsApp broadcasting device with AI-assisted delivery.',
+    full: 'Xplorer W23 is a portable communication device designed to distribute WhatsApp messages, including text, images, and video, to users within a designated area. It operates independently without requiring a pre-existing recipient database or direct connection to a mobile network operator. The system uses AI and Machine Learning technologies to identify active WhatsApp connections and optimize message delivery. Supporting 3G and 4G networks, the device provides coverage of up to 300 meters and supports up to 2,000 messages per hour. Its portable and shock-resistant design makes it suitable for public information, service notifications, event communication, and other general-purpose applications.',
+    capabilities: [
+      'WhatsApp message distribution for text, images, and video',
+      'AI and Machine Learning assisted communication',
+      '3G and 4G network support',
+      'Up to 300-meter coverage',
+      'Up to 2,000 messages per hour'
+    ],
+    useCases: [
+      'Public information and service notifications',
+      'Event communication',
+      'Localized communication within designated areas'
+    ]
   },
   {
-    id: 'df-portable', cat: 'connected', sub: 'DF Portable', name: 'Visual Direction Finding',
-    short: 'Portable signal-location and coverage analysis device.',
-    full: 'DF Portable is a device that locates signal sources within a defined radius using a visual method. It supports network coverage analysis and signal troubleshooting, and can help identify signal positions across different building levels. It comes equipped with a portable field kit.'
+    id: 'catcher', cat: 'connected', sub: 'Cellular Communication Interface', name: 'Cellular Communication Interface',
+    tagline: 'Specialized technology for controlled cellular communication environments.',
+    short: 'Interfaces with cellular network environments in passive and active modes.',
+    full: 'The Cellular Communication Interface is a specialized communication system designed to facilitate interaction between mobile devices and cellular network environments. It supports passive and active operating modes, enabling the system to monitor communication activity and exchange defined signaling responses within a controlled communication environment.',
+    capabilities: [
+      'Interaction with cellular network environments',
+      'Passive and active operating modes',
+      'Communication activity analysis',
+      'Defined signaling response exchange'
+    ],
+    useCases: [
+      'Signal and connectivity assessment'
+    ]
   },
   {
-    id: 'tactical-tapping', cat: 'connected', sub: 'Tactical Tapping', name: 'Eskan-Rabon 4 Microphone System',
-    short: 'Compact microphone system for clear audio capture and monitoring.',
-    full: 'The Eskan-Rabon 4 Miniature Microphone System is a compact audio-capture solution designed for rapid deployment. Its background-noise-reduction feature delivers clear audio, supporting environmental monitoring, documentation, and audio-quality workflows without additional processing.'
+    id: 'df-portable', cat: 'connected', sub: 'Portable Signal Location System', name: 'Portable Signal Location System',
+    tagline: 'Portable technology for visual signal location and spatial awareness.',
+    short: 'Portable system that locates mobile communication signals visually.',
+    full: 'Portable Signal Location System is a portable signal location system designed to identify and determine the approximate location of mobile communication signals within a designated area. Its visual interface provides directional and location information without relying solely on conventional audio-based signal detection. The system can assist in identifying signal sources associated with specific locations or elevated areas and can be deployed using a dedicated transport vehicle.',
+    capabilities: [
+      'Approximate location identification of mobile communication signals',
+      'Visual directional and location information',
+      'Analysis of signals associated with specific or elevated locations',
+      'Portable deployment with dedicated transport support'
+    ],
+    useCases: [
+      'Signal location assessment'
+    ]
   },
   {
-    id: 'electronic-jammer', cat: 'connected', sub: 'Electronic Jammer', name: 'Electronic Jammer',
-    flag: 'review',
-    short: 'Energy-wave device that disrupts and damages electronic equipment.',
-    full: 'Electronic Jammer (EJ) is an energy wave that induces electrical faults (short circuits), causing damage to any device that uses electricity. At high frequencies, EJ is estimated to be capable of making electronic devices fail or even explode due to short circuits. Any object that uses electrical power — such as lights, TVs, radios, mobile phones, rice cookers, refrigerators, computers, cars and motorcycles — becomes vulnerable to the EJ wave.'
+    id: 'tactical-tapping', cat: 'connected', sub: 'RABON 4', name: 'Eskan-Rabon 4 Audio Recording System',
+    tagline: 'Compact audio recording for clear and reliable documentation.',
+    short: 'Compact, rapid-deployment audio recording with noise reduction.',
+    full: 'The Eskan-Rabon 4 Miniature Audio Recording System is designed for rapid deployment in situations requiring audio recording and documentation. Its compact design and background-noise-reduction capability provide clear audio recording in various environments, supporting documentation, inspection, assessment, and other general-purpose audio applications.',
+    capabilities: [
+      'Compact and portable audio recording',
+      'Background noise reduction',
+      'Rapid deployment',
+      'Clear audio documentation in various environments'
+    ],
+    useCases: [
+      'Documentation and record keeping',
+      'Inspection and assessment activities',
+      'General-purpose audio recording'
+    ]
+  },
+  {
+    id: 'electronic-jammer', cat: 'connected', sub: 'Electromagnetic Environment Control Equipment', name: 'Electromagnetic Environment Control Equipment',
+    tagline: 'Controlled electromagnetic technology for testing and technical evaluation.',
+    short: 'Manages electromagnetic conditions for controlled testing and evaluation.',
+    full: 'Electromagnetic Environment Control Equipment is a specialized device designed to manage electromagnetic conditions within a designated area. It can temporarily affect the normal operation of electronic and electrical devices through controlled electromagnetic energy, making it suitable for controlled testing, technical evaluation, and electromagnetic environment management.',
+    capabilities: [
+      'Controlled electromagnetic environment management',
+      'Temporary interaction with electronic and electrical devices',
+      'Technical testing and evaluation',
+      'Designated-area deployment'
+    ],
+    useCases: [
+      'Electromagnetic environment testing',
+      'Technical evaluation of electronic equipment',
+      'Controlled laboratory and facility testing'
+    ]
+  },
+
+  /* ---------- Infrastructure & Integration ---------- */
+  {
+    id: 'gpd', cat: 'infra', sub: 'GPD', name: 'Geospatial Data Portal',
+    tagline: 'Integrated maritime data for clearer geographic insights and informed decision making.',
+    short: 'Centralized platform for vessel activity and maritime traffic data.',
+    full: 'Geospatial Data Portal (GPD) is a centralized platform designed to monitor vessel activity and maritime traffic in Indonesian waters. The system can process AIS data and identify unusual vessel activity, while integrating multiple data sources such as weather conditions, ocean currents, satellite imagery, and satellite radar imagery to support maritime situational awareness and analysis.',
+    capabilities: [
+      'AIS-based maritime data processing',
+      'Multi-source geospatial data integration',
+      'Vessel activity and maritime traffic analysis',
+      'Weather and ocean condition data integration',
+      'Satellite imagery and radar imagery visualization'
+    ],
+    useCases: [
+      'Maritime traffic analysis',
+      'Maritime and coastal planning',
+      'Environmental and oceanographic assessment',
+      'Geographic data analysis and decision support'
+    ]
+  },
+  {
+    id: 'aipd', cat: 'infra', sub: 'AIPD', name: 'AI Data Portal',
+    tagline: 'Integrated data access and AI-powered insights for informed decision making.',
+    short: 'Centralized repository to search, link, and reuse information.',
+    full: 'AI Data Portal (AIPD) is a data platform that enables users to search, explore, link, download, and reuse information within a centralized repository. It provides visualization tools for creating data presentations and supports the analysis of structured information from multiple sources for research, planning, and data-driven decision making.',
+    capabilities: [
+      'Centralized data search and access',
+      'Multi-source information integration',
+      'Data visualization and presentation',
+      'Structured data analysis'
+    ],
+    useCases: [
+      'Research and data analysis',
+      'Planning and reporting',
+      'Data-driven decision making'
+    ]
   },
 
   /* ---------- Cybersecurity & Resilience ---------- */
   {
-    id: 'kontra-tapp', cat: 'cyber', sub: 'Kontra Tapp', name: 'Anti-Tapping Detection',
-    short: 'Detects eavesdropping devices to keep spaces secure.',
-    full: 'Kontra Tapp is a security solution used to detect eavesdropping devices installed within a room or area. It helps organizations protect sensitive spaces and safeguard privacy by keeping meeting rooms and offices free from unauthorized listening devices.'
+    id: 'kontra-tapp', cat: 'cyber', sub: 'Electronic Security Inspection Device', name: 'Electronic Security Inspection Device',
+    tagline: 'Technical inspection for a more secure electronic environment.',
+    short: 'Detects potential unauthorized electronic monitoring equipment.',
+    full: 'Electronic Security Inspection Device is a technical security detection device designed to identify potential unauthorized electronic monitoring or signal transmission equipment within a designated room or area. It supports general security inspection and technical assessment of indoor environments.',
+    capabilities: [
+      'Detection of potential unauthorized electronic equipment',
+      'Identification of signal transmission sources',
+      'Indoor environment inspection',
+      'Technical security assessment'
+    ],
+    useCases: [
+      'Facility security inspections',
+      'Indoor environment assessments',
+      'Technical security assessments'
+    ]
   },
   {
     id: 'mbd', cat: 'cyber', sub: 'MBD', name: 'Malware Blocking Data',
-    short: 'Neutralizes file-based threats including APTs and ransomware.',
-    full: 'Malware Blocking Data (MBD) strengthens security by treating every file as potentially suspicious — conducting deep scanning, removing hazardous elements, and producing a neutralized, safe copy. MBD helps prevent advanced file-based attacks including Advanced Persistent Threats (APTs), zero-days, and ransomware, while preserving the file\u2019s full usability, visibility, and functionality.'
+    tagline: 'Secure file analysis and protection for safer digital operations.',
+    short: 'Deep file inspection that neutralizes threats while preserving usability.',
+    full: 'Malware Blocking Data (MBD) is a file security solution designed to protect users from potentially harmful files through deep inspection and security analysis. The system identifies and removes potentially hazardous elements before producing a neutralized copy while maintaining the usability, visibility, and functionality of the original file. MBD helps protect against advanced file-based threats, including previously unidentified malware and ransomware, supporting secure file exchange and everyday digital operations.',
+    capabilities: [
+      'Deep file inspection and security analysis',
+      'Identification and removal of potentially harmful elements',
+      'Neutralized file generation',
+      'Preservation of file usability and functionality'
+    ],
+    useCases: [
+      'Secure file exchange',
+      'Enterprise document handling',
+      'Protection of everyday digital operations',
+      'File security assessment'
+    ]
   },
   {
     id: 'osd', cat: 'cyber', sub: 'OSD', name: 'Open Source Data',
-    short: 'Defensive cybersecurity platform for IT infrastructure resilience.',
-    full: 'Open Source Data (OSD) is a platform running on virtualized infrastructure (network, server, workstation) used to strengthen the security, stability, and performance of IT infrastructure. It supports defensive security operations, secure architecture, and resilience, and provides a controlled environment for training technical teams in defensive practices.'
+    tagline: 'Integrated cybersecurity environments for assessment, research, and professional training.',
+    short: 'Virtualized cybersecurity platform for assessment, research, and training.',
+    full: 'Open Source Data (OSD) is a cybersecurity platform deployed across virtualized network, server, and workstation environments to support the security, stability, and performance of IT infrastructure. It provides a controlled environment for cybersecurity assessment, security research, and professional training, helping organizations develop practical capabilities for identifying, preventing, and responding to cyber threats.',
+    capabilities: [
+      'Virtualized cybersecurity environment',
+      'Security assessment and research',
+      'Practical cybersecurity training',
+      'Network, server, and workstation environment support'
+    ],
+    useCases: [
+      'Cybersecurity assessment',
+      'Security research and testing',
+      'Professional cybersecurity training',
+      'IT infrastructure security development'
+    ]
   },
 
   /* ---------- Immersive Technology & Training ---------- */
   {
-    id: 'vr-training', cat: 'immersive', sub: 'Tactical VR', name: 'VR Training Simulations',
-    short: 'Immersive VR simulations for professional and technical training.',
-    full: 'VR Training Simulations provide Virtual Reality-based training that enables realistic, scenario-based exercises in a safe, controlled environment. They support professional learning, technical skills development, and equipment familiarization — improving readiness without the risks and costs of live exercises.'
+    id: 'vr-training', cat: 'immersive', sub: 'VR Training Simulations', name: 'VR Training Simulations',
+    tagline: 'Immersive virtual training for practical skills and scenario-based learning.',
+    short: 'VR-based, scenario-driven training in a safe, controlled environment.',
+    full: 'VR Training Simulations provide Virtual Reality-based training through realistic, scenario-based exercises in a safe and controlled environment. The solution enables users to practice procedures, evaluate different scenarios, and develop practical skills without the risks and costs associated with live exercises.',
+    capabilities: [
+      'Scenario-based VR training',
+      'Virtual practice environment',
+      'Procedure and scenario evaluation',
+      'Practical skills development'
+    ],
+    useCases: [
+      'Professional training and development',
+      'Procedure practice and evaluation',
+      'Scenario-based learning',
+      'Skills assessment and preparation'
+    ]
   },
   {
     id: 'digital-twin', cat: 'immersive', sub: 'Digital Twin', name: 'Digital Twin & Virtual Tours',
-    short: 'Digital representations and virtual tours for visualization and planning.',
-    full: 'Digital Twin & Virtual Tours deliver digital representations of real objects or locations, together with virtual tours, supporting visualization, planning, collaboration, and in-depth analysis.'
+    tagline: 'Immersive digital experiences for visualization, planning, and virtual collaboration.',
+    short: 'Digital representations and immersive virtual tours of real-world places.',
+    full: 'Digital Twin & Virtual Tours provide digital representations of real-world objects, facilities, and locations together with immersive virtual tours. The solution supports visualization, planning, virtual inspection, training, and in-depth analysis for a wide range of professional and general-purpose applications.',
+    capabilities: [
+      'Digital representation of objects, facilities, and locations',
+      'Immersive virtual tours',
+      'Virtual inspection and visualization',
+      'Interactive planning and analysis'
+    ],
+    useCases: [
+      'Facility and site visualization',
+      'Virtual inspection and assessment',
+      'Training and professional development',
+      'Planning and presentation'
+    ]
   },
 ];

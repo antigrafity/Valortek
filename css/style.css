@@ -45,17 +45,17 @@ p{ text-align:justify; hyphens:auto; -webkit-hyphens:auto; }
 /* Keep centred text centred where it's set explicitly */
 .section__head p,
 .trusted__label,
-.hero__sub,
 .page-hero p,
-.cta p,
+.cta p{ text-align:center; }
+/* Hero description: left edge straight, justified to the right */
+.hero__sub{ text-align:justify; }
+/* Footer: everything centered */
 .footer__brand p{ text-align:center; }
 /* Left-align single-line / short utility text */
 .breadcrumb,
 .case__scope,
 .case__tech,
-.contact__item span,
-.footer__col a,
-.footer__bottom{ text-align:left; }
+.contact__item span{ text-align:left; }
 section{ position:relative; }
 
 .container{ width:100%; max-width:var(--container); margin-inline:auto; padding-inline:24px; }
@@ -394,12 +394,13 @@ section{ position:relative; }
 /* ---------- Footer ---------- */
 .footer{ background:var(--ink); color:rgba(255,255,255,.7); padding:4.5rem 0 2rem; border-top:1px solid var(--line); }
 .footer__inner{ display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:2rem; }
-.footer__logo{ height:38px; filter:brightness(0) invert(1); margin-bottom:1.2rem; }
+.footer__logo{ height:38px; filter:brightness(0) invert(1); margin:0 auto 1.2rem; }
 .footer__brand p{ font-size:.92rem; max-width:36ch; }
+.footer__col{ text-align:center; }
 .footer__col h4{ color:#fff; font-size:1rem; margin-bottom:1.1rem; }
-.footer__col a{ display:block; font-size:.92rem; padding:.35rem 0; color:rgba(255,255,255,.62); transition:.3s; }
-.footer__col a:hover{ color:var(--copper-soft); padding-left:5px; }
-.footer__bottom{ display:flex; justify-content:space-between; align-items:center; margin-top:3rem; padding-top:1.6rem; border-top:1px solid var(--line); font-size:.85rem; flex-wrap:wrap; gap:1rem; }
+.footer__col a{ display:block; font-size:.92rem; padding:.35rem 0; color:rgba(255,255,255,.62); transition:.3s; text-align:center; }
+.footer__col a:hover{ color:var(--copper-soft); }
+.footer__bottom{ display:flex; justify-content:center; align-items:center; text-align:center; margin-top:3rem; padding-top:1.6rem; border-top:1px solid var(--line); font-size:.85rem; flex-wrap:wrap; gap:1rem; }
 .footer__legal a{ margin-left:1.4rem; color:rgba(255,255,255,.62); transition:.3s; }
 .footer__legal a:hover{ color:#fff; }
 
@@ -458,6 +459,14 @@ section{ position:relative; }
   background:radial-gradient(120% 130% at 75% 0%, #1b1e28 0%, var(--ink) 60%);
   color:#fff; overflow:hidden;
 }
+/* Optional background photo per page (set --hero-bg on [data-page]).
+   Sits behind everything; a dark scrim keeps the text readable.
+   If the image is missing, the radial gradient above shows instead. */
+.page-hero__bg{
+  position:absolute; inset:0; z-index:0;
+  background-image:linear-gradient(90deg, rgba(10,11,14,.92) 0%, rgba(10,11,14,.7) 45%, rgba(10,11,14,.45) 100%), var(--hero-bg, none);
+  background-size:cover; background-position:center; background-repeat:no-repeat;
+}
 .page-hero__grid{
   position:absolute; inset:0;
   background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
@@ -475,7 +484,11 @@ section{ position:relative; }
 .breadcrumb a:hover{ color:var(--copper-soft); }
 .breadcrumb span{ opacity:.5; }
 .page-hero h1{ font-size:clamp(2.3rem,5.4vw,4rem); font-weight:800; max-width:18ch; }
-.page-hero p{ color:rgba(255,255,255,.75); font-size:clamp(1.05rem,1.6vw,1.25rem); max-width:60ch; margin-top:1.3rem; }
+.page-hero p{ color:rgba(255,255,255,.75); font-size:clamp(1.05rem,1.6vw,1.25rem); max-width:60ch; margin-top:1.3rem; text-align:justify; }
+/* Per-page hero background images */
+body[data-page="about"]    { --hero-bg:url('../assets/img/hero-about.jpg'); }
+body[data-page="products"] { --hero-bg:url('../assets/img/hero-products.jpg'); }
+body[data-page="services"] { --hero-bg:url('../assets/img/hero-services.jpg'); }
 .page-hero__eyebrow{
   display:inline-block; color:var(--copper-soft); font-weight:600; letter-spacing:.16em;
   text-transform:uppercase; font-size:.78rem; margin-bottom:1.1rem;
@@ -496,6 +509,10 @@ section{ position:relative; }
 .sm-2{ background:linear-gradient(135deg,#2a1f14,#14100a); }
 .sm-3{ background:linear-gradient(135deg,#12222a,#0a1418); }
 .sm-4{ background:linear-gradient(135deg,#221826,#120b16); }
+.sm-5{ background:linear-gradient(135deg,#132a24,#0a1712); }
+.sm-6{ background:linear-gradient(135deg,#2a1414,#160a0a); }
+.sm-7{ background:linear-gradient(135deg,#1a2233,#0b1018); }
+.sm-8{ background:linear-gradient(135deg,#26201a,#13100b); }
 .solrow__media::after{ content:""; position:absolute; inset:0; z-index:2; background:radial-gradient(70% 70% at 30% 25%,rgba(203,116,41,.3),transparent 70%); }
 .solrow__body .tag{ margin-bottom:1rem; }
 .solrow__body h2{ font-size:clamp(1.6rem,3.2vw,2.3rem); margin-bottom:1rem; }
@@ -682,20 +699,15 @@ section{ position:relative; }
 }
 
 /* =========================================================
-   Under-review markers (internal positioning review)
+   Product detail — tagline, capabilities & use cases
    ========================================================= */
-.pcard{ position:relative; }
-.pcard--review{ border-color:rgba(203,116,41,.5); }
-.review-badge{
-  position:absolute; top:.9rem; right:.9rem; z-index:2;
-  font-family:'Montserrat',system-ui,sans-serif; font-weight:700; font-size:.62rem;
-  letter-spacing:.08em; text-transform:uppercase; color:#7a3d00;
-  background:linear-gradient(140deg,#f6c67a,#f0b06a); border:1px solid rgba(122,61,0,.25);
-  padding:.28rem .6rem; border-radius:100px; box-shadow:var(--shadow-sm);
+.detail__tagline{
+  font-family:'Montserrat',system-ui,sans-serif; font-weight:600; font-style:italic;
+  color:var(--copper); font-size:1.08rem; line-height:1.5; margin:0 0 1.2rem; text-align:left;
 }
-.review-notice{
-  display:block; margin:0 0 1.4rem; padding:1rem 1.2rem; border-radius:12px;
-  background:rgba(203,116,41,.08); border:1px solid rgba(203,116,41,.35);
-  color:var(--text); font-size:.92rem; line-height:1.5; text-align:left;
+.detail__specs{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.5rem,4vw,3rem); }
+.detail__block-title{
+  font-size:1.15rem; margin-bottom:1rem; padding-bottom:.6rem;
+  border-bottom:1px solid var(--paper-3);
 }
-.review-notice strong{ color:var(--copper); display:inline; margin-right:.35rem; }
+@media (max-width:760px){ .detail__specs{ grid-template-columns:1fr; } }

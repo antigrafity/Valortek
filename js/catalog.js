@@ -52,12 +52,8 @@
       var grid = el('<div class="cards pgrid"></div>');
       PRODUCTS.filter(function (p) { return p.cat === c.id; }).forEach(function (p) {
         var hay = (p.name + ' ' + p.sub + ' ' + c.name).toLowerCase();
-        var reviewBadge = p.flag === 'review'
-          ? '<span class="review-badge" title="Positioning under internal review">Under Review</span>'
-          : '';
         grid.appendChild(el(
-          '<a class="pcard' + (p.flag === 'review' ? ' pcard--review' : '') + '" href="product.html?id=' + p.id + '" data-hay="' + esc(hay) + '" data-cat="' + p.cat + '">' +
-            reviewBadge +
+          '<a class="pcard" href="product.html?id=' + p.id + '" data-hay="' + esc(hay) + '" data-cat="' + p.cat + '">' +
             '<span class="pcard__sub">' + esc(p.sub) + '</span>' +
             '<h3 class="pcard__name">' + esc(p.name) + '</h3>' +
             '<p class="pcard__short">' + esc(p.short) + '</p>' +
@@ -141,10 +137,8 @@
       ? '<div class="detail__media"><img src="' + cat.img + '" alt="' + esc(cat.name) + '" /><span class="prod-banner__tag">' + esc(cat.name) + '</span></div>'
       : '<div class="detail__media detail__media--plain"><span>' + esc(p.sub) + '</span></div>';
 
-    var reviewNotice = p.flag === 'review'
-      ? '<div class="review-notice" role="note">' +
-          '<strong>⚠ Under Review</strong> This product\u2019s positioning and wording are still under internal review and have not yet been aligned to Valortek\u2019s enterprise positioning.' +
-        '</div>'
+    var tagline = p.tagline
+      ? '<p class="detail__tagline">' + esc(p.tagline) + '</p>'
       : '';
 
     detail.appendChild(el(
@@ -152,7 +146,7 @@
         '<div class="detail__main">' +
           '<span class="tag">' + esc(cat.name) + '</span>' +
           '<h2>' + esc(p.name) + '</h2>' +
-          reviewNotice +
+          tagline +
           '<p class="detail__full">' + esc(p.full) + '</p>' +
           '<div class="detail__actions">' +
             '<a href="contact.html" class="btn btn--primary">Request Information <i class="ico-arrow"></i></a>' +
@@ -162,6 +156,25 @@
         media +
       '</div></div></section>'
     ));
+
+    // capabilities + use cases
+    function listBlock(title, items) {
+      if (!items || !items.length) return '';
+      var lis = items.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('');
+      return '<div class="detail__block">' +
+               '<h3 class="detail__block-title">' + esc(title) + '</h3>' +
+               '<ul class="ticks">' + lis + '</ul>' +
+             '</div>';
+    }
+    var caps = listBlock('Key Capabilities', p.capabilities);
+    var uses = listBlock('Use Cases', p.useCases);
+    if (caps || uses) {
+      detail.appendChild(el(
+        '<section class="section section--alt"><div class="container">' +
+          '<div class="detail__specs">' + caps + uses + '</div>' +
+        '</div></section>'
+      ));
+    }
 
     // related
     var related = PRODUCTS.filter(function (x) { return x.cat === p.cat && x.id !== p.id; });

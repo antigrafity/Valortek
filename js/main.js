@@ -55,19 +55,17 @@
           <a href="products.html#cat-software">Software &amp; Digital Platforms</a>
           <a href="products.html#cat-data">Data &amp; Analytics</a>
           <a href="products.html#cat-connected">Connected Systems</a>
+          <a href="products.html#cat-infra">Infrastructure &amp; Integration</a>
           <a href="products.html#cat-cyber">Cybersecurity &amp; Resilience</a>
           <a href="products.html#cat-immersive">Immersive Technology &amp; Training</a>
         </div>
         <div class="footer__col">
           <h4>Get in Touch</h4>
-          <a href="#">Jalan Tebet Barat Dalam Raya IX No. 54</a>
-          <a href="#">Tebet Barat, Tebet, Jakarta Selatan, DKI Jakarta</a>
           <a href="mailto:info@valortek.co.id">info@valortek.co.id</a>
         </div>
       </div>
       <div class="footer__bottom container">
         <span>© ${year} PT. Valortek Ratanika Utama. All rights reserved.</span>
-        <span class="footer__legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Security</a></span>
       </div>
     </footer>`;
 

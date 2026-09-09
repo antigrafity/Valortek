@@ -17,80 +17,66 @@
   <div id="site-header"></div>
 
   <section class="page-hero">
+    <div class="page-hero__bg" aria-hidden="true"></div>
     <div class="page-hero__grid" aria-hidden="true"></div>
     <div class="page-hero__glow" aria-hidden="true"></div>
     <div class="page-hero__inner">
       <nav class="breadcrumb" data-reveal><a href="index.html">Home</a><span>/</span>Services</nav>
       <span class="page-hero__eyebrow" data-reveal>Technology Services</span>
-      <h1 data-reveal>Technology services from planning through implementation and support</h1>
+      <h1 data-reveal>Technology Services From Planning Through Implementation And Support</h1>
       <p data-reveal>Our teams help organizations design, build, integrate, maintain, and improve technology across software, data, infrastructure, connected systems, and cybersecurity. Our expertise extends beyond our own solutions to include third-party systems from local and international technology partners, ensuring seamless integration across diverse platforms.</p>
     </div>
   </section>
 
-  <!-- Overview cards -->
-  <section class="section">
-    <div class="container">
-      <div class="cards">
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg></div>
-          <h3>Software &amp; Application Development</h3>
-          <p>Web, mobile, backend, workflow, dashboard, and custom application development.</p>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg></div>
-          <h3>Data Engineering &amp; Analytics</h3>
-          <p>Data integration, processing, visualization, reporting, analytics, and AI-enabled solutions.</p>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></div>
-          <h3>System Integration</h3>
-          <p>Connecting applications, platforms, devices, data sources, and infrastructure into a reliable environment.</p>
-          <a href="#integration" class="card__more">Details <i class="ico-arrow"></i></a>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M12 16v4"/></svg></div>
-          <h3>Network &amp; Infrastructure</h3>
-          <p>Design, implementation, modernization, and support for digital infrastructure.</p>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12h6M13 12l4-5M13 12l4 5"/></svg></div>
-          <h3>Connected &amp; Electronic Systems</h3>
-          <p>Integration of electronic devices, embedded systems, sensors, and connected technologies.</p>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
-          <h3>Cybersecurity &amp; IT Resilience</h3>
-          <p>Defensive cybersecurity, secure architecture, risk management, monitoring, and continuity support.</p>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <h3>Maintenance &amp; Technical Support</h3>
-          <p>Ongoing technical support, maintenance, optimization, and system reliability services.</p>
-          <a href="#maintenance" class="card__more">Details <i class="ico-arrow"></i></a>
-        </article>
-        <article class="card" data-reveal>
-          <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5zM2 8v6M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg></div>
-          <h3>Training &amp; Enablement</h3>
-          <p>Technical training, product familiarization, and structured learning for users and teams.</p>
-          <a href="#training" class="card__more">Details <i class="ico-arrow"></i></a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Detail rows -->
+  <!-- Detail rows (8 services) -->
   <section class="section section--alt">
     <div class="container">
 
-      <div class="solrow" id="integration">
+      <div class="solrow" id="software">
         <div class="solrow__media sm-1">
+          <img src="assets/img/service-software.jpg" alt="Software &amp; Application Development" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
+          <span><svg viewBox="0 0 24 24"><path d="M8 6 3 12l5 6M16 6l5 6-5 6"/></svg></span>
+        </div>
+        <div class="solrow__body">
+          <span class="tag">01 · Software</span>
+          <h2>Software &amp; Application Development</h2>
+          <p>We design and build web, mobile, and backend applications tailored to real organizational needs. From workflow tools to custom platforms, our development services turn requirements into dependable, usable software built for long-term reliability and growth.</p>
+          <ul class="ticks">
+            <li>Web and mobile application development</li>
+            <li>Backend and API development</li>
+            <li>Workflow and process automation tools</li>
+            <li>Custom platform and product development</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="solrow solrow--reverse" id="data">
+        <div class="solrow__media sm-2">
+          <img src="assets/img/service-data.jpg" alt="Data Engineering &amp; Analytics" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
+          <span><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg></span>
+        </div>
+        <div class="solrow__body">
+          <span class="tag">02 · Data</span>
+          <h2>Data Engineering &amp; Analytics</h2>
+          <p>We help organizations integrate, process, and make sense of their data. Our data services cover pipelines, reporting, and AI-enabled analytics that support better decisions and turn distributed information into clear, reusable insight.</p>
+          <ul class="ticks">
+            <li>Data integration and processing pipelines</li>
+            <li>Reporting and visualization</li>
+            <li>Analytics and performance insights</li>
+            <li>AI-enabled data solutions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="solrow" id="integration">
+        <div class="solrow__media sm-3">
           <img src="assets/img/service-integration.jpg" alt="System Integration" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
           <span><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></span>
         </div>
         <div class="solrow__body">
-          <span class="tag">01 · Integration</span>
+          <span class="tag">03 · Integration</span>
           <h2>System Integration</h2>
-          <p>Our integration services include API implementation, custom interface development, data synchronization, workflow automation, and secure system connectivity. Each solution is tailored to meet your business requirements while ensuring scalability, performance, and long term reliability.</p>
+          <p>Our integration services connect applications, platforms, devices, and data sources into one reliable environment. Each solution is tailored to your requirements while ensuring scalability, performance, and long-term reliability.</p>
           <ul class="ticks">
             <li>API implementation</li>
             <li>Custom interface development</li>
@@ -101,39 +87,92 @@
         </div>
       </div>
 
-      <div class="solrow solrow--reverse" id="maintenance">
-        <div class="solrow__media sm-2">
-          <img src="assets/img/service-maintenance.jpg" alt="Maintenance &amp; Technical Support" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
-          <span><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <div class="solrow solrow--reverse" id="infrastructure">
+        <div class="solrow__media sm-4">
+          <img src="assets/img/service-infrastructure.jpg" alt="Network &amp; Infrastructure" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
+          <span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M12 16v4"/></svg></span>
         </div>
         <div class="solrow__body">
-          <span class="tag">02 · Maintenance</span>
-          <h2>Maintenance &amp; Technical Support</h2>
-          <p>To maximize system availability, we offer ongoing maintenance and technical support, including preventive maintenance, software updates, performance optimization, troubleshooting, and security enhancements. Our team is committed to keeping your systems operating efficiently and adapting to evolving business needs.</p>
+          <span class="tag">04 · Infrastructure</span>
+          <h2>Network &amp; Infrastructure</h2>
+          <p>We design, implement, and modernize the digital infrastructure that keeps organizations running. From networks to cloud environments, our services build dependable foundations that are secure, scalable, and easy to support.</p>
           <ul class="ticks">
-            <li>Preventive maintenance</li>
-            <li>Software updates</li>
-            <li>Performance optimization</li>
-            <li>Troubleshooting</li>
-            <li>Security enhancements</li>
+            <li>Network design and implementation</li>
+            <li>Infrastructure modernization</li>
+            <li>Cloud and on-premise environments</li>
+            <li>Infrastructure support and optimization</li>
           </ul>
         </div>
       </div>
 
-      <div class="solrow" id="training">
-        <div class="solrow__media sm-3">
-          <img src="assets/img/service-training.jpg" alt="Training &amp; Knowledge Transfer" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
+      <div class="solrow" id="connected">
+        <div class="solrow__media sm-5">
+          <img src="assets/img/service-connected.jpg" alt="Connected &amp; Electronic Systems" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
+          <span><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 12h6M13 12l4-5M13 12l4 5"/></svg></span>
+        </div>
+        <div class="solrow__body">
+          <span class="tag">05 · Connected Systems</span>
+          <h2>Connected &amp; Electronic Systems</h2>
+          <p>We integrate electronic devices, embedded systems, sensors, and connected technologies into cohesive solutions. Our work supports reliable information flow, equipment visibility, and dependable interaction between physical and digital systems.</p>
+          <ul class="ticks">
+            <li>Electronic device integration</li>
+            <li>Embedded systems and sensors</li>
+            <li>Connected technology deployment</li>
+            <li>Reliable information flow and equipment visibility</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="solrow solrow--reverse" id="cybersecurity">
+        <div class="solrow__media sm-6">
+          <img src="assets/img/service-cybersecurity.jpg" alt="Cybersecurity &amp; IT Resilience" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
+          <span><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        </div>
+        <div class="solrow__body">
+          <span class="tag">06 · Cybersecurity</span>
+          <h2>Cybersecurity &amp; IT Resilience</h2>
+          <p>We help organizations strengthen their defensive security posture through secure architecture, monitoring, and risk management. Our services support business continuity and technology resilience so operations stay dependable.</p>
+          <ul class="ticks">
+            <li>Defensive cybersecurity</li>
+            <li>Secure architecture and hardening</li>
+            <li>Risk management and monitoring</li>
+            <li>Business continuity support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="solrow" id="maintenance">
+        <div class="solrow__media sm-7">
+          <img src="assets/img/service-maintenance.jpg" alt="Maintenance &amp; Technical Support" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
+          <span><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="3"/></svg></span>
+        </div>
+        <div class="solrow__body">
+          <span class="tag">07 · Maintenance</span>
+          <h2>Maintenance &amp; Technical Support</h2>
+          <p>To maximize system availability, we offer ongoing maintenance and technical support, including preventive maintenance, updates, performance optimization, and troubleshooting. Our team keeps your systems operating efficiently and adapting to evolving needs.</p>
+          <ul class="ticks">
+            <li>Preventive maintenance</li>
+            <li>Software updates</li>
+            <li>Performance optimization</li>
+            <li>Troubleshooting and reliability support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="solrow solrow--reverse" id="training">
+        <div class="solrow__media sm-8">
+          <img src="assets/img/service-training.jpg" alt="Training &amp; Enablement" loading="lazy" class="solrow__img" onerror="this.style.display='none'" />
           <span><svg viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5zM2 8v6M6 10.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-5.5"/></svg></span>
         </div>
         <div class="solrow__body">
-          <span class="tag">03 · Training</span>
-          <h2>Training &amp; Knowledge Transfer</h2>
-          <p>We provide professional training for administrators, technical teams, and end users through structured sessions, practical workshops, and knowledge transfer. By equipping your team with the necessary skills, we help ensure successful system adoption and sustainable operational excellence.</p>
+          <span class="tag">08 · Training</span>
+          <h2>Training &amp; Enablement</h2>
+          <p>We provide technical training, product familiarization, and structured learning for administrators, technical teams, and end users. By equipping your team with the right skills, we help ensure successful adoption and sustainable operational excellence.</p>
           <ul class="ticks">
-            <li>Training for administrators, technical teams &amp; end users</li>
-            <li>Structured training sessions</li>
+            <li>Technical training and product familiarization</li>
+            <li>Structured learning sessions</li>
             <li>Practical workshops</li>
-            <li>Knowledge transfer</li>
+            <li>Knowledge transfer for teams and end users</li>
           </ul>
         </div>
       </div>
@@ -173,7 +212,7 @@
     <div class="cta__glow" aria-hidden="true"></div>
     <div class="container cta__inner">
       <h2 data-reveal>Operate with confidence.</h2>
-      <p data-reveal>Let's discuss your integration, maintenance and training needs.</p>
+      <p data-reveal>Let's discuss your technology services needs — from development and integration to maintenance and training.</p>
       <a href="contact.html" class="btn btn--primary btn--lg" data-reveal>Contact Us <i class="ico-arrow"></i></a>
     </div>
   </section>
