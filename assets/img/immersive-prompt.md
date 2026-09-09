@@ -1,0 +1,7 @@
+# Immersive category banner
+
+Generated using the built-in ImageGen tool. Website asset: `assets/img/immersive.jpg` (2048 × 768, 16:6, JPEG).
+
+## Final prompt
+
+Use case: ads-marketing. Asset type: wide website category banner for Immersive Technology & Training on Valortek enterprise technology website. Generate a single polished photorealistic commercial technology image, 2304 x 864 pixels, aspect ratio 16:6 (2.67:1). Scene: modern civilian professional VR training studio, dark charcoal architectural interior. Subject positioned center-right: waist-up adult professional wearing a clean unbranded white VR headset and dark smart-casual clothing, holding two realistic VR controllers naturally, practicing equipment familiarization. Behind them on the far right a large screen showing a refined cyan-blue digital twin visualization of a civilian industrial pump assembly, plausible 3D CAD geometry, subtle copper highlights. Premium photographic realism, natural hands, restrained subtle digital visualization, soft cool screen illumination with warm copper #cb7429 rim lighting. Composition: subject and headset fully inside frame, keep the lower-left quadrant dark, uncluttered, clear negative space for website category label; scene must remain clear in a short wide crop. Enterprise, commercial, civilian technology only. No military, defense, tactical, army, soldiers, combat, weapons, surveillance or intelligence themes. No text, no lettering, no logos, no watermark, no baked-in border or rounded corners. Not a collage.

@@ -1,141 +1,141 @@
 /* =========================================================
    Valortek — product catalog data (single source of truth)
    Used by products.html (listing/search) and product.html (detail)
+   Positioning: enterprise / commercial / civilian technology.
+   NOTE: Product names & subtitles are kept exactly as-is.
    ========================================================= */
 window.VALORTEK_CATEGORIES = [
-  { id: 'portable', name: 'Portable Technology Solutions', tagline: 'Portable technology platforms designed for field connectivity, mobile communications, data collection, and operational support.', img: 'assets/img/portable.png' },
-  { id: 'geofence', name: 'Geospatial Data Solutions',      tagline: 'Location based data visualization, spatial analytics, movement trend analysis, and geographic information management.',        img: 'assets/img/geofence.png' },
-  { id: 'cdi',      name: 'Data Platforms',                 tagline: 'Integrated data platforms providing operational visibility, asset monitoring, and AI powered analytics to support informed decision making.', img: 'assets/img/cdi.jpg' },
-  { id: 'dmi',      name: 'Data Analytics',                  tagline: 'AI powered data analytics across digital channels, providing trend analysis, performance insights, reporting, and visualization.', img: 'assets/img/dmi.jpg' },
-  { id: 'cyber',    name: 'Cybersecurity Solutions',         tagline: 'Solutions designed to enhance digital resilience through threat detection, data protection, secure infrastructure, and cybersecurity management.', img: 'assets/img/cyber.jpg' },
-  { id: 'vr',       name: 'Immersive Digital Solutions',     tagline: 'Virtual Reality (VR), Digital Twin, and Virtual Tour technologies designed for training, visualization, collaboration, and interactive experiences.', img: '' },
+  { id: 'software', name: 'Software & Digital Platforms', tagline: 'Applications, platforms, workflow tools, dashboards, and digital services designed around real organizational needs.', img: 'assets/img/portable.png' },
+  { id: 'data',      name: 'Data & Analytics',            tagline: 'Data integration, processing, visualization, reporting, and AI-enabled tools that support better business decisions.', img: 'assets/img/dmi.jpg' },
+  { id: 'connected', name: 'Connected Systems',           tagline: 'Connected devices, electronic systems, sensors, and integrated technologies for reliable information flow and equipment visibility.', img: 'assets/img/geofence.png' },
+  { id: 'cyber',     name: 'Cybersecurity & Resilience',   tagline: 'Defensive security, secure architecture, monitoring, risk management, and technology resilience for business continuity.', img: 'assets/img/cyber.jpg' },
+  { id: 'immersive', name: 'Immersive Technology & Training', tagline: 'Interactive and immersive technology for technical learning, product familiarization, visualization, and professional training.', img: 'assets/img/immersive.jpg' },
 ];
 
 window.VALORTEK_PRODUCTS = [
-  /* ---------- Portable Technology Solutions ---------- */
+  /* ---------- Software & Digital Platforms ---------- */
   {
-    id: 'emb', cat: 'portable', sub: 'EMB', name: 'Electronic Message Broadcast',
-    short: 'Tactical BTS tracking and opinion-shaping via mass SMS broadcasting.',
-    full: 'Electronic Message Broadcast (EMB) performs tactical tracking of Base Transceiver Stations (BTS), captures active phone numbers, and conducts opinion-shaping operations using tactical equipment through mass SMS broadcasting.'
+    id: 'brahma', cat: 'software', sub: 'BRAHMA', name: 'Broadcast WhatsApp Massive',
+    short: 'Large-scale messaging platform for WhatsApp and Telegram communications.',
+    full: 'BRAHMA (Broadcast WhatsApp Massive) is a messaging platform designed to help organizations deliver notifications, announcements, and customer engagement messages at scale across WhatsApp and Telegram. It supports audience segmentation, scheduled delivery, and message management to streamline organizational communications.'
+  },
+
+  /* ---------- Data & Analytics ---------- */
+  {
+    id: 'follow-the-dots', cat: 'data', sub: 'Follow the Dots', name: 'Movement Analysis',
+    short: 'Movement and pattern analytics for logistics and operational planning.',
+    full: 'Follow the Dots is a data analytics solution designed to help organizations understand movement and positional patterns from authorized datasets. It supports logistics planning, service coverage analysis, and operational reporting through clear visualization of movement patterns.'
   },
   {
-    id: 'brahma', cat: 'portable', sub: 'BRAHMA', name: 'Broadcast WhatsApp Massive',
-    short: 'Tactical BTS tracking and opinion-shaping via WhatsApp & Telegram broadcasting.',
-    full: 'BRAHMA (Broadcast WhatsApp Massive) performs tactical tracking of Base Transceiver Stations (BTS), captures active phone numbers, and conducts opinion-shaping operations using tactical equipment through mass WhatsApp and Telegram message broadcasting.'
+    id: 'hawk-deep-eye', cat: 'data', sub: 'Hawk Deep Eye', name: 'Deep Profiling',
+    short: 'Audience and customer data enrichment and analytics.',
+    full: 'Hawk Deep Eye is a data enrichment and analytics solution designed to help organizations consolidate and understand authorized customer and audience data. It combines available attributes into aggregated profiles that support segmentation, engagement planning, and better business decisions.'
   },
   {
-    id: 'xplorer-s23', cat: 'portable', sub: 'Xplorer S23', name: 'Tactical SMS Broadcasting',
-    short: 'High-performance mass SMS broadcasting across GSM networks.',
-    full: 'Tactical Xplorer S23 is a high-performance SMS broadcasting system capable of sending mass messages across multiple GSM networks simultaneously. It requires no internet connection, no number database, and no per-SMS cost, making it highly efficient for large-scale operations. Supporting 2G, 3G and 4G (GSM, WCDMA, LTE), the S23 reaches up to 300 meters and sends up to 1,500 SMS per hour. Equipped with source-number masking (numeric & alphanumeric) and laptop control, it is highly flexible for both mobile and stationary deployment, with a rugged, portable design ideal for tactical operations in varied field conditions.'
+    id: 'ai-grouping-record', cat: 'data', sub: 'AI Grouping Record', name: 'Group Monitoring',
+    short: 'Community and channel engagement analytics.',
+    full: 'AI Grouping Record is an analytics solution designed to help organizations understand engagement and activity across their own community channels and groups. It provides aggregated activity insights and trend awareness to support community management and communication planning.'
   },
   {
-    id: 'xplorer-w23', cat: 'portable', sub: 'Xplorer W23', name: 'Tactical WhatsApp Broadcasting',
-    short: 'AI-powered mobile WhatsApp broadcasting to a target area.',
-    full: 'Tactical Xplorer W23 is a mobile broadcasting device designed to send WhatsApp messages — text, images and video — to users within a specific area. It works independently without a number database or a direct connection to the mobile operator. Powered by Artificial Intelligence and Machine Learning, it automatically detects active WhatsApp numbers and optimizes delivery to stay safe from mass blocking. Built for tactical field operations, the W23 is portable and shock-resistant, supports 3G and 4G, reaches up to 300 meters, and sends up to 2,000 messages per hour.'
+    id: 'gpd', cat: 'data', sub: 'GPD', name: 'Geospatial Portal Data',
+    short: 'Geospatial platform for vessel and maritime traffic awareness.',
+    full: 'Geospatial Portal Data (GPD) is a geospatial analytics platform designed to help organizations monitor vessel activity and maritime traffic using authorized AIS data. It overlays multiple data sources such as weather, ocean currents, and satellite imagery to support logistics, maritime awareness, and operational planning.'
   },
   {
-    id: 'catcher', cat: 'portable', sub: 'Catcher', name: 'Fake BTS Interceptor',
-    short: 'Fake BTS intermediary with passive and active interception modes.',
-    full: 'Catcher functions as a Fake BTS acting as an intermediary in communications between mobile phones and the operator network. It operates in two modes: passive, where the intermediary can only listen to passing communications without issuing any response; and active, where the intermediary can act as an "operator" and issue specific responses to a target\u2019s communications.'
+    id: 'aipd', cat: 'data', sub: 'AIPD', name: 'Artificial Intelligence Portal Data',
+    short: 'AI data portal for search, linking, visualization, and reporting.',
+    full: 'Artificial Intelligence Portal Data (AIPD) is a data portal that enables users to search, explore, link, download, and reuse data within a repository, with visualization tools for creating data presentations. It helps organizations turn distributed datasets into accessible, reusable information for analysis and reporting.'
   },
   {
-    id: 'df-portable', cat: 'portable', sub: 'DF Portable', name: 'Visual Direction Finding',
-    short: 'Visual direction finding to locate an IMSI within a radius.',
-    full: 'DF Portable is a device capable of locating an IMSI number within a certain radius using a visual method, rather than the traditional strongest-signal audio-detection method. Visual DF can also locate a target positioned on a specific (elevated) floor. It comes equipped with a tactical vehicle.'
+    id: 'fdm', cat: 'data', sub: 'FDM', name: 'Flight Data Monitoring',
+    short: 'Flight and logistics data for planning and movement analysis.',
+    full: 'Flight Data Monitoring (FDM) is a data analytics solution that organizes authorized flight, passenger, and cargo information to support logistics planning, scheduling analysis, and operational reporting for organizations that manage air-transport-related workflows.'
   },
   {
-    id: 'tactical-tapping', cat: 'portable', sub: 'Tactical Tapping', name: 'Eskan-Rabon 4 Microphone System',
-    short: 'Miniature microphone system for rapid covert monitoring.',
-    full: 'The Eskan-Rabon 4 Miniature Microphone System is designed for rapid deployment and response, enabling surveillance operators to handle unexpected situations that require monitoring and recording. Its background-noise-reduction feature delivers clear audio, so operators can immediately understand what the target is saying without further processing — a key tactical advantage.'
+    id: 'smc', cat: 'data', sub: 'SMC', name: 'Social Media Collector',
+    short: 'Media monitoring across 3,000+ outlets with AI analytics.',
+    full: 'Social Media Collector (SMC) monitors mainstream media, both online and print, across more than 3,000 international, national, and local outlets. It uses AI for analysis across timeline, influencers, media, sentiment, and comparison, presented in a monitoring dashboard that helps brand, communications, and PR teams grasp trends quickly.'
   },
   {
-    id: 'kontra-tapp', cat: 'portable', sub: 'Kontra Tapp', name: 'Anti-Tapping Detection',
-    short: 'Detects wiretaps and keeps an area sterile from eavesdropping.',
-    full: 'Kontra Tapp is equipment used to detect the installation of wiretaps within a specific room or area. It keeps a room or area sterile against various forms of eavesdropping.'
+    id: 'sma', cat: 'data', sub: 'SMA', name: 'Social Media Analytic',
+    short: 'Real-time social media analytics and sentiment insights.',
+    full: 'Social Media Analytic (SMA) is a monitoring and analysis solution for social media that performs real-time processing using semantic processing and AI. It analyzes public sentiment and audience perception by region, helping organizations understand conversations and reputation trends across social platforms.'
   },
   {
-    id: 'electronic-jammer', cat: 'portable', sub: 'Electronic Jammer', name: 'Electronic Jammer',
-    short: 'Energy wave that disrupts and damages electronic devices.',
+    id: 'ais', cat: 'data', sub: 'AIS', name: 'Avatar Intelligence Social Media',
+    short: 'Content credibility analytics and misinformation detection.',
+    full: 'Avatar Intelligence Social Media (AIS) is a real-time content analytics solution that helps organizations assess online information quality. It supports detection of misinformation, hate speech, and harmful content, and rates source reliability and information credibility to support content moderation and trust-and-safety workflows.'
+  },
+  {
+    id: 'cma', cat: 'data', sub: 'CMA', name: 'Cyber Army Media Analytic',
+    short: 'Social media campaign and content management platform.',
+    full: 'Cyber Army Media Analytic (CMA) is a campaign and content management platform designed to help organizations plan and run social media programs. It provides multi-account management, scheduling, automated posting, and campaign analytics to help marketing and communications teams manage their presence efficiently.'
+  },
+
+  /* ---------- Connected Systems ---------- */
+  {
+    id: 'emb', cat: 'connected', sub: 'EMB', name: 'Electronic Message Broadcast',
+    short: 'Area-based SMS broadcasting system for mass notifications.',
+    full: 'Electronic Message Broadcast (EMB) is a connected communication system that delivers SMS notifications and announcements to recipients within a defined area. It helps organizations reach people quickly for operational updates, alerts, and public information messaging.'
+  },
+  {
+    id: 'xplorer-s23', cat: 'connected', sub: 'Xplorer S23', name: 'Tactical SMS Broadcasting',
+    short: 'Portable SMS broadcasting across GSM networks without internet.',
+    full: 'Xplorer S23 is a portable SMS broadcasting system capable of sending messages across multiple GSM networks. It requires no internet connection, no number database, and no per-SMS cost, making it efficient for large-scale area notifications. Supporting 2G, 3G, and 4G (GSM, WCDMA, LTE), it offers a rugged, portable design suited to field communications in varied conditions.'
+  },
+  {
+    id: 'xplorer-w23', cat: 'connected', sub: 'Xplorer W23', name: 'Tactical WhatsApp Broadcasting',
+    short: 'AI-powered portable WhatsApp broadcasting to a defined area.',
+    full: 'Xplorer W23 is a portable broadcasting device designed to send WhatsApp messages — text, images, and video — to users within a defined area. Powered by AI and machine learning, it optimizes delivery for reliability. Built for field use, the W23 is portable and shock-resistant, and supports 3G and 4G connectivity.'
+  },
+  {
+    id: 'catcher', cat: 'connected', sub: 'Catcher', name: 'Fake BTS Interceptor',
+    short: 'Mobile network testing and signal analysis device.',
+    full: 'Catcher is a mobile network testing device used to analyze communication between mobile phones and operator networks. It supports network diagnostics and signal analysis to help technical teams evaluate coverage, connectivity, and network behavior in a controlled environment.'
+  },
+  {
+    id: 'df-portable', cat: 'connected', sub: 'DF Portable', name: 'Visual Direction Finding',
+    short: 'Portable signal-location and coverage analysis device.',
+    full: 'DF Portable is a device that locates signal sources within a defined radius using a visual method. It supports network coverage analysis and signal troubleshooting, and can help identify signal positions across different building levels. It comes equipped with a portable field kit.'
+  },
+  {
+    id: 'tactical-tapping', cat: 'connected', sub: 'Tactical Tapping', name: 'Eskan-Rabon 4 Microphone System',
+    short: 'Compact microphone system for clear audio capture and monitoring.',
+    full: 'The Eskan-Rabon 4 Miniature Microphone System is a compact audio-capture solution designed for rapid deployment. Its background-noise-reduction feature delivers clear audio, supporting environmental monitoring, documentation, and audio-quality workflows without additional processing.'
+  },
+  {
+    id: 'electronic-jammer', cat: 'connected', sub: 'Electronic Jammer', name: 'Electronic Jammer',
+    flag: 'review',
+    short: 'Energy-wave device that disrupts and damages electronic equipment.',
     full: 'Electronic Jammer (EJ) is an energy wave that induces electrical faults (short circuits), causing damage to any device that uses electricity. At high frequencies, EJ is estimated to be capable of making electronic devices fail or even explode due to short circuits. Any object that uses electrical power — such as lights, TVs, radios, mobile phones, rice cookers, refrigerators, computers, cars and motorcycles — becomes vulnerable to the EJ wave.'
   },
 
-  /* ---------- Geospatial Data Solutions ---------- */
+  /* ---------- Cybersecurity & Resilience ---------- */
   {
-    id: 'follow-the-dots', cat: 'geofence', sub: 'Follow the Dots', name: 'Movement Analysis',
-    short: 'Movement analysis with alerts on suspicious patterns.',
-    full: 'Follow the Dots analyzes the movement of individuals or groups and can generate alerts for suspicious movement behaviors and positional patterns that are considered to warrant further attention.'
+    id: 'kontra-tapp', cat: 'cyber', sub: 'Kontra Tapp', name: 'Anti-Tapping Detection',
+    short: 'Detects eavesdropping devices to keep spaces secure.',
+    full: 'Kontra Tapp is a security solution used to detect eavesdropping devices installed within a room or area. It helps organizations protect sensitive spaces and safeguard privacy by keeping meeting rooms and offices free from unauthorized listening devices.'
   },
-  {
-    id: 'hawk-deep-eye', cat: 'geofence', sub: 'Hawk Deep Eye', name: 'Deep Profiling',
-    short: 'Deep individual profiling beyond the surface.',
-    full: 'Hawk Deep Eye Profiling builds a comprehensive profile of an individual — from basic personal data, family data, social network and estimated income, to other details that are not visible on the surface.'
-  },
-  {
-    id: 'ai-grouping-record', cat: 'geofence', sub: 'AI Grouping Record', name: 'Group Monitoring',
-    short: 'Monitoring of WhatsApp group conversations.',
-    full: 'AI Grouping Record is a monitoring system operated to surveil online conversations that take place within WhatsApp groups, enabling real-time awareness of group activity.'
-  },
-
-  /* ---------- Data Platforms ---------- */
-  {
-    id: 'gpd', cat: 'cdi', sub: 'GPD', name: 'Geospatial Portal Data',
-    short: 'Maritime surveillance of vessels in Indonesian waters.',
-    full: 'Geospatial Portal Data (GPD) is used to monitor vessel activity and maritime traffic in Indonesian waters. The system can monitor ships via AIS signals and detect anomalies from vessels involved in maritime crime, overlaying data from multiple sources such as weather, ocean currents, satellite imagery and satellite radar imagery.'
-  },
-  {
-    id: 'aipd', cat: 'cdi', sub: 'AIPD', name: 'Artificial Intelligence Portal Data',
-    short: 'AI data portal for search, linking and defense analysis.',
-    full: 'Artificial Intelligence Portal Data (AIPD) is a data portal that enables users to search, explore, link, download and reuse data within a repository, with visualization tools for creating data presentations. Data such as foreign military capabilities and arms acquisitions can be used as a tool for defense strategy analysis.'
-  },
-  {
-    id: 'fdm', cat: 'cdi', sub: 'FDM', name: 'Flight Data Monitoring',
-    short: 'Aircraft detection with passenger and cargo manifests.',
-    full: 'Flight Data Monitoring (FDM) can detect aircraft transiting Indonesian airspace, along with passenger and cargo manifest lists, which can be used when tracing the travel movements of a target.'
-  },
-
-  /* ---------- Data Analytics ---------- */
-  {
-    id: 'smc', cat: 'dmi', sub: 'SMC', name: 'Social Media Collector',
-    short: 'Monitoring 3,000+ media outlets with AI analytics.',
-    full: 'Social Media Collector (SMC) monitors all mainstream media, both online and print, covering more than 3,000 international, national and local outlets. It uses Artificial Intelligence for complete analysis across timeline, influencers, media, sentiment, comparison and detailed investigation of reported subjects, so it can support decision-making on specific issues. SMC features a main monitoring dashboard summarizing most of its analytical features, making it easy for analysts to grasp trends or the latest developments of an issue in a short time.'
-  },
-  {
-    id: 'sma', cat: 'dmi', sub: 'SMA', name: 'Social Media Analytic',
-    short: 'Real-time social media analysis of public perception.',
-    full: 'Social Media Analytic (SMA) is a monitoring and analysis system for social media (Facebook, Twitter, Instagram) that performs real-time processing using semantic processing and artificial intelligence. It analyzes and reads public perception in each region and can be used to analyze issues that pose threats from the perspective of public opinion on social media, thereby supporting national security stability.'
-  },
-  {
-    id: 'ais', cat: 'dmi', sub: 'AIS', name: 'Avatar Intelligence Social Media',
-    short: 'Detects propaganda, hate speech and rates credibility.',
-    full: 'Avatar Intelligence Social Media (AIS) is a real-time system with short timeframes (10\u201320 minutes) capable of monitoring information across media and social media, and recognizing propaganda, hate speech, bias, pornographic and radical content, as well as assessing information distortion. It also assigns credentials to information via a source-reliability rating (scale A\u2013F) and an information-credibility rating (scale 1\u20136). Coverage includes official media, radical media, and dubious outlets, and additional media of intelligence interest can be added.'
-  },
-  {
-    id: 'cma', cat: 'dmi', sub: 'CMA', name: 'Cyber Army Media Analytic',
-    short: 'Automated AI-driven social media campaign operations.',
-    full: 'Cyber Army Media Analytic (CMA) is capable of conducting propaganda aligned with region-specific issues on social media automatically, using accounts based on Artificial Intelligence. It is equipped with tools for account creation, management and monitoring, campaign management, and automated posting by bots, including abuse reporting and voting. It also includes an SMS Blaster and WhatsApp Blaster for direct condition-setting to phone numbers within a specific area.'
-  },
-
-  /* ---------- Cybersecurity Solutions ---------- */
   {
     id: 'mbd', cat: 'cyber', sub: 'MBD', name: 'Malware Blocking Data',
     short: 'Neutralizes file-based threats including APTs and ransomware.',
-    full: 'Malware Blocking Data (MBD) ensures security by treating every file as potentially suspicious — conducting deep scanning, removing hazardous elements from the file, and producing a neutralized (safe) copy. MBD prevents advanced, undetected file-based attacks including Advanced Persistent Threats (APTs), Zero Days and ransomware, while preserving the file\u2019s full usability, visibility and functionality.'
+    full: 'Malware Blocking Data (MBD) strengthens security by treating every file as potentially suspicious — conducting deep scanning, removing hazardous elements, and producing a neutralized, safe copy. MBD helps prevent advanced file-based attacks including Advanced Persistent Threats (APTs), zero-days, and ransomware, while preserving the file\u2019s full usability, visibility, and functionality.'
   },
   {
     id: 'osd', cat: 'cyber', sub: 'OSD', name: 'Open Source Data',
-    short: 'Cyber defense platform for government and military.',
-    full: 'Open Source Data (OSD) is a platform running on virtualized infrastructure (network, server, workstation). It is used to strengthen the security stability and performance of the cyber and IT infrastructure used by government agencies and the military. OSD is also used to prepare cyber soldiers, trained to conduct both defensive operations against attacks and offensive operations in cyberspace.'
+    short: 'Defensive cybersecurity platform for IT infrastructure resilience.',
+    full: 'Open Source Data (OSD) is a platform running on virtualized infrastructure (network, server, workstation) used to strengthen the security, stability, and performance of IT infrastructure. It supports defensive security operations, secure architecture, and resilience, and provides a controlled environment for training technical teams in defensive practices.'
   },
 
-  /* ---------- Immersive Digital Solutions ---------- */
+  /* ---------- Immersive Technology & Training ---------- */
   {
-    id: 'vr-training', cat: 'vr', sub: 'Tactical VR', name: 'VR Training Simulations',
-    short: 'Immersive VR simulations for tactical operations.',
-    full: 'VR Training Simulations for Tactical Operations provide Virtual Reality-based training that enables realistic scenario-based exercises in a safe, controlled environment — improving readiness without the risks and costs of live drills.'
+    id: 'vr-training', cat: 'immersive', sub: 'Tactical VR', name: 'VR Training Simulations',
+    short: 'Immersive VR simulations for professional and technical training.',
+    full: 'VR Training Simulations provide Virtual Reality-based training that enables realistic, scenario-based exercises in a safe, controlled environment. They support professional learning, technical skills development, and equipment familiarization — improving readiness without the risks and costs of live exercises.'
   },
   {
-    id: 'digital-twin', cat: 'vr', sub: 'Digital Twin', name: 'Digital Twin & Virtual Tours',
-    short: 'Digital representations and virtual tours.',
-    full: 'Digital Twin & Virtual Tours deliver digital representations of real objects or locations, together with virtual tours, supporting visualization, planning and in-depth analysis.'
+    id: 'digital-twin', cat: 'immersive', sub: 'Digital Twin', name: 'Digital Twin & Virtual Tours',
+    short: 'Digital representations and virtual tours for visualization and planning.',
+    full: 'Digital Twin & Virtual Tours deliver digital representations of real objects or locations, together with virtual tours, supporting visualization, planning, collaboration, and in-depth analysis.'
   },
 ];

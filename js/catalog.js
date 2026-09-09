@@ -36,20 +36,28 @@
       section.appendChild(el(
         '<div class="catcat__head">' +
           '<span class="tag">' + esc(c.name) + '</span>' +
-          '<p class="catcat__tag">' + esc(c.tagline) + '</p>' +
         '</div>'
       ));
       if (c.img) {
+        // If the banner image is missing (e.g. not yet generated), hide the <img>
+        // so it falls back to the styled banner box instead of a broken-image icon.
         section.appendChild(el(
-          '<div class="prod-banner"><img src="' + c.img + '" alt="' + esc(c.name) + '" loading="lazy" />' +
+          '<div class="prod-banner"><img src="' + c.img + '" alt="' + esc(c.name) + '" loading="lazy" onerror="this.style.display=\'none\'" />' +
           '<span class="prod-banner__tag">' + esc(c.name) + '</span></div>'
         ));
       }
+      section.appendChild(el(
+        '<p class="catcat__tag' + (c.img ? ' catcat__tag--below' : '') + '">' + esc(c.tagline) + '</p>'
+      ));
       var grid = el('<div class="cards pgrid"></div>');
       PRODUCTS.filter(function (p) { return p.cat === c.id; }).forEach(function (p) {
         var hay = (p.name + ' ' + p.sub + ' ' + c.name).toLowerCase();
+        var reviewBadge = p.flag === 'review'
+          ? '<span class="review-badge" title="Positioning under internal review">Under Review</span>'
+          : '';
         grid.appendChild(el(
-          '<a class="pcard" href="product.html?id=' + p.id + '" data-hay="' + esc(hay) + '" data-cat="' + p.cat + '">' +
+          '<a class="pcard' + (p.flag === 'review' ? ' pcard--review' : '') + '" href="product.html?id=' + p.id + '" data-hay="' + esc(hay) + '" data-cat="' + p.cat + '">' +
+            reviewBadge +
             '<span class="pcard__sub">' + esc(p.sub) + '</span>' +
             '<h3 class="pcard__name">' + esc(p.name) + '</h3>' +
             '<p class="pcard__short">' + esc(p.short) + '</p>' +
@@ -133,11 +141,18 @@
       ? '<div class="detail__media"><img src="' + cat.img + '" alt="' + esc(cat.name) + '" /><span class="prod-banner__tag">' + esc(cat.name) + '</span></div>'
       : '<div class="detail__media detail__media--plain"><span>' + esc(p.sub) + '</span></div>';
 
+    var reviewNotice = p.flag === 'review'
+      ? '<div class="review-notice" role="note">' +
+          '<strong>⚠ Under Review</strong> This product\u2019s positioning and wording are still under internal review and have not yet been aligned to Valortek\u2019s enterprise positioning.' +
+        '</div>'
+      : '';
+
     detail.appendChild(el(
       '<section class="section"><div class="container"><div class="detail">' +
         '<div class="detail__main">' +
           '<span class="tag">' + esc(cat.name) + '</span>' +
           '<h2>' + esc(p.name) + '</h2>' +
+          reviewNotice +
           '<p class="detail__full">' + esc(p.full) + '</p>' +
           '<div class="detail__actions">' +
             '<a href="contact.html" class="btn btn--primary">Request Information <i class="ico-arrow"></i></a>' +

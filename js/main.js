@@ -41,7 +41,7 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Valortek" class="footer__logo" />
-          <p>PT. Valortek Ratanika Utama — Providing Innovative Information Technology and Digital Solutions, proudly supporting Indonesia since 1995.</p>
+          <p>PT. Valortek Ratanika Utama — Technology solutions across software, data, connected systems, infrastructure, cybersecurity, immersive technology, and system integration.</p>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
@@ -52,12 +52,11 @@
         </div>
         <div class="footer__col">
           <h4>Products</h4>
-          <a href="products.html#portable">Portable Technology Solutions</a>
-          <a href="products.html#geofence">Geospatial Data Solutions</a>
-          <a href="products.html#cdi">Data Platforms</a>
-          <a href="products.html#dmi">Data Analytics</a>
-          <a href="products.html#cyber">Cybersecurity Solutions</a>
-          <a href="products.html#vr">Immersive Digital Solutions</a>
+          <a href="products.html#cat-software">Software &amp; Digital Platforms</a>
+          <a href="products.html#cat-data">Data &amp; Analytics</a>
+          <a href="products.html#cat-connected">Connected Systems</a>
+          <a href="products.html#cat-cyber">Cybersecurity &amp; Resilience</a>
+          <a href="products.html#cat-immersive">Immersive Technology &amp; Training</a>
         </div>
         <div class="footer__col">
           <h4>Get in Touch</h4>
@@ -135,7 +134,6 @@
       (c, i) =>
         `<li class="megamenu__cat${i === 0 ? ' is-active' : ''}" data-cat="${c.id}">
            <span class="megamenu__cat-name">${c.name}</span>
-           <span class="megamenu__cat-tagline">${c.tagline}</span>
          </li>`
     ).join('');
 
@@ -241,7 +239,7 @@
       e.preventDefault();
       const note = document.getElementById('formNote');
       if (note) {
-        note.textContent = 'Terima kasih — pesan Anda telah kami terima. Tim kami akan menghubungi Anda dalam 1 hari kerja.';
+        note.textContent = 'Thank you — we have received your message. Our team will get back to you within one business day.';
         note.classList.add('show');
       }
       form.reset();

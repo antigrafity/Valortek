@@ -1,3 +1,5 @@
 .DS_Store
 *.log
 node_modules/
+# Internal source doc — not tracked
+Valortek_Simple_New_Website_Wording.docx
