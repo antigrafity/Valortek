@@ -18,16 +18,18 @@
         </a>
         <nav class="nav__menu" id="navMenu" aria-label="Primary">
           <a href="index.html"    class="nav__link" data-nav="home">Home</a>
-          <a href="about.html"    class="nav__link" data-nav="about">About</a>
           <div class="nav__dropdown" id="navProductsDropdown">
-            <a href="products.html" class="nav__link nav__link--caret" data-nav="products">Products</a>
+            <a href="solutions.html" class="nav__link nav__link--caret" data-nav="solutions">Solutions</a>
             <div class="megamenu" id="megaMenu">
               <ul class="megamenu__cats" id="megaCats"></ul>
               <div class="megamenu__products" id="megaProducts"></div>
             </div>
           </div>
-          <a href="services.html" class="nav__link" data-nav="services">Services</a>
-          <a href="contact.html"  class="nav__cta">Contact Us</a>
+          <a href="services.html"  class="nav__link" data-nav="services">Services</a>
+          <a href="industries.html" class="nav__link" data-nav="industries">Industries</a>
+          <a href="technology-ecosystem.html" class="nav__link" data-nav="ecosystem">Technology Ecosystem</a>
+          <a href="about.html"     class="nav__link" data-nav="about">About</a>
+          <a href="contact.html"   class="nav__cta">Contact Us</a>
         </nav>
         <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -41,23 +43,24 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Valortek" class="footer__logo" />
-          <p>PT. Valortek Ratanika Utama — Technology solutions across software, data, connected systems, infrastructure, cybersecurity, immersive technology, and system integration.</p>
+          <p>PT. Valortek Ratanika Utama — Cybersecurity Solutions &amp; Services. We help organizations build, secure, monitor, operate, and improve the security and resilience of their digital infrastructure.</p>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
           <a href="about.html">About Us</a>
           <a href="about.html#vision-mission">Vision &amp; Mission</a>
-          <a href="services.html">Services</a>
+          <a href="industries.html">Industries</a>
+          <a href="technology-ecosystem.html">Technology Ecosystem</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer__col">
-          <h4>Products</h4>
-          <a href="products.html#cat-software">Software &amp; Digital Platforms</a>
-          <a href="products.html#cat-data">Data &amp; Analytics</a>
-          <a href="products.html#cat-connected">Connected Systems</a>
-          <a href="products.html#cat-infra">Infrastructure &amp; Integration</a>
-          <a href="products.html#cat-cyber">Cybersecurity &amp; Resilience</a>
-          <a href="products.html#cat-immersive">Immersive Technology &amp; Training</a>
+          <h4>Solutions &amp; Services</h4>
+          <a href="solutions.html#cat-advisory">Advisory &amp; Consulting</a>
+          <a href="solutions.html#cat-solutions">Solutions &amp; Integration</a>
+          <a href="solutions.html#cat-operations">Security Operations</a>
+          <a href="solutions.html#cat-infrastructure">Secure IT Infrastructure</a>
+          <a href="solutions.html#cat-resilience">Cyber Resilience &amp; Recovery</a>
+          <a href="services.html">Implementation &amp; Lifecycle</a>
         </div>
         <div class="footer__col">
           <h4>Get in Touch</h4>
@@ -120,7 +123,7 @@
       megaProducts.innerHTML = items
         .map(
           (p) =>
-            `<a href="product.html?id=${p.id}" class="megamenu__product">
+            `<a href="solution.html?id=${p.id}" class="megamenu__product">
                <span class="megamenu__product-sub">${p.sub}</span>
                <span class="megamenu__product-name">${p.name}</span>
              </a>`
@@ -144,7 +147,7 @@
         renderProductsFor(li.dataset.cat);
       });
       li.addEventListener('click', () => {
-        window.location.href = `products.html#cat-${li.dataset.cat}`;
+        window.location.href = `solutions.html#cat-${li.dataset.cat}`;
       });
     });
 

@@ -1,421 +1,389 @@
 /* =========================================================
-   Valortek — product catalog data (single source of truth)
-   Used by products.html (listing/search) and product.html (detail)
-   Positioning: enterprise / commercial / civilian technology.
-   Wording follows the approved "SUGGESTIONS" spec (Sept 2026).
+   Valortek — Cybersecurity Solutions & Services portfolio
+   Single source of truth for solutions.html (listing) and
+   solution.html (detail), plus the Solutions mega menu.
+
+   Positioning: Cybersecurity Solutions & Services provider.
+   Products/technology from principals are positioned as
+   technology components/enablers — the value is in the
+   end-to-end solutions and services built around them.
+   Wording follows the approved concept document.
    ========================================================= */
 window.VALORTEK_CATEGORIES = [
-  { id: 'software', name: 'Software & Digital Platforms', tagline: 'Applications, platforms, workflow tools, dashboards, and digital services designed around real organizational needs.', img: 'assets/img/cat-software.jpg' },
-  { id: 'data',      name: 'Data & Analytics',            tagline: 'AI-powered data analytics across digital channels, providing trend analysis, performance insights, reporting, and visualization.', img: 'assets/img/cat-data.jpg' },
-  { id: 'connected', name: 'Connected Systems',           tagline: 'Connected devices, electronic systems, sensors, and integrated technologies for reliable information flow and equipment visibility.', img: 'assets/img/cat-connected.jpg' },
-  { id: 'infra',     name: 'Infrastructure & Integration', tagline: 'Integrated data platforms and access, providing comprehensive information, analysis, and AI-powered insights to support informed decision making.', img: 'assets/img/cat-infra.jpg' },
-  { id: 'cyber',     name: 'Cybersecurity & Resilience',   tagline: 'Solutions designed to strengthen digital resilience through risk identification, data protection, secure infrastructure, and cybersecurity management.', img: 'assets/img/cat-cyber.jpg' },
-  { id: 'immersive', name: 'Immersive Technology & Training', tagline: 'Virtual Reality (VR), Digital Twin, and Virtual Tour technologies supporting training, visualization, collaboration, and interactive experiences.', img: 'assets/img/cat-immersive.jpg' },
+  {
+    id: 'advisory',
+    name: 'Cybersecurity Advisory & Consulting',
+    tagline: 'The entry point to understand an organization\u2019s condition, risks, needs, and targets \u2014 turning insight into a clear security strategy and roadmap.',
+    img: 'assets/img/cat-cyber.jpg'
+  },
+  {
+    id: 'solutions',
+    name: 'Cybersecurity Solutions & Integration',
+    tagline: 'Designing and integrating security systems that fit each customer\u2019s architecture \u2014 from network and endpoint to identity, data, and Zero Trust.',
+    img: 'assets/img/cat-infra.jpg'
+  },
+  {
+    id: 'operations',
+    name: 'Security Operations Services',
+    tagline: 'Continuous monitoring, detection, analysis, response, and reporting through SOC, managed SIEM, and managed security services.',
+    img: 'assets/img/cat-data.jpg'
+  },
+  {
+    id: 'infrastructure',
+    name: 'Secure IT Infrastructure',
+    tagline: 'Building secure, resilient, and manageable IT foundations across network, data center, compute, storage, virtualization, and cloud.',
+    img: 'assets/img/cat-connected.jpg'
+  },
+  {
+    id: 'resilience',
+    name: 'Cyber Resilience & Recovery',
+    tagline: 'Helping organizations maintain operational continuity and recover services quickly when disruptions or incidents occur.',
+    img: 'assets/img/cat-immersive.jpg'
+  },
+  {
+    id: 'lifecycle',
+    name: 'Implementation & Lifecycle Services',
+    tagline: 'Supporting customers across the full lifecycle of implementing and operating solutions \u2014 from deployment and integration to maintenance and optimization.',
+    img: 'assets/img/cat-software.jpg'
+  },
 ];
 
 window.VALORTEK_PRODUCTS = [
-  /* ---------- Software & Digital Platforms ---------- */
+  /* ---------- A. Cybersecurity Advisory & Consulting ---------- */
   {
-    id: 'hawk-deep-eye', cat: 'software', sub: 'Hawk Deep Eye', name: 'Comprehensive Data Analysis',
-    tagline: 'Connecting diverse information for a more comprehensive view of data.',
-    short: 'Consolidates available information into a structured, comprehensive view.',
-    full: 'Hawk Deep Eye is a data analysis solution that consolidates available information into a structured format. It can organize relevant personal, demographic, social, and financial information to provide a more comprehensive view of available data and support research, analysis, and decision making.',
+    id: 'it-cyber-assessment', cat: 'advisory', sub: 'Assessment', name: 'IT & Cybersecurity Assessment',
+    tagline: 'Understand your current security posture, risks, and priorities.',
+    short: 'Structured assessment of IT and cybersecurity condition, gaps, and priorities.',
+    full: 'IT & Cybersecurity Assessment is the entry point to understanding an organization\u2019s condition, risks, needs, and targets. We evaluate the current state of IT and security controls, identify gaps against good practice, and prioritize actions so that every subsequent design and implementation decision is grounded in a clear picture of risk and readiness.',
     capabilities: [
-      'Multi-source information consolidation',
-      'Structured data organization',
-      'Personal, demographic, social, and financial data analysis'
+      'Security maturity assessment',
+      'IT infrastructure assessment',
+      'Vulnerability assessment',
+      'Gap analysis against security good practice'
     ],
     useCases: [
-      'Research and information analysis',
-      'Data-driven decision making',
-      'Comprehensive data review'
+      'Baseline of current security posture',
+      'Prioritizing security investments',
+      'Preparation for audit and compliance'
     ]
   },
   {
-    id: 'dmc', cat: 'software', sub: 'DMC', name: 'Digital Media Campaign',
-    tagline: 'Structured digital campaign planning, coordination, and performance analysis.',
-    short: 'Digital campaign platform for planning, scheduling, and performance analysis.',
-    full: 'Digital Media Campaign (DMC) is a campaign and content management platform that helps organizations plan, organize, and analyze digital media programs. It supports content scheduling and distribution across multiple channels, enabling users to coordinate content and evaluate campaign performance in a structured environment for public communication, digital outreach, information campaigns, and general communication planning.',
+    id: 'audit-compliance', cat: 'advisory', sub: 'Compliance', name: 'Security Audit & Compliance Support',
+    tagline: 'Align security controls with standards and regulatory expectations.',
+    short: 'Audit readiness and compliance support against relevant standards.',
+    full: 'Security Audit & Compliance Support helps organizations align their security controls with applicable standards and regulatory expectations. We review controls, document evidence, and support audit readiness so security governance is demonstrable and defensible.',
     capabilities: [
-      'Digital campaign planning and organization',
-      'Content scheduling and distribution',
-      'Campaign performance assessment',
-      'Multi-channel content coordination'
+      'Security audit support',
+      'Compliance readiness review',
+      'Controls documentation and evidence',
+      'Remediation guidance'
     ],
     useCases: [
-      'Public communication campaigns',
-      'Digital outreach and engagement',
-      'Information campaigns',
-      'Communication planning and performance analysis'
-    ]
-  },
-
-  /* ---------- Data & Analytics ---------- */
-  {
-    id: 'follow-the-dots', cat: 'data', sub: 'Follow the Dots', name: 'Movement Pattern Analysis',
-    tagline: 'Visualizing mobility patterns for better planning and informed decision making.',
-    short: 'Identifies and visualizes movement patterns of individuals or groups.',
-    full: 'Follow the Dots is a movement analysis solution designed to identify and visualize movement patterns of individuals or groups. It can analyze positional data and highlight patterns that may require further review, supporting situational awareness, mobility analysis, and operational / logistics planning.',
-    capabilities: [
-      'Movement pattern visualization',
-      'Positional data analysis',
-      'Pattern identification and analysis',
-      'Visual presentation of mobility trends'
-    ],
-    useCases: [
-      'Mobility and transportation analysis',
-      'Logistics and route planning',
-      'Spatial planning and decision support'
+      'Regulatory compliance preparation',
+      'Internal and external audit support',
+      'Security governance improvement'
     ]
   },
   {
-    id: 'ai-grouping-record', cat: 'data', sub: 'AI Grouping Record', name: 'Group Activity Analysis',
-    tagline: 'Structured insights into online group activity and communication patterns.',
-    short: 'Organizes and analyzes activity within online groups.',
-    full: 'AI Grouping Record is a communication activity analysis solution designed to organize and analyze activity within online groups. It provides structured information on group activity and communication patterns, supporting research, reporting, and general information analysis.',
+    id: 'strategy-roadmap', cat: 'advisory', sub: 'Strategy', name: 'Cybersecurity Strategy & Roadmap',
+    tagline: 'A clear, prioritized path to improve security maturity over time.',
+    short: 'Security strategy, governance, and architecture direction with a phased roadmap.',
+    full: 'Cybersecurity Strategy & Roadmap translates assessment findings into a prioritized, phased plan. We define security governance and risk management approaches, shape target security architecture and design, and set a roadmap that aligns security investment with business and operational objectives.',
     capabilities: [
-      'Online group activity analysis',
-      'Communication pattern analysis',
-      'Structured information organization'
+      'Cybersecurity strategy and roadmap',
+      'Security governance and risk management',
+      'Security architecture and design'
     ],
     useCases: [
-      'Communication research',
-      'Group activity analysis',
-      'Reporting and information analysis'
-    ]
-  },
-  {
-    id: 'fdm', cat: 'data', sub: 'FDM', name: 'Flight Data Monitoring',
-    tagline: 'Comprehensive aviation data for informed analysis and planning.',
-    short: 'Organizes aircraft, passenger, and cargo information for aviation analysis.',
-    full: 'Flight Data Monitoring (FDM) is a data platform designed to provide information on aircraft operating within Indonesian airspace. It can organize flight information together with relevant passenger and cargo documentation, supporting aviation data analysis, travel pattern assessment, and operational planning.',
-    capabilities: [
-      'Aircraft and flight information organization',
-      'Passenger and cargo documentation management',
-      'Aviation data analysis',
-      'Travel pattern assessment'
-    ],
-    useCases: [
-      'Aviation data analysis',
-      'Travel and mobility planning',
-      'Operational planning and reporting'
-    ]
-  },
-  {
-    id: 'mia', cat: 'data', sub: 'MIA', name: 'Media Insight & Analysis',
-    tagline: 'AI-powered media insights for understanding trends, coverage, and public information.',
-    short: 'Media analytics across 3,000+ online and print sources with AI analysis.',
-    full: 'Media Insight & Analysis is a media analytics platform that collects information from online and print media across more than 3,000 international, national, and local sources. It uses AI to analyze timelines, influential sources, media coverage, sentiment, comparisons, and reported subjects. Its centralized dashboard provides an overview of key analytical findings, helping users identify trends and developments efficiently and support media research, public information analysis, communication planning, and data-driven decision making.',
-    capabilities: [
-      'Multi-source media data collection and analysis',
-      'AI-powered sentiment and trend analysis',
-      'Media coverage comparison and visualization',
-      'Centralized analytical dashboard'
-    ],
-    useCases: [
-      'Media and market research',
-      'Public information analysis',
-      'Communication planning',
-      'Trend and media coverage analysis'
-    ]
-  },
-  {
-    id: 'sma', cat: 'data', sub: 'SMA', name: 'Social Media Insight & Analysis',
-    tagline: 'AI-powered social media insights for understanding public discussions and emerging trends.',
-    short: 'Real-time social media analytics across public platforms.',
-    full: 'Social Media Insight & Analysis (SMA) is a social media analytics platform designed to process information from public social media sources, including Facebook, Twitter, and Instagram. Using semantic processing and AI, it analyzes public discussions, sentiment, and emerging issues across different regions, supporting social research, public opinion analysis, communication planning, trend assessment, and data-driven decision making.',
-    capabilities: [
-      'Public social media data analysis',
-      'Semantic and AI-powered analysis',
-      'Sentiment and discussion analysis',
-      'Regional trend and issue assessment'
-    ],
-    useCases: [
-      'Social and public opinion research',
-      'Communication planning',
-      'Trend and issue analysis',
-      'Public information analysis'
-    ]
-  },
-  {
-    id: 'ais', cat: 'data', sub: 'AIS', name: 'Media & Social Information Analysis',
-    tagline: 'AI-powered insights for evaluating information quality, trends, and credibility.',
-    short: 'Real-time analysis of information quality, patterns, and credibility.',
-    full: 'Media & Social Information Analysis is a real-time information analysis platform designed to observe and analyze information from media and social media sources within short processing timeframes. It can identify and classify content patterns such as misinformation, hate speech, bias, and other potentially sensitive content, while assessing information quality and potential distortion. The system also provides source reliability and information credibility ratings, helping users evaluate information from a wide range of media sources and support media research, information verification, public information assessment, and informed decision making.',
-    capabilities: [
-      'Real-time media and social information analysis',
-      'Content pattern identification and classification',
-      'Information quality and credibility assessment',
-      'Source reliability and information credibility ratings'
-    ],
-    useCases: [
-      'Media research and analysis',
-      'Information verification',
-      'Public information assessment',
-      'Trend and content analysis'
+      'Multi-year security planning',
+      'Security governance and risk programs',
+      'Target architecture definition'
     ]
   },
 
-  /* ---------- Connected Systems ---------- */
+  /* ---------- B. Cybersecurity Solutions & Integration ---------- */
   {
-    id: 'emb', cat: 'connected', sub: 'EMB', name: 'Electronic Message Broadcast',
-    tagline: 'Location-based mobile messaging for public information and service notifications.',
-    short: 'Location-based SMS messaging over compatible cellular infrastructure.',
-    full: 'Electronic Message Broadcast (EMB) is a communication solution designed to support location-based mobile messaging through compatible cellular communication infrastructure. It can identify active mobile connections within a designated coverage area and support the distribution of SMS messages for public information, service notifications, and other general communication purposes.',
+    id: 'network-security', cat: 'solutions', sub: 'Network', name: 'Network Security Solutions',
+    tagline: 'Protect the network perimeter and internal segments.',
+    short: 'Network security controls integrated into the customer architecture.',
+    full: 'Network Security Solutions build and integrate the controls that protect network traffic, perimeters, and internal segments according to the customer\u2019s architecture. We design, deploy, and integrate the technology so security is consistent and manageable across the environment.',
     capabilities: [
-      'Location-based mobile messaging',
-      'Active mobile connection identification within a coverage area',
-      'SMS distribution for public information and notifications'
+      'Perimeter and internal network security',
+      'Secure segmentation',
+      'Security platform integration'
     ],
     useCases: [
-      'Public information and service notifications',
-      'Localized communication within designated areas'
+      'Network security modernization',
+      'Segmentation and traffic control',
+      'Consolidation of security tooling'
     ]
   },
   {
-    id: 'brahma', cat: 'connected', sub: 'BRAHMA', name: 'Broadcast WhatsApp Massive',
-    tagline: 'Location-based messaging over WhatsApp and Telegram for general communication.',
-    short: 'Location-based messaging via WhatsApp and Telegram.',
-    full: 'BRAHMA (Broadcast WhatsApp Massive) is a communication solution designed to support location-based messaging through WhatsApp and Telegram. It can identify active mobile connections within a designated coverage area and facilitate the distribution of messages for public information, service notifications, and other general communication purposes.',
+    id: 'endpoint-security', cat: 'solutions', sub: 'Endpoint', name: 'Endpoint Security Solutions',
+    tagline: 'Secure the devices where users and data meet.',
+    short: 'Endpoint protection integrated with monitoring and response.',
+    full: 'Endpoint Security Solutions protect the devices where users, applications, and data interact. We deploy and integrate endpoint protection so it works together with monitoring and response capabilities for consistent visibility and control.',
     capabilities: [
-      'Location-based messaging via WhatsApp and Telegram',
-      'Active mobile connection identification within a coverage area',
-      'Message distribution for public information and notifications'
+      'Endpoint protection deployment',
+      'Integration with detection and response',
+      'Policy and configuration management'
     ],
     useCases: [
-      'Public information and service notifications',
-      'Localized communication within designated areas'
+      'Endpoint protection rollout',
+      'Threat detection at the endpoint',
+      'Standardized device security'
     ]
   },
   {
-    id: 'xplorer-s23', cat: 'connected', sub: 'Xplorer S23', name: 'SMS Broadcasting System',
-    tagline: 'Reliable large-scale mobile communication without internet dependency.',
-    short: 'High-performance SMS broadcasting across 2G/3G/4G GSM networks.',
-    full: 'Xplorer S23 is a high-performance SMS broadcasting system designed for large-scale mobile communication across multiple GSM networks. It operates independently of an internet connection and does not require a pre-existing recipient database or per-message SMS charges. Supporting 2G, 3G, and 4G technologies (GSM, WCDMA, LTE), the system provides coverage of up to 300 meters and supports up to 1,500 SMS messages per hour. It includes configurable sender identification options (numeric and alphanumeric) and laptop-based control. Its portable and rugged design allows flexible deployment for public information, service communication, event notifications, and other general-purpose applications.',
+    id: 'identity-access', cat: 'solutions', sub: 'Identity', name: 'Identity & Access Security',
+    tagline: 'Ensure the right people have the right access.',
+    short: 'Identity and access controls to govern authentication and authorization.',
+    full: 'Identity & Access Security establishes controls that govern who can access what, under which conditions. We design and integrate identity and access management so authentication and authorization are strong, auditable, and aligned with least-privilege principles.',
     capabilities: [
-      'Multi-network SMS communication across 2G, 3G, and 4G',
-      'Up to 1,500 SMS messages per hour',
-      'Up to 300-meter coverage',
-      'Numeric and alphanumeric sender identification',
-      'Laptop-based control and portable deployment'
+      'Identity and access management integration',
+      'Authentication and authorization controls',
+      'Least-privilege access design'
     ],
     useCases: [
-      'Public information and service notifications',
-      'Event communication',
-      'Localized communication within designated areas'
+      'Access governance',
+      'Strengthening authentication',
+      'Privileged access control'
     ]
   },
   {
-    id: 'xplorer-w23', cat: 'connected', sub: 'Xplorer W23', name: 'WhatsApp Broadcasting Device',
-    tagline: 'Flexible mobile communication for localized information and engagement.',
-    short: 'Portable WhatsApp broadcasting device with AI-assisted delivery.',
-    full: 'Xplorer W23 is a portable communication device designed to distribute WhatsApp messages, including text, images, and video, to users within a designated area. It operates independently without requiring a pre-existing recipient database or direct connection to a mobile network operator. The system uses AI and Machine Learning technologies to identify active WhatsApp connections and optimize message delivery. Supporting 3G and 4G networks, the device provides coverage of up to 300 meters and supports up to 2,000 messages per hour. Its portable and shock-resistant design makes it suitable for public information, service notifications, event communication, and other general-purpose applications.',
+    id: 'data-security', cat: 'solutions', sub: 'Data', name: 'Data Security & Protection',
+    tagline: 'Protect sensitive data across its lifecycle.',
+    short: 'Data protection controls integrated across the environment.',
+    full: 'Data Security & Protection focuses on safeguarding sensitive information across its lifecycle. We design and integrate controls that protect data at rest, in transit, and in use so information stays confidential and intact.',
     capabilities: [
-      'WhatsApp message distribution for text, images, and video',
-      'AI and Machine Learning assisted communication',
-      '3G and 4G network support',
-      'Up to 300-meter coverage',
-      'Up to 2,000 messages per hour'
+      'Data protection controls',
+      'Encryption and access controls',
+      'Integration across systems'
     ],
     useCases: [
-      'Public information and service notifications',
-      'Event communication',
-      'Localized communication within designated areas'
+      'Sensitive data protection',
+      'Data loss prevention',
+      'Regulatory data safeguards'
     ]
   },
   {
-    id: 'catcher', cat: 'connected', sub: 'Cellular Communication Interface', name: 'Cellular Communication Interface',
-    tagline: 'Specialized technology for controlled cellular communication environments.',
-    short: 'Interfaces with cellular network environments in passive and active modes.',
-    full: 'The Cellular Communication Interface is a specialized communication system designed to facilitate interaction between mobile devices and cellular network environments. It supports passive and active operating modes, enabling the system to monitor communication activity and exchange defined signaling responses within a controlled communication environment.',
+    id: 'zero-trust', cat: 'solutions', sub: 'Zero Trust', name: 'Zero Trust Security Architecture',
+    tagline: 'Never trust, always verify \u2014 by design.',
+    short: 'Zero Trust architecture and security operations system integration.',
+    full: 'Zero Trust Security Architecture applies a \u201cnever trust, always verify\u201d model across the environment. We design the architecture, integrate the security operations system, and connect security platforms so verification and least privilege are enforced consistently.',
     capabilities: [
-      'Interaction with cellular network environments',
-      'Passive and active operating modes',
-      'Communication activity analysis',
-      'Defined signaling response exchange'
+      'Zero Trust architecture design',
+      'Security operations system integration',
+      'Security platform integration',
+      'Cybersecurity system integration'
     ],
     useCases: [
-      'Signal and connectivity assessment'
-    ]
-  },
-  {
-    id: 'df-portable', cat: 'connected', sub: 'Portable Signal Location System', name: 'Portable Signal Location System',
-    tagline: 'Portable technology for visual signal location and spatial awareness.',
-    short: 'Portable system that locates mobile communication signals visually.',
-    full: 'Portable Signal Location System is a portable signal location system designed to identify and determine the approximate location of mobile communication signals within a designated area. Its visual interface provides directional and location information without relying solely on conventional audio-based signal detection. The system can assist in identifying signal sources associated with specific locations or elevated areas and can be deployed using a dedicated transport vehicle.',
-    capabilities: [
-      'Approximate location identification of mobile communication signals',
-      'Visual directional and location information',
-      'Analysis of signals associated with specific or elevated locations',
-      'Portable deployment with dedicated transport support'
-    ],
-    useCases: [
-      'Signal location assessment'
-    ]
-  },
-  {
-    id: 'tactical-tapping', cat: 'connected', sub: 'RABON 4', name: 'Eskan-Rabon 4 Audio Recording System',
-    tagline: 'Compact audio recording for clear and reliable documentation.',
-    short: 'Compact, rapid-deployment audio recording with noise reduction.',
-    full: 'The Eskan-Rabon 4 Miniature Audio Recording System is designed for rapid deployment in situations requiring audio recording and documentation. Its compact design and background-noise-reduction capability provide clear audio recording in various environments, supporting documentation, inspection, assessment, and other general-purpose audio applications.',
-    capabilities: [
-      'Compact and portable audio recording',
-      'Background noise reduction',
-      'Rapid deployment',
-      'Clear audio documentation in various environments'
-    ],
-    useCases: [
-      'Documentation and record keeping',
-      'Inspection and assessment activities',
-      'General-purpose audio recording'
-    ]
-  },
-  {
-    id: 'electronic-jammer', cat: 'connected', sub: 'Electromagnetic Environment Control Equipment', name: 'Electromagnetic Environment Control Equipment',
-    tagline: 'Controlled electromagnetic technology for testing and technical evaluation.',
-    short: 'Manages electromagnetic conditions for controlled testing and evaluation.',
-    full: 'Electromagnetic Environment Control Equipment is a specialized device designed to manage electromagnetic conditions within a designated area. It can temporarily affect the normal operation of electronic and electrical devices through controlled electromagnetic energy, making it suitable for controlled testing, technical evaluation, and electromagnetic environment management.',
-    capabilities: [
-      'Controlled electromagnetic environment management',
-      'Temporary interaction with electronic and electrical devices',
-      'Technical testing and evaluation',
-      'Designated-area deployment'
-    ],
-    useCases: [
-      'Electromagnetic environment testing',
-      'Technical evaluation of electronic equipment',
-      'Controlled laboratory and facility testing'
+      'Zero Trust adoption',
+      'Consolidating security platforms',
+      'End-to-end security integration'
     ]
   },
 
-  /* ---------- Infrastructure & Integration ---------- */
+  /* ---------- C. Security Operations Services ---------- */
   {
-    id: 'gpd', cat: 'infra', sub: 'GPD', name: 'Geospatial Data Portal',
-    tagline: 'Integrated maritime data for clearer geographic insights and informed decision making.',
-    short: 'Centralized platform for vessel activity and maritime traffic data.',
-    full: 'Geospatial Data Portal (GPD) is a centralized platform designed to monitor vessel activity and maritime traffic in Indonesian waters. The system can process AIS data and identify unusual vessel activity, while integrating multiple data sources such as weather conditions, ocean currents, satellite imagery, and satellite radar imagery to support maritime situational awareness and analysis.',
+    id: 'soc', cat: 'operations', sub: 'SOC', name: 'Security Operations Center (SOC)',
+    tagline: 'Continuous monitoring, detection, and response.',
+    short: 'SOC services providing monitoring, detection, analysis, and reporting.',
+    full: 'The Security Operations Center (SOC) provides continuous monitoring, detection, analysis, response, and reporting. Whether operated as managed security operations or supporting your own team, the SOC gives ongoing visibility into threats and the ability to respond quickly.',
     capabilities: [
-      'AIS-based maritime data processing',
-      'Multi-source geospatial data integration',
-      'Vessel activity and maritime traffic analysis',
-      'Weather and ocean condition data integration',
-      'Satellite imagery and radar imagery visualization'
+      'Security monitoring',
+      'Managed security operations',
+      'Threat detection and monitoring',
+      'Security analytics'
     ],
     useCases: [
-      'Maritime traffic analysis',
-      'Maritime and coastal planning',
-      'Environmental and oceanographic assessment',
-      'Geographic data analysis and decision support'
+      'Continuous security monitoring',
+      'Managed detection and response',
+      'Centralized security reporting'
     ]
   },
   {
-    id: 'aipd', cat: 'infra', sub: 'AIPD', name: 'AI Data Portal',
-    tagline: 'Integrated data access and AI-powered insights for informed decision making.',
-    short: 'Centralized repository to search, link, and reuse information.',
-    full: 'AI Data Portal (AIPD) is a data platform that enables users to search, explore, link, download, and reuse information within a centralized repository. It provides visualization tools for creating data presentations and supports the analysis of structured information from multiple sources for research, planning, and data-driven decision making.',
+    id: 'managed-siem', cat: 'operations', sub: 'SIEM', name: 'Managed SIEM',
+    tagline: 'Centralized security analytics, fully managed.',
+    short: 'Managed SIEM for log collection, correlation, and threat analytics.',
+    full: 'Managed SIEM centralizes security event collection, correlation, and analytics as a managed service. We operate the platform, tune detections, and turn raw telemetry into actionable insight so security signals are not lost in the noise.',
     capabilities: [
-      'Centralized data search and access',
-      'Multi-source information integration',
-      'Data visualization and presentation',
-      'Structured data analysis'
+      'Log collection and correlation',
+      'Security analytics and detection tuning',
+      'Managed operation and reporting'
     ],
     useCases: [
-      'Research and data analysis',
-      'Planning and reporting',
-      'Data-driven decision making'
-    ]
-  },
-
-  /* ---------- Cybersecurity & Resilience ---------- */
-  {
-    id: 'kontra-tapp', cat: 'cyber', sub: 'Electronic Security Inspection Device', name: 'Electronic Security Inspection Device',
-    tagline: 'Technical inspection for a more secure electronic environment.',
-    short: 'Detects potential unauthorized electronic monitoring equipment.',
-    full: 'Electronic Security Inspection Device is a technical security detection device designed to identify potential unauthorized electronic monitoring or signal transmission equipment within a designated room or area. It supports general security inspection and technical assessment of indoor environments.',
-    capabilities: [
-      'Detection of potential unauthorized electronic equipment',
-      'Identification of signal transmission sources',
-      'Indoor environment inspection',
-      'Technical security assessment'
-    ],
-    useCases: [
-      'Facility security inspections',
-      'Indoor environment assessments',
-      'Technical security assessments'
+      'Centralized threat detection',
+      'Compliance-driven logging',
+      'Security analytics without in-house overhead'
     ]
   },
   {
-    id: 'mbd', cat: 'cyber', sub: 'MBD', name: 'Malware Blocking Data',
-    tagline: 'Secure file analysis and protection for safer digital operations.',
-    short: 'Deep file inspection that neutralizes threats while preserving usability.',
-    full: 'Malware Blocking Data (MBD) is a file security solution designed to protect users from potentially harmful files through deep inspection and security analysis. The system identifies and removes potentially hazardous elements before producing a neutralized copy while maintaining the usability, visibility, and functionality of the original file. MBD helps protect against advanced file-based threats, including previously unidentified malware and ransomware, supporting secure file exchange and everyday digital operations.',
+    id: 'incident-response', cat: 'operations', sub: 'Response', name: 'Incident Response',
+    tagline: 'Contain, investigate, and recover from incidents.',
+    short: 'Incident response to contain and remediate security events.',
+    full: 'Incident Response provides the capability to contain, investigate, and remediate security incidents. Combined with managed security services, it ensures that when something happens, there is a defined and practiced path back to normal operations.',
     capabilities: [
-      'Deep file inspection and security analysis',
-      'Identification and removal of potentially harmful elements',
-      'Neutralized file generation',
-      'Preservation of file usability and functionality'
+      'Incident containment and investigation',
+      'Managed security services',
+      'Post-incident reporting and improvement'
     ],
     useCases: [
-      'Secure file exchange',
-      'Enterprise document handling',
-      'Protection of everyday digital operations',
-      'File security assessment'
-    ]
-  },
-  {
-    id: 'osd', cat: 'cyber', sub: 'OSD', name: 'Open Source Data',
-    tagline: 'Integrated cybersecurity environments for assessment, research, and professional training.',
-    short: 'Virtualized cybersecurity platform for assessment, research, and training.',
-    full: 'Open Source Data (OSD) is a cybersecurity platform deployed across virtualized network, server, and workstation environments to support the security, stability, and performance of IT infrastructure. It provides a controlled environment for cybersecurity assessment, security research, and professional training, helping organizations develop practical capabilities for identifying, preventing, and responding to cyber threats.',
-    capabilities: [
-      'Virtualized cybersecurity environment',
-      'Security assessment and research',
-      'Practical cybersecurity training',
-      'Network, server, and workstation environment support'
-    ],
-    useCases: [
-      'Cybersecurity assessment',
-      'Security research and testing',
-      'Professional cybersecurity training',
-      'IT infrastructure security development'
+      'Responding to active incidents',
+      'Reducing incident impact',
+      'Strengthening response readiness'
     ]
   },
 
-  /* ---------- Immersive Technology & Training ---------- */
+  /* ---------- D. Secure IT Infrastructure ---------- */
   {
-    id: 'vr-training', cat: 'immersive', sub: 'VR Training Simulations', name: 'VR Training Simulations',
-    tagline: 'Immersive virtual training for practical skills and scenario-based learning.',
-    short: 'VR-based, scenario-driven training in a safe, controlled environment.',
-    full: 'VR Training Simulations provide Virtual Reality-based training through realistic, scenario-based exercises in a safe and controlled environment. The solution enables users to practice procedures, evaluate different scenarios, and develop practical skills without the risks and costs associated with live exercises.',
+    id: 'secure-network-infra', cat: 'infrastructure', sub: 'Network', name: 'Secure Network Infrastructure',
+    tagline: 'A secure, resilient network foundation.',
+    short: 'Secure and manageable network infrastructure design and deployment.',
+    full: 'Secure Network Infrastructure builds the foundation for a secure, resilient, and manageable network. We design and deploy the underlying infrastructure with security and monitoring built in from the start.',
     capabilities: [
-      'Scenario-based VR training',
-      'Virtual practice environment',
-      'Procedure and scenario evaluation',
-      'Practical skills development'
+      'Secure network infrastructure design',
+      'Infrastructure monitoring',
+      'Resilient, manageable architecture'
     ],
     useCases: [
-      'Professional training and development',
-      'Procedure practice and evaluation',
-      'Scenario-based learning',
-      'Skills assessment and preparation'
+      'Network foundation modernization',
+      'Secure connectivity',
+      'Manageable, monitored networks'
     ]
   },
   {
-    id: 'digital-twin', cat: 'immersive', sub: 'Digital Twin', name: 'Digital Twin & Virtual Tours',
-    tagline: 'Immersive digital experiences for visualization, planning, and virtual collaboration.',
-    short: 'Digital representations and immersive virtual tours of real-world places.',
-    full: 'Digital Twin & Virtual Tours provide digital representations of real-world objects, facilities, and locations together with immersive virtual tours. The solution supports visualization, planning, virtual inspection, training, and in-depth analysis for a wide range of professional and general-purpose applications.',
+    id: 'secure-datacenter', cat: 'infrastructure', sub: 'Data Center', name: 'Secure Data Center Infrastructure',
+    tagline: 'Compute, storage, and virtualization built to be secure.',
+    short: 'Secure data center, compute, storage, and virtualization foundations.',
+    full: 'Secure Data Center Infrastructure delivers the compute, storage, and virtualization foundations that host critical workloads. We build these environments to be secure, resilient, and manageable, with monitoring across the stack.',
     capabilities: [
-      'Digital representation of objects, facilities, and locations',
-      'Immersive virtual tours',
-      'Virtual inspection and visualization',
-      'Interactive planning and analysis'
+      'Server and compute infrastructure',
+      'Storage infrastructure',
+      'Virtualization',
+      'Infrastructure monitoring'
     ],
     useCases: [
-      'Facility and site visualization',
-      'Virtual inspection and assessment',
-      'Training and professional development',
-      'Planning and presentation'
+      'Secure data center build',
+      'Workload consolidation',
+      'Virtualized environment security'
+    ]
+  },
+  {
+    id: 'cloud-hybrid', cat: 'infrastructure', sub: 'Cloud', name: 'Cloud / Hybrid Infrastructure',
+    tagline: 'Secure operations across cloud and on-premise.',
+    short: 'Secure cloud and hybrid infrastructure with backup and disaster recovery.',
+    full: 'Cloud / Hybrid Infrastructure extends secure operations across cloud and on-premise environments. We design and integrate cloud and hybrid foundations, including backup and disaster recovery, so services stay available and protected.',
+    capabilities: [
+      'Cloud and hybrid infrastructure',
+      'Backup and disaster recovery',
+      'Infrastructure monitoring'
+    ],
+    useCases: [
+      'Cloud adoption and migration',
+      'Hybrid environment security',
+      'Backup and recovery readiness'
+    ]
+  },
+
+  /* ---------- E. Cyber Resilience & Recovery ---------- */
+  {
+    id: 'resilience-assessment', cat: 'resilience', sub: 'Resilience', name: 'Cyber Resilience Assessment',
+    tagline: 'Measure your ability to withstand and recover.',
+    short: 'Assessment of resilience posture and continuity readiness.',
+    full: 'Cyber Resilience Assessment evaluates how well an organization can maintain operations and recover services during disruptions or incidents. We review resilience architecture and continuity readiness to identify where recovery can be strengthened.',
+    capabilities: [
+      'Cyber resilience assessment',
+      'Resilience architecture review',
+      'Business continuity support'
+    ],
+    useCases: [
+      'Resilience posture review',
+      'Continuity planning',
+      'Recovery readiness improvement'
+    ]
+  },
+  {
+    id: 'disaster-cyber-recovery', cat: 'resilience', sub: 'Recovery', name: 'Disaster & Cyber Recovery',
+    tagline: 'Restore services quickly after disruption.',
+    short: 'Disaster recovery and cyber recovery capabilities and testing.',
+    full: 'Disaster & Cyber Recovery establishes the capability to restore services after disruption or a cyber incident. We help plan, build, and test recovery so that when the unexpected happens, the path back to operations is proven.',
+    capabilities: [
+      'Disaster recovery',
+      'Cyber recovery',
+      'Recovery planning and testing'
+    ],
+    useCases: [
+      'Recovery capability build-out',
+      'Recovery testing and validation',
+      'Minimizing downtime after incidents'
+    ]
+  },
+  {
+    id: 'incident-recovery', cat: 'resilience', sub: 'Continuity', name: 'Incident Response & Recovery',
+    tagline: 'Keep operating through disruption.',
+    short: 'Combined incident response and recovery to sustain operations.',
+    full: 'Incident Response & Recovery combines rapid response with structured recovery so organizations can keep operating through disruption. We align response actions with continuity and recovery plans to protect ongoing operations.',
+    capabilities: [
+      'Incident response and recovery',
+      'Business continuity support',
+      'Resilience architecture'
+    ],
+    useCases: [
+      'Operational continuity during incidents',
+      'Coordinated response and recovery',
+      'Resilience-by-design'
+    ]
+  },
+
+  /* ---------- F. Implementation & Lifecycle Services ---------- */
+  {
+    id: 'implementation-deployment', cat: 'lifecycle', sub: 'Implementation', name: 'Solution Implementation & Deployment',
+    tagline: 'From design to a running, integrated solution.',
+    short: 'Implementation, deployment, integration, and configuration services.',
+    full: 'Solution Implementation & Deployment delivers designed solutions into running systems. We handle deployment, system integration, configuration, security hardening, and migration so solutions go live cleanly and securely.',
+    capabilities: [
+      'Solution implementation and system deployment',
+      'System integration and configuration',
+      'Security hardening',
+      'Migration'
+    ],
+    useCases: [
+      'New solution rollout',
+      'Secure system deployment',
+      'Migration and integration projects'
+    ]
+  },
+  {
+    id: 'testing-training', cat: 'lifecycle', sub: 'Enablement', name: 'Testing, Validation & Training',
+    tagline: 'Verify it works \u2014 and enable your team to run it.',
+    short: 'Testing, validation, training, and knowledge transfer.',
+    full: 'Testing, Validation & Training ensures solutions perform as intended and that your team can operate them confidently. We validate deployments and provide training and knowledge transfer for administrators, technical teams, and end users.',
+    capabilities: [
+      'Testing and validation',
+      'Training and knowledge transfer',
+      'Operational readiness'
+    ],
+    useCases: [
+      'Go-live validation',
+      'Team enablement',
+      'Sustainable operations'
+    ]
+  },
+  {
+    id: 'maintenance-optimization', cat: 'lifecycle', sub: 'Support', name: 'Maintenance & Optimization',
+    tagline: 'Keep systems running, secure, and improving.',
+    short: 'Technical support, maintenance, upgrade, and optimization.',
+    full: 'Maintenance & Optimization keeps solutions dependable over time. We provide technical support, preventive and corrective maintenance, and ongoing upgrade and optimization to sustain performance, security, and continuous improvement.',
+    capabilities: [
+      'Technical support',
+      'Preventive and corrective maintenance',
+      'Upgrade and optimization'
+    ],
+    useCases: [
+      'Ongoing support and SLAs',
+      'Performance and security tuning',
+      'Continuous improvement of security maturity'
     ]
   },
 ];

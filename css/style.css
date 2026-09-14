@@ -486,9 +486,11 @@ section{ position:relative; }
 .page-hero h1{ font-size:clamp(2.3rem,5.4vw,4rem); font-weight:800; max-width:18ch; }
 .page-hero p{ color:rgba(255,255,255,.75); font-size:clamp(1.05rem,1.6vw,1.25rem); max-width:60ch; margin-top:1.3rem; text-align:justify; }
 /* Per-page hero background images */
-body[data-page="about"]    { --hero-bg:url('../assets/img/hero-about.jpg'); }
-body[data-page="products"] { --hero-bg:url('../assets/img/hero-products.jpg'); }
-body[data-page="services"] { --hero-bg:url('../assets/img/hero-services.jpg'); }
+body[data-page="about"]      { --hero-bg:url('../assets/img/hero-about.jpg'); }
+body[data-page="solutions"]  { --hero-bg:url('../assets/img/hero-products.jpg'); }
+body[data-page="services"]   { --hero-bg:url('../assets/img/hero-services.jpg'); }
+body[data-page="industries"] { --hero-bg:url('../assets/img/hero-services.jpg'); }
+body[data-page="ecosystem"]  { --hero-bg:url('../assets/img/hero-products.jpg'); }
 .page-hero__eyebrow{
   display:inline-block; color:var(--copper-soft); font-weight:600; letter-spacing:.16em;
   text-transform:uppercase; font-size:.78rem; margin-bottom:1.1rem;

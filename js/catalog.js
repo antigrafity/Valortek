@@ -1,7 +1,7 @@
 /* =========================================================
    Valortek — catalog renderer
-   - products.html : grouped listing + search + category filter
-   - product.html  : single product detail (via ?id=)
+   - solutions.html : grouped listing + search + category filter
+   - solution.html  : single solution detail (via ?id=)
    ========================================================= */
 (function () {
   'use strict';
@@ -25,7 +25,7 @@
     var emptyMsg = document.getElementById('catalogEmpty');
 
     // category dropdown
-    var optData = [{ id: 'all', name: 'All Products' }].concat(CATS);
+    var optData = [{ id: 'all', name: 'All Solutions & Services' }].concat(CATS);
     optData.forEach(function (c) {
       categorySelect.appendChild(el('<option value="' + c.id + '">' + esc(c.name) + '</option>'));
     });
@@ -53,7 +53,7 @@
       PRODUCTS.filter(function (p) { return p.cat === c.id; }).forEach(function (p) {
         var hay = (p.name + ' ' + p.sub + ' ' + c.name).toLowerCase();
         grid.appendChild(el(
-          '<a class="pcard" href="product.html?id=' + p.id + '" data-hay="' + esc(hay) + '" data-cat="' + p.cat + '">' +
+          '<a class="pcard" href="solution.html?id=' + p.id + '" data-hay="' + esc(hay) + '" data-cat="' + p.cat + '">' +
             '<span class="pcard__sub">' + esc(p.sub) + '</span>' +
             '<h3 class="pcard__name">' + esc(p.name) + '</h3>' +
             '<p class="pcard__short">' + esc(p.short) + '</p>' +
@@ -110,23 +110,23 @@
       detail.innerHTML =
         '<section class="page-hero"><div class="page-hero__grid"></div><div class="page-hero__glow"></div>' +
         '<div class="page-hero__inner"><nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>' +
-        '<a href="products.html">Products</a><span>/</span>Not found</nav>' +
-        '<h1>Product not found</h1><p>The product you are looking for is unavailable.</p>' +
-        '<a href="products.html" class="btn btn--primary" style="margin-top:1.4rem">Back to Products <i class="ico-arrow"></i></a>' +
+        '<a href="solutions.html">Solutions</a><span>/</span>Not found</nav>' +
+        '<h1>Solution not found</h1><p>The solution you are looking for is unavailable.</p>' +
+        '<a href="solutions.html" class="btn btn--primary" style="margin-top:1.4rem">Back to Solutions <i class="ico-arrow"></i></a>' +
         '</div></section>';
-      document.title = 'Product not found | Valortek';
+      document.title = 'Solution not found | Valortek';
       return;
     }
 
-    document.title = p.name + ' (' + p.sub + ') | Valortek';
+    document.title = p.name + ' | Valortek Cybersecurity Solutions & Services';
 
     // hero
     detail.appendChild(el(
       '<section class="page-hero"><div class="page-hero__grid" aria-hidden="true"></div>' +
       '<div class="page-hero__glow" aria-hidden="true"></div><div class="page-hero__inner">' +
       '<nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>' +
-      '<a href="products.html">Products</a><span>/</span>' +
-      '<a href="products.html#cat-' + cat.id + '">' + esc(cat.name) + '</a><span>/</span>' + esc(p.sub) + '</nav>' +
+      '<a href="solutions.html">Solutions</a><span>/</span>' +
+      '<a href="solutions.html#cat-' + cat.id + '">' + esc(cat.name) + '</a><span>/</span>' + esc(p.sub) + '</nav>' +
       '<span class="page-hero__eyebrow">' + esc(cat.name) + '</span>' +
       '<h1>' + esc(p.name) + '</h1>' +
       '<p class="detail__code">' + esc(p.sub) + '</p></div></section>'
@@ -150,7 +150,7 @@
           '<p class="detail__full">' + esc(p.full) + '</p>' +
           '<div class="detail__actions">' +
             '<a href="contact.html" class="btn btn--primary">Request Information <i class="ico-arrow"></i></a>' +
-            '<a href="products.html" class="btn btn--ghost btn--dark">Back to Products</a>' +
+            '<a href="solutions.html" class="btn btn--ghost btn--dark">Back to Solutions</a>' +
           '</div>' +
         '</div>' +
         media +
@@ -182,7 +182,7 @@
       var relGrid = '';
       related.forEach(function (r) {
         relGrid +=
-          '<a class="pcard" href="product.html?id=' + r.id + '">' +
+          '<a class="pcard" href="solution.html?id=' + r.id + '">' +
             '<span class="pcard__sub">' + esc(r.sub) + '</span>' +
             '<h3 class="pcard__name">' + esc(r.name) + '</h3>' +
             '<p class="pcard__short">' + esc(r.short) + '</p>' +
@@ -192,7 +192,7 @@
       detail.appendChild(el(
         '<section class="section section--alt"><div class="container">' +
         '<div class="section__head"><span class="tag">More in ' + esc(cat.name) + '</span>' +
-        '<h2 class="section__title">Related products</h2></div>' +
+        '<h2 class="section__title">Related Solutions &amp; Services</h2></div>' +
         '<div class="cards pgrid">' + relGrid + '</div></div></section>'
       ));
     }

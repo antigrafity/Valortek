@@ -4,3 +4,7 @@ node_modules/
 # Internal source doc — not tracked
 Valortek_Simple_New_Website_Wording.docx
 Web Valortek - September 2026 (1).xlsx
+# Word/Office temporary lock files
+~$*
+# Internal concept document — not tracked
+Konsep_Company_A_Cybersecurity_Solutions_Services.docx
