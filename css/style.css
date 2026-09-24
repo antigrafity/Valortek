@@ -155,15 +155,6 @@ section{ position:relative; }
 @media (max-width:900px){
   .nav__dropdown{ position:static; }
   .megamenu{ display:none; }
-  .nav__menu{
-    position:fixed; inset:0 0 0 auto; width:min(320px,82vw); flex-direction:column;
-    justify-content:center; gap:1.6rem; background:var(--ink); padding:2rem;
-    transform:translateX(100%); transition:transform .4s var(--ease); box-shadow:-20px 0 60px -20px rgba(0,0,0,.6);
-  }
-  .nav__menu.open{ transform:translateX(0); }
-  .nav__link,.nav.scrolled .nav__link{ color:#fff; font-size:1.1rem; }
-  .nav__cta,.nav.scrolled .nav__cta{ color:#fff; border-color:rgba(255,255,255,.4); }
-  .nav__burger{ display:flex; z-index:10; }
 }
 
 .nav__cta{
@@ -189,6 +180,21 @@ section{ position:relative; }
 
 .nav__burger{ display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer; padding:6px; }
 .nav__burger span{ width:26px; height:2px; background:#fff; border-radius:2px; transition:.3s var(--ease); }
+
+/* ---------- Mobile / tablet navigation (must come AFTER the base nav rules) ---------- */
+@media (max-width:900px){
+  .nav__menu{
+    position:fixed; inset:0 0 0 auto; width:min(320px,82vw); flex-direction:column;
+    justify-content:center; gap:1.6rem; background:var(--ink); padding:2rem;
+    transform:translateX(100%); transition:transform .4s var(--ease);
+    box-shadow:-20px 0 60px -20px rgba(0,0,0,.6); z-index:5;
+  }
+  .nav__menu.open{ transform:translateX(0); }
+  .nav__link,.nav.scrolled .nav__link{ color:#fff; font-size:1.1rem; }
+  .nav__cta,.nav.scrolled .nav__cta{ color:#fff; border-color:rgba(255,255,255,.4); }
+  .nav__burger{ display:flex; z-index:10; }
+  .nav.scrolled .nav__burger span{ background:var(--text); }
+}
 
 /* ---------- Hero ---------- */
 .hero{
