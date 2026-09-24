@@ -1,389 +1,283 @@
 /* =========================================================
-   Valortek — Cybersecurity Solutions & Services portfolio
-   Single source of truth for solutions.html (listing) and
-   solution.html (detail), plus the Solutions mega menu.
+   Valortek — capability catalog (single source of truth)
+   Positioning: System Integrator & Enterprise Technology
+   Solutions Partner.
 
-   Positioning: Cybersecurity Solutions & Services provider.
-   Products/technology from principals are positioned as
-   technology components/enablers — the value is in the
-   end-to-end solutions and services built around them.
-   Wording follows the approved concept document.
+   Content source: PT. Valortek Ratanika Utama — Corporate
+   Website Content (Section 4: Solutions & Services).
+
+   Used by:
+   - solutions.html : grouped listing (short capability cards)
+   - solution.html  : full capability detail (via ?id=)
+   - shared mega menu (js/main.js)
+
+   Fields consumed by catalog.js:
+   sub, name, tagline, short, full,
+   capabilities  -> Key Capabilities
+   challenges    -> Business Challenges Addressed
+   value         -> Customer Value
+   useCases      -> Example Applications / Use Cases
+   integration   -> Integration Perspective
+   cta           -> CTA button label
    ========================================================= */
 window.VALORTEK_CATEGORIES = [
   {
-    id: 'advisory',
-    name: 'Cybersecurity Advisory & Consulting',
-    tagline: 'The entry point to understand an organization\u2019s condition, risks, needs, and targets \u2014 turning insight into a clear security strategy and roadmap.',
-    img: 'assets/img/cat-cyber.jpg'
-  },
-  {
-    id: 'solutions',
-    name: 'Cybersecurity Solutions & Integration',
-    tagline: 'Designing and integrating security systems that fit each customer\u2019s architecture \u2014 from network and endpoint to identity, data, and Zero Trust.',
-    img: 'assets/img/cat-infra.jpg'
-  },
-  {
-    id: 'operations',
-    name: 'Security Operations Services',
-    tagline: 'Continuous monitoring, detection, analysis, response, and reporting through SOC, managed SIEM, and managed security services.',
-    img: 'assets/img/cat-data.jpg'
-  },
-  {
-    id: 'infrastructure',
-    name: 'Secure IT Infrastructure',
-    tagline: 'Building secure, resilient, and manageable IT foundations across network, data center, compute, storage, virtualization, and cloud.',
-    img: 'assets/img/cat-connected.jpg'
-  },
-  {
-    id: 'resilience',
-    name: 'Cyber Resilience & Recovery',
-    tagline: 'Helping organizations maintain operational continuity and recover services quickly when disruptions or incidents occur.',
-    img: 'assets/img/cat-immersive.jpg'
-  },
-  {
-    id: 'lifecycle',
-    name: 'Implementation & Lifecycle Services',
-    tagline: 'Supporting customers across the full lifecycle of implementing and operating solutions \u2014 from deployment and integration to maintenance and optimization.',
+    id: 'capabilities',
+    name: 'Integrated Technology Capabilities',
+    tagline: 'Seven core capabilities designed to address specific enterprise needs while remaining part of a broader system integration model. An engagement may focus on one capability or combine several into a connected solution.',
     img: 'assets/img/cat-software.jpg'
   },
 ];
 
 window.VALORTEK_PRODUCTS = [
-  /* ---------- A. Cybersecurity Advisory & Consulting ---------- */
+  /* ---------- 4.1 Data ---------- */
   {
-    id: 'it-cyber-assessment', cat: 'advisory', sub: 'Assessment', name: 'IT & Cybersecurity Assessment',
-    tagline: 'Understand your current security posture, risks, and priorities.',
-    short: 'Structured assessment of IT and cybersecurity condition, gaps, and priorities.',
-    full: 'IT & Cybersecurity Assessment is the entry point to understanding an organization\u2019s condition, risks, needs, and targets. We evaluate the current state of IT and security controls, identify gaps against good practice, and prioritize actions so that every subsequent design and implementation decision is grounded in a clear picture of risk and readiness.',
+    id: 'data', cat: 'capabilities', sub: 'Data Foundation', name: 'Data Foundation', img: 'assets/img/cap-data.jpg',
+    icon: '<svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>',
+    tagline: 'Turn enterprise data into a connected, accessible, and usable foundation for operations and decision-making.',
+    short: 'Connect, organize, manage, and improve access to enterprise data so information can support operations, applications, analytics, and decision-making.',
+    full: 'Organizations generate and depend on growing volumes of information, but value is limited when data is fragmented, inconsistent, difficult to access, or disconnected from the systems and teams that need it. Valortek helps organizations structure, integrate, manage, and enable data so it can support operational processes, analytics, digital services, and informed decision-making.',
     capabilities: [
-      'Security maturity assessment',
-      'IT infrastructure assessment',
-      'Vulnerability assessment',
-      'Gap analysis against security good practice'
+      'Data Integration — connect information from relevant systems and sources so it can be used across the wider technology environment.',
+      'Data Management — support more structured approaches to organizing, maintaining, governing, and using enterprise data.',
+      'Data Platforms — help design and integrate environments that bring together data for access, processing, sharing, and downstream use.',
+      'Data Accessibility — improve how authorized users, applications, and analytical functions access the information they require.',
+      'Data Quality — support processes and controls that improve consistency, completeness, reliability, and usability of important data.',
+      'Data Enablement — prepare data to support analytics, digital workflows, geospatial use cases, visualization, and other enterprise capabilities.'
     ],
-    useCases: [
-      'Baseline of current security posture',
-      'Prioritizing security investments',
-      'Preparation for audit and compliance'
-    ]
-  },
-  {
-    id: 'audit-compliance', cat: 'advisory', sub: 'Compliance', name: 'Security Audit & Compliance Support',
-    tagline: 'Align security controls with standards and regulatory expectations.',
-    short: 'Audit readiness and compliance support against relevant standards.',
-    full: 'Security Audit & Compliance Support helps organizations align their security controls with applicable standards and regulatory expectations. We review controls, document evidence, and support audit readiness so security governance is demonstrable and defensible.',
-    capabilities: [
-      'Security audit support',
-      'Compliance readiness review',
-      'Controls documentation and evidence',
-      'Remediation guidance'
+    challenges: [
+      'Information spread across disconnected systems or business units.',
+      'Difficulty obtaining a consistent view of important operational or business data.',
+      'Manual data movement and repetitive reconciliation between systems.',
+      'Limited confidence in data quality or consistency.',
+      'Slow access to information needed for reporting, analysis, or decisions.',
+      'New digital or analytical initiatives constrained by fragmented data foundations.'
     ],
+    value: 'A more connected data environment can improve information access, reduce fragmentation, support more consistent decision-making, and create a stronger foundation for analytics and digital initiatives. The objective is not simply to store more data, but to make relevant data easier to trust, connect, use, and govern within the organization.',
     useCases: [
-      'Regulatory compliance preparation',
-      'Internal and external audit support',
-      'Security governance improvement'
-    ]
-  },
-  {
-    id: 'strategy-roadmap', cat: 'advisory', sub: 'Strategy', name: 'Cybersecurity Strategy & Roadmap',
-    tagline: 'A clear, prioritized path to improve security maturity over time.',
-    short: 'Security strategy, governance, and architecture direction with a phased roadmap.',
-    full: 'Cybersecurity Strategy & Roadmap translates assessment findings into a prioritized, phased plan. We define security governance and risk management approaches, shape target security architecture and design, and set a roadmap that aligns security investment with business and operational objectives.',
-    capabilities: [
-      'Cybersecurity strategy and roadmap',
-      'Security governance and risk management',
-      'Security architecture and design'
+      'Integrating data from multiple enterprise systems into a more unified information environment.',
+      'Improving access to operational and management information across authorized teams.',
+      'Preparing and connecting data for dashboards, analytics, reporting, or planning.',
+      'Combining enterprise data with geospatial information for location-aware insight.',
+      'Supporting digital workflow modernization with more consistent information flows.',
+      'Improving data quality and usability for downstream applications and decision-support needs.'
     ],
-    useCases: [
-      'Multi-year security planning',
-      'Security governance and risk programs',
-      'Target architecture definition'
-    ]
+    integration: 'Data solutions often become more valuable when connected to analytics, digital workflows, geospatial information, visualization, and security requirements. Valortek considers how the data environment will support the broader technology ecosystem rather than treating data as an isolated repository.',
+    cta: 'Discuss Your Data Requirements'
   },
 
-  /* ---------- B. Cybersecurity Solutions & Integration ---------- */
+  /* ---------- 4.2 Geospatial ---------- */
   {
-    id: 'network-security', cat: 'solutions', sub: 'Network', name: 'Network Security Solutions',
-    tagline: 'Protect the network perimeter and internal segments.',
-    short: 'Network security controls integrated into the customer architecture.',
-    full: 'Network Security Solutions build and integrate the controls that protect network traffic, perimeters, and internal segments according to the customer\u2019s architecture. We design, deploy, and integrate the technology so security is consistent and manageable across the environment.',
+    id: 'geospatial', cat: 'capabilities', sub: 'Geospatial Intelligence', name: 'Geospatial Intelligence', img: 'assets/img/cap-geospatial.jpg',
+    icon: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
+    tagline: 'Add location intelligence to the way your organization understands assets, operations, environments, and relationships.',
+    short: 'Use location-based information, mapping, spatial analysis, and geospatial visualization to understand assets, environments, operations, and relationships in place and space.',
+    full: 'Many business and operational questions have a spatial dimension: where assets are located, how locations relate to one another, where activity is concentrated, how service areas are structured, or how physical environments affect operations. Valortek helps organizations use geospatial data, mapping, spatial information, and location intelligence as part of broader enterprise solutions.',
     capabilities: [
-      'Perimeter and internal network security',
-      'Secure segmentation',
-      'Security platform integration'
+      'Geospatial Data — organize and integrate location-based information relevant to assets, facilities, service areas, operations, or planning.',
+      'Mapping — present spatial information in map-based interfaces that make geographic relationships easier to understand.',
+      'Spatial Information Integration — connect geospatial information with enterprise, operational, and analytical data.',
+      'Location Intelligence — use spatial context to enrich analysis, planning, monitoring, and decision-making.',
+      'Geospatial Visualization — create clear visual representations of location-based information for operational and management use.',
+      'Enterprise Integration — connect geospatial capabilities with data platforms, analytics, digital workflows, and visualization environments.'
     ],
-    useCases: [
-      'Network security modernization',
-      'Segmentation and traffic control',
-      'Consolidation of security tooling'
-    ]
-  },
-  {
-    id: 'endpoint-security', cat: 'solutions', sub: 'Endpoint', name: 'Endpoint Security Solutions',
-    tagline: 'Secure the devices where users and data meet.',
-    short: 'Endpoint protection integrated with monitoring and response.',
-    full: 'Endpoint Security Solutions protect the devices where users, applications, and data interact. We deploy and integrate endpoint protection so it works together with monitoring and response capabilities for consistent visibility and control.',
-    capabilities: [
-      'Endpoint protection deployment',
-      'Integration with detection and response',
-      'Policy and configuration management'
+    challenges: [
+      'Limited visibility into the location and spatial relationships of assets or activities.',
+      'Geographic information maintained separately from enterprise systems and business data.',
+      'Difficulty understanding patterns that are clearer when viewed spatially.',
+      'Planning and operational decisions made without sufficient location context.',
+      'Complex geographic information that is difficult for non-specialist users to interpret.'
     ],
+    value: 'By bringing spatial context into the enterprise information environment, organizations can gain a clearer view of where assets, activities, customers, facilities, resources, or service areas are located and how they relate. This can improve planning, operational visibility, resource coordination, and decision-making.',
     useCases: [
-      'Endpoint protection rollout',
-      'Threat detection at the endpoint',
-      'Standardized device security'
-    ]
-  },
-  {
-    id: 'identity-access', cat: 'solutions', sub: 'Identity', name: 'Identity & Access Security',
-    tagline: 'Ensure the right people have the right access.',
-    short: 'Identity and access controls to govern authentication and authorization.',
-    full: 'Identity & Access Security establishes controls that govern who can access what, under which conditions. We design and integrate identity and access management so authentication and authorization are strong, auditable, and aligned with least-privilege principles.',
-    capabilities: [
-      'Identity and access management integration',
-      'Authentication and authorization controls',
-      'Least-privilege access design'
+      'Asset and facility mapping connected with enterprise records.',
+      'Location-based operational dashboards and management views.',
+      'Spatial analysis to identify patterns, relationships, or areas requiring attention.',
+      'Integration of location information with business and analytical data.',
+      'Geospatial visualization for infrastructure, service coverage, logistics, or planning contexts.',
+      'Interactive maps that support users in exploring complex information geographically.'
     ],
-    useCases: [
-      'Access governance',
-      'Strengthening authentication',
-      'Privileged access control'
-    ]
-  },
-  {
-    id: 'data-security', cat: 'solutions', sub: 'Data', name: 'Data Security & Protection',
-    tagline: 'Protect sensitive data across its lifecycle.',
-    short: 'Data protection controls integrated across the environment.',
-    full: 'Data Security & Protection focuses on safeguarding sensitive information across its lifecycle. We design and integrate controls that protect data at rest, in transit, and in use so information stays confidential and intact.',
-    capabilities: [
-      'Data protection controls',
-      'Encryption and access controls',
-      'Integration across systems'
-    ],
-    useCases: [
-      'Sensitive data protection',
-      'Data loss prevention',
-      'Regulatory data safeguards'
-    ]
-  },
-  {
-    id: 'zero-trust', cat: 'solutions', sub: 'Zero Trust', name: 'Zero Trust Security Architecture',
-    tagline: 'Never trust, always verify \u2014 by design.',
-    short: 'Zero Trust architecture and security operations system integration.',
-    full: 'Zero Trust Security Architecture applies a \u201cnever trust, always verify\u201d model across the environment. We design the architecture, integrate the security operations system, and connect security platforms so verification and least privilege are enforced consistently.',
-    capabilities: [
-      'Zero Trust architecture design',
-      'Security operations system integration',
-      'Security platform integration',
-      'Cybersecurity system integration'
-    ],
-    useCases: [
-      'Zero Trust adoption',
-      'Consolidating security platforms',
-      'End-to-end security integration'
-    ]
+    integration: 'Geospatial capabilities can be integrated with enterprise data, analytics, digital workflows, visualization, and security controls to create a more complete view of assets, operations, locations, and relationships.',
+    cta: 'Discuss Your Geospatial Requirements'
   },
 
-  /* ---------- C. Security Operations Services ---------- */
+  /* ---------- 4.3 Analytics ---------- */
   {
-    id: 'soc', cat: 'operations', sub: 'SOC', name: 'Security Operations Center (SOC)',
-    tagline: 'Continuous monitoring, detection, and response.',
-    short: 'SOC services providing monitoring, detection, analysis, and reporting.',
-    full: 'The Security Operations Center (SOC) provides continuous monitoring, detection, analysis, response, and reporting. Whether operated as managed security operations or supporting your own team, the SOC gives ongoing visibility into threats and the ability to respond quickly.',
+    id: 'analytics', cat: 'capabilities', sub: 'Analytics & Insight', name: 'Analytics & Insight', img: 'assets/img/cap-analytics.jpg',
+    icon: '<svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg>',
+    tagline: 'Transform connected data into insight that supports better visibility, planning, and decisions.',
+    short: 'Turn data into useful insight through business intelligence, performance visibility, trend analysis, monitoring, and decision-support capabilities.',
+    full: 'Data creates value when people can interpret it and use it. Valortek helps organizations build analytics capabilities that turn enterprise information into clearer insight for decision-making, performance monitoring, operational visibility, business intelligence, trend identification, planning, and continuous improvement.',
     capabilities: [
-      'Security monitoring',
-      'Managed security operations',
-      'Threat detection and monitoring',
-      'Security analytics'
+      'Business Intelligence — organize and present relevant information to support management and operational decisions.',
+      'Performance Monitoring — track indicators and operational measures that help teams understand current performance.',
+      'Operational Visibility — bring together information from multiple sources to provide a clearer view of activities and conditions.',
+      'Trend Identification — analyze historical and current information to identify patterns, changes, and areas requiring attention.',
+      'Decision Support — structure information and analytical views so decision-makers can evaluate options with stronger context.',
+      'Planning & Improvement — use evidence and analytical insight to support planning, prioritization, and organizational improvement.'
     ],
-    useCases: [
-      'Continuous security monitoring',
-      'Managed detection and response',
-      'Centralized security reporting'
-    ]
-  },
-  {
-    id: 'managed-siem', cat: 'operations', sub: 'SIEM', name: 'Managed SIEM',
-    tagline: 'Centralized security analytics, fully managed.',
-    short: 'Managed SIEM for log collection, correlation, and threat analytics.',
-    full: 'Managed SIEM centralizes security event collection, correlation, and analytics as a managed service. We operate the platform, tune detections, and turn raw telemetry into actionable insight so security signals are not lost in the noise.',
-    capabilities: [
-      'Log collection and correlation',
-      'Security analytics and detection tuning',
-      'Managed operation and reporting'
+    challenges: [
+      'Large volumes of data without clear, decision-ready insight.',
+      'Manual or slow reporting processes.',
+      'Limited visibility across functions, locations, or operational activities.',
+      'Difficulty identifying trends, exceptions, or performance gaps.',
+      'Decision-making based on fragmented or inconsistent information.',
+      'Analytics initiatives disconnected from operational systems and workflows.'
     ],
+    value: 'Effective analytics can help decision-makers see what is happening, understand why it matters, identify patterns, and act with stronger information. The value comes from connecting the analytical layer with reliable data, appropriate context, clear visualization, and the processes in which decisions are made.',
     useCases: [
-      'Centralized threat detection',
-      'Compliance-driven logging',
-      'Security analytics without in-house overhead'
-    ]
-  },
-  {
-    id: 'incident-response', cat: 'operations', sub: 'Response', name: 'Incident Response',
-    tagline: 'Contain, investigate, and recover from incidents.',
-    short: 'Incident response to contain and remediate security events.',
-    full: 'Incident Response provides the capability to contain, investigate, and remediate security incidents. Combined with managed security services, it ensures that when something happens, there is a defined and practiced path back to normal operations.',
-    capabilities: [
-      'Incident containment and investigation',
-      'Managed security services',
-      'Post-incident reporting and improvement'
+      'Executive and management dashboards.',
+      'Operational performance monitoring and reporting.',
+      'Cross-functional analysis using integrated enterprise data.',
+      'Trend, exception, and pattern analysis.',
+      'Geospatial analytics combining business and location information.',
+      'Analytical views embedded within digital processes or operational applications.'
     ],
-    useCases: [
-      'Responding to active incidents',
-      'Reducing incident impact',
-      'Strengthening response readiness'
-    ]
+    integration: 'Analytics depends on the quality and accessibility of underlying data and often needs to connect with operational systems, digital processes, geospatial information, and visualization interfaces. We design analytics as part of that wider environment.',
+    cta: 'Turn Data Into Useful Insight'
   },
 
-  /* ---------- D. Secure IT Infrastructure ---------- */
+  /* ---------- 4.4 Digital Transformation ---------- */
   {
-    id: 'secure-network-infra', cat: 'infrastructure', sub: 'Network', name: 'Secure Network Infrastructure',
-    tagline: 'A secure, resilient network foundation.',
-    short: 'Secure and manageable network infrastructure design and deployment.',
-    full: 'Secure Network Infrastructure builds the foundation for a secure, resilient, and manageable network. We design and deploy the underlying infrastructure with security and monitoring built in from the start.',
+    id: 'digital', cat: 'capabilities', sub: 'Digital Transformation', name: 'Digital Transformation', img: 'assets/img/cap-digital.jpg',
+    icon: '<svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="3"/></svg>',
+    tagline: 'Modernize technology, processes, information flows, and digital experiences with integration at the center.',
+    short: 'Modernize processes, technology environments, information flows, and digital experiences through practical, integrated change aligned with organizational priorities.',
+    full: 'Digital transformation is not simply replacing manual work with digital tools. It is the coordinated improvement of processes, technology environments, information flows, user experiences, and operating models so an organization can work more effectively. Valortek supports transformation initiatives by helping organizations connect modernization priorities with the systems, data, integration, analytics, security, and resilience required to make change sustainable.',
     capabilities: [
-      'Secure network infrastructure design',
-      'Infrastructure monitoring',
-      'Resilient, manageable architecture'
+      'Process Modernization — review and improve workflows so technology supports more efficient and consistent ways of working.',
+      'Technology Modernization — help evolve technology environments to support current needs, integration requirements, and future digital capabilities.',
+      'Digital Workflows — connect information, users, and systems through structured digital processes.',
+      'Systems Integration — enable new and existing technologies to exchange information and operate as part of a broader environment.',
+      'Data-Driven Operations — connect digital processes with reliable data and analytical insight.',
+      'Digital Experiences — improve how employees, customers, or stakeholders interact with digital services and information.'
     ],
-    useCases: [
-      'Network foundation modernization',
-      'Secure connectivity',
-      'Manageable, monitored networks'
-    ]
-  },
-  {
-    id: 'secure-datacenter', cat: 'infrastructure', sub: 'Data Center', name: 'Secure Data Center Infrastructure',
-    tagline: 'Compute, storage, and virtualization built to be secure.',
-    short: 'Secure data center, compute, storage, and virtualization foundations.',
-    full: 'Secure Data Center Infrastructure delivers the compute, storage, and virtualization foundations that host critical workloads. We build these environments to be secure, resilient, and manageable, with monitoring across the stack.',
-    capabilities: [
-      'Server and compute infrastructure',
-      'Storage infrastructure',
-      'Virtualization',
-      'Infrastructure monitoring'
+    challenges: [
+      'Manual processes that limit speed, consistency, or visibility.',
+      'Disconnected systems and duplicated information handling.',
+      'Legacy processes that make it difficult to introduce new digital capabilities.',
+      'Digital initiatives implemented without sufficient integration to existing environments.',
+      'Limited data visibility across end-to-end processes.',
+      'Modernization programs that need stronger security, resilience, and governance considerations.'
     ],
+    value: 'A well-integrated transformation program can improve operational efficiency, information flow, user experience, visibility, and adaptability. Valortek focuses on practical modernization — connecting the changes that matter to the processes, systems, data, security, and people that make the organization work.',
     useCases: [
-      'Secure data center build',
-      'Workload consolidation',
-      'Virtualized environment security'
-    ]
-  },
-  {
-    id: 'cloud-hybrid', cat: 'infrastructure', sub: 'Cloud', name: 'Cloud / Hybrid Infrastructure',
-    tagline: 'Secure operations across cloud and on-premise.',
-    short: 'Secure cloud and hybrid infrastructure with backup and disaster recovery.',
-    full: 'Cloud / Hybrid Infrastructure extends secure operations across cloud and on-premise environments. We design and integrate cloud and hybrid foundations, including backup and disaster recovery, so services stay available and protected.',
-    capabilities: [
-      'Cloud and hybrid infrastructure',
-      'Backup and disaster recovery',
-      'Infrastructure monitoring'
+      'Digitizing and integrating multi-step business workflows.',
+      'Connecting new digital applications with existing enterprise systems.',
+      'Improving information flow across departments or operational functions.',
+      'Modernizing reporting and management visibility as part of process change.',
+      'Building data and analytics into redesigned digital operations.',
+      'Strengthening security and resilience as technology environments are modernized.'
     ],
-    useCases: [
-      'Cloud adoption and migration',
-      'Hybrid environment security',
-      'Backup and recovery readiness'
-    ]
+    integration: 'Digital transformation frequently spans processes, data, applications, user experiences, integration, analytics, security, and resilience. Valortek helps connect these components so modernization creates a coherent operating environment rather than a collection of isolated digital projects.',
+    cta: 'Discuss Your Digital Transformation Priorities'
   },
 
-  /* ---------- E. Cyber Resilience & Recovery ---------- */
+  /* ---------- 4.5 Cyber Resilience ---------- */
   {
-    id: 'resilience-assessment', cat: 'resilience', sub: 'Resilience', name: 'Cyber Resilience Assessment',
-    tagline: 'Measure your ability to withstand and recover.',
-    short: 'Assessment of resilience posture and continuity readiness.',
-    full: 'Cyber Resilience Assessment evaluates how well an organization can maintain operations and recover services during disruptions or incidents. We review resilience architecture and continuity readiness to identify where recovery can be strengthened.',
+    id: 'resilience', cat: 'capabilities', sub: 'Cyber Resilience', name: 'Cyber Resilience', img: 'assets/img/cap-resilience.jpg',
+    icon: '<svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>',
+    tagline: 'Strengthen the organization\u2019s ability to prepare, protect, detect, respond, recover, and adapt.',
+    short: 'Strengthen the organization\u2019s ability to prepare for disruption, protect critical capabilities, detect issues, respond effectively, recover, and adapt.',
+    full: 'Cyber resilience is the ability to continue operating through technology-related disruption and to recover effectively when incidents occur. It goes beyond preventive security by considering how critical processes, systems, information, people, and recovery capabilities work together before, during, and after disruption. Valortek helps organizations approach resilience as part of the broader technology and business continuity environment.',
     capabilities: [
-      'Cyber resilience assessment',
-      'Resilience architecture review',
-      'Business continuity support'
+      'Prepare — understand important systems, information, dependencies, recovery needs, and resilience priorities.',
+      'Protect — apply appropriate safeguards within the wider technology environment to reduce exposure and limit impact.',
+      'Detect — support visibility and monitoring approaches that help identify issues requiring attention.',
+      'Respond — clarify processes, coordination, and technology requirements that support timely and structured response.',
+      'Recover — support the ability to restore critical capabilities and information in line with business priorities.',
+      'Adapt — use lessons, changing risks, and operational experience to improve resilience over time.'
     ],
-    useCases: [
-      'Resilience posture review',
-      'Continuity planning',
-      'Recovery readiness improvement'
-    ]
-  },
-  {
-    id: 'disaster-cyber-recovery', cat: 'resilience', sub: 'Recovery', name: 'Disaster & Cyber Recovery',
-    tagline: 'Restore services quickly after disruption.',
-    short: 'Disaster recovery and cyber recovery capabilities and testing.',
-    full: 'Disaster & Cyber Recovery establishes the capability to restore services after disruption or a cyber incident. We help plan, build, and test recovery so that when the unexpected happens, the path back to operations is proven.',
-    capabilities: [
-      'Disaster recovery',
-      'Cyber recovery',
-      'Recovery planning and testing'
+    challenges: [
+      'Critical business processes that depend heavily on interconnected technology.',
+      'Unclear dependencies between systems, data, operations, and recovery requirements.',
+      'Security programs focused on prevention without sufficient attention to continuity and recovery.',
+      'Need for stronger coordination between technology operations, security, and business continuity activities.',
+      'Difficulty prioritizing which capabilities must be restored first following disruption.'
     ],
+    value: 'A resilient organization is better prepared to manage disruption without relying on the assumption that every incident can be prevented. By connecting security, continuity, recovery, system dependencies, and operational priorities, organizations can improve their ability to sustain critical activities and restore capabilities in a controlled manner.',
     useCases: [
-      'Recovery capability build-out',
-      'Recovery testing and validation',
-      'Minimizing downtime after incidents'
-    ]
-  },
-  {
-    id: 'incident-recovery', cat: 'resilience', sub: 'Continuity', name: 'Incident Response & Recovery',
-    tagline: 'Keep operating through disruption.',
-    short: 'Combined incident response and recovery to sustain operations.',
-    full: 'Incident Response & Recovery combines rapid response with structured recovery so organizations can keep operating through disruption. We align response actions with continuity and recovery plans to protect ongoing operations.',
-    capabilities: [
-      'Incident response and recovery',
-      'Business continuity support',
-      'Resilience architecture'
+      'Reviewing technology dependencies that support critical business processes.',
+      'Strengthening coordination between cyber security, IT operations, and continuity requirements.',
+      'Improving recovery priorities for systems and information.',
+      'Integrating resilience considerations into digital transformation initiatives.',
+      'Reviewing gaps in protection, detection, response, and recovery capabilities.',
+      'Supporting continuous resilience improvement as technology environments evolve.'
     ],
-    useCases: [
-      'Operational continuity during incidents',
-      'Coordinated response and recovery',
-      'Resilience-by-design'
-    ]
+    integration: 'Cyber resilience works across technology, operations, security, continuity, and recovery. We consider resilience in relation to the systems and information the organization depends on, and how those dependencies interact across the wider environment.',
+    cta: 'Strengthen Your Cyber Resilience'
   },
 
-  /* ---------- F. Implementation & Lifecycle Services ---------- */
+  /* ---------- 4.6 Immersive & Visualization Solutions ---------- */
   {
-    id: 'implementation-deployment', cat: 'lifecycle', sub: 'Implementation', name: 'Solution Implementation & Deployment',
-    tagline: 'From design to a running, integrated solution.',
-    short: 'Implementation, deployment, integration, and configuration services.',
-    full: 'Solution Implementation & Deployment delivers designed solutions into running systems. We handle deployment, system integration, configuration, security hardening, and migration so solutions go live cleanly and securely.',
+    id: 'immersive', cat: 'capabilities', sub: 'Immersive & Visualization', name: 'Immersive & Visualization Solutions', img: 'assets/img/cap-immersive.jpg',
+    icon: '<svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+    tagline: 'Make complex information easier to understand through interactive, spatial, and immersive visual experiences.',
+    short: 'Make complex information, environments, processes, and scenarios easier to understand through interactive, 3D, digital, and immersive visualization.',
+    full: 'Some information is difficult to understand through tables, documents, or conventional interfaces alone. Immersive and visualization solutions can help users explore complex environments, relationships, processes, data, and scenarios in more intuitive ways. Valortek helps integrate visualization capabilities with the information and systems that give those visual experiences meaning.',
     capabilities: [
-      'Solution implementation and system deployment',
-      'System integration and configuration',
-      'Security hardening',
-      'Migration'
+      '3D Visualization — represent environments, assets, concepts, or information in three-dimensional visual form.',
+      'Interactive Visualization — allow users to explore information dynamically rather than through static presentation alone.',
+      'Immersive Experiences — create engaging digital environments that support understanding, communication, training, planning, or stakeholder engagement.',
+      'Virtual Environments — represent spaces, systems, or scenarios in digital environments that users can navigate or review.',
+      'Data Visualization — translate complex data into clear visual forms that support interpretation and decision-making.',
+      'Simulation-Oriented Visualization — visualize scenarios, processes, or changing conditions to support analysis, demonstration, planning, or learning.'
     ],
+    challenges: [
+      'Complex information that is difficult to communicate through conventional reports or dashboards.',
+      'Need to understand environments, assets, or processes spatially and interactively.',
+      'Stakeholder engagement that benefits from more intuitive digital presentation.',
+      'Training or planning scenarios that require visual context.',
+      'Large or multi-dimensional datasets that need clearer visual interpretation.'
+    ],
+    value: 'Visualization can reduce cognitive complexity by presenting information in forms that are easier to explore and understand. When connected to enterprise data, analytics, geospatial information, or digital applications, visual and immersive experiences can provide a more intuitive interface to complex business and operational information.',
     useCases: [
-      'New solution rollout',
-      'Secure system deployment',
-      'Migration and integration projects'
-    ]
+      'Interactive 3D representation of facilities, assets, or environments.',
+      'Immersive environments for orientation, learning, communication, or stakeholder engagement.',
+      'Data-rich visualization combining operational and contextual information.',
+      'Geospatial and 3D visualization of location-based information.',
+      'Interactive scenario or process visualization for planning and analysis.',
+      'Visual interfaces that make complex analytical information easier for decision-makers to interpret.'
+    ],
+    integration: 'Visualization can sit on top of data, analytics, geospatial information, digital applications, and simulation-oriented environments. Its value increases when the visual experience is connected to reliable information and the workflows in which users make decisions.',
+    cta: 'Explore Visualization Possibilities'
   },
+
+  /* ---------- 4.7 Cyber Security ---------- */
   {
-    id: 'testing-training', cat: 'lifecycle', sub: 'Enablement', name: 'Testing, Validation & Training',
-    tagline: 'Verify it works \u2014 and enable your team to run it.',
-    short: 'Testing, validation, training, and knowledge transfer.',
-    full: 'Testing, Validation & Training ensures solutions perform as intended and that your team can operate them confidently. We validate deployments and provide training and knowledge transfer for administrators, technical teams, and end users.',
+    id: 'cyber', cat: 'capabilities', sub: 'Cyber Security', name: 'Cyber Security', img: 'assets/img/cap-cyber.jpg',
+    icon: '<svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>',
+    tagline: 'Protect enterprise information, applications, infrastructure, and digital operations as part of the wider technology environment.',
+    short: 'Protect information, applications, infrastructure, and digital operations through security assessment, architecture, integration, monitoring, risk management, and continuous improvement.',
+    full: 'Cyber security supports the confidentiality, integrity, and availability of the technology and information an organization depends on. Valortek approaches security as an integrated enterprise requirement — one that must align with systems, data, applications, users, operational processes, and business priorities rather than exist as an isolated technical layer.',
     capabilities: [
-      'Testing and validation',
-      'Training and knowledge transfer',
-      'Operational readiness'
+      'Security Assessment — review relevant technology environments, requirements, risks, and control gaps to support informed security improvement.',
+      'Security Architecture — help define how security controls and principles should fit within the broader solution and technology environment.',
+      'Protection — support appropriate safeguards for information, applications, infrastructure, identities, and digital operations.',
+      'Monitoring — support visibility into relevant security events and conditions requiring attention.',
+      'Risk Management — connect security priorities with business context, technology dependencies, and practical risk considerations.',
+      'Security Integration — integrate security requirements into digital platforms, data environments, applications, and broader technology solutions.',
+      'Security Operations — support structured approaches to ongoing security activities, coordination, and operational improvement.',
+      'Security Improvement — help organizations review gaps, strengthen controls, and evolve their security posture over time.'
     ],
-    useCases: [
-      'Go-live validation',
-      'Team enablement',
-      'Sustainable operations'
-    ]
-  },
-  {
-    id: 'maintenance-optimization', cat: 'lifecycle', sub: 'Support', name: 'Maintenance & Optimization',
-    tagline: 'Keep systems running, secure, and improving.',
-    short: 'Technical support, maintenance, upgrade, and optimization.',
-    full: 'Maintenance & Optimization keeps solutions dependable over time. We provide technical support, preventive and corrective maintenance, and ongoing upgrade and optimization to sustain performance, security, and continuous improvement.',
-    capabilities: [
-      'Technical support',
-      'Preventive and corrective maintenance',
-      'Upgrade and optimization'
+    challenges: [
+      'Growing technology dependencies and expanding digital environments.',
+      'Security controls implemented inconsistently across systems or initiatives.',
+      'Limited visibility into security conditions across the technology environment.',
+      'New digital or integration projects that need security embedded from the design stage.',
+      'Difficulty prioritizing security improvements against business and operational requirements.',
+      'Need for stronger connection between cyber security and continuity or resilience planning.'
     ],
+    value: 'Integrated security helps organizations protect important technology and information while enabling business operations. The objective is to apply appropriate security measures in the right places, align them with the wider architecture, and improve the organization\u2019s ability to manage risk as technology environments change.',
     useCases: [
-      'Ongoing support and SLAs',
-      'Performance and security tuning',
-      'Continuous improvement of security maturity'
-    ]
+      'Security reviews for existing or planned technology environments.',
+      'Security architecture for integrated enterprise solutions.',
+      'Security requirements embedded within digital transformation initiatives.',
+      'Improving monitoring and operational visibility for security-relevant events.',
+      'Integrating security considerations with data, applications, infrastructure, and user access.',
+      'Connecting cyber security improvement with broader cyber resilience objectives.'
+    ],
+    integration: 'Cyber security should be integrated into the technology environment rather than added as an isolated layer. We consider how security requirements interact with data, applications, integration, digital transformation, operations, resilience, and user needs.',
+    cta: 'Discuss Your Cyber Security Requirements'
   },
 ];

@@ -18,17 +18,16 @@
         </a>
         <nav class="nav__menu" id="navMenu" aria-label="Primary">
           <a href="index.html"    class="nav__link" data-nav="home">Home</a>
+          <a href="about.html"     class="nav__link" data-nav="about">About</a>
           <div class="nav__dropdown" id="navProductsDropdown">
-            <a href="solutions.html" class="nav__link nav__link--caret" data-nav="solutions">Solutions</a>
+            <a href="solutions.html" class="nav__link nav__link--caret" data-nav="solutions">Solutions &amp; Services</a>
             <div class="megamenu" id="megaMenu">
               <ul class="megamenu__cats" id="megaCats"></ul>
               <div class="megamenu__products" id="megaProducts"></div>
             </div>
           </div>
-          <a href="services.html"  class="nav__link" data-nav="services">Services</a>
           <a href="industries.html" class="nav__link" data-nav="industries">Industries</a>
           <a href="technology-ecosystem.html" class="nav__link" data-nav="ecosystem">Technology Ecosystem</a>
-          <a href="about.html"     class="nav__link" data-nav="about">About</a>
           <a href="contact.html"   class="nav__cta">Contact Us</a>
         </nav>
         <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
@@ -43,24 +42,26 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Valortek" class="footer__logo" />
-          <p>PT. Valortek Ratanika Utama — Cybersecurity Solutions &amp; Services. We help organizations build, secure, monitor, operate, and improve the security and resilience of their digital infrastructure.</p>
+          <p>PT. Valortek Ratanika Utama — System Integrator &amp; Enterprise Technology Solutions Partner. We connect data, geospatial, analytics, digital, resilience, visualization, and security capabilities into practical, business-aligned technology environments.</p>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
           <a href="about.html">About Us</a>
           <a href="about.html#vision-mission">Vision &amp; Mission</a>
+          <a href="index.html#approach">System Integration Approach</a>
           <a href="industries.html">Industries</a>
           <a href="technology-ecosystem.html">Technology Ecosystem</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer__col">
-          <h4>Solutions &amp; Services</h4>
-          <a href="solutions.html#cat-advisory">Advisory &amp; Consulting</a>
-          <a href="solutions.html#cat-solutions">Solutions &amp; Integration</a>
-          <a href="solutions.html#cat-operations">Security Operations</a>
-          <a href="solutions.html#cat-infrastructure">Secure IT Infrastructure</a>
-          <a href="solutions.html#cat-resilience">Cyber Resilience &amp; Recovery</a>
-          <a href="services.html">Implementation &amp; Lifecycle</a>
+          <h4>Capabilities</h4>
+          <a href="solution.html?id=data">Data Foundation</a>
+          <a href="solution.html?id=geospatial">Geospatial Intelligence</a>
+          <a href="solution.html?id=analytics">Analytics &amp; Insight</a>
+          <a href="solution.html?id=digital">Digital Transformation</a>
+          <a href="solution.html?id=resilience">Cyber Resilience</a>
+          <a href="solution.html?id=immersive">Immersive &amp; Visualization</a>
+          <a href="solution.html?id=cyber">Cyber Security</a>
         </div>
         <div class="footer__col">
           <h4>Get in Touch</h4>
@@ -117,39 +118,20 @@
   const CATS = window.VALORTEK_CATEGORIES || [];
   const PRODUCTS = window.VALORTEK_PRODUCTS || [];
 
-  if (dropdownWrap && megaCats && megaProducts && CATS.length) {
-    function renderProductsFor(catId) {
-      const items = PRODUCTS.filter((p) => p.cat === catId);
-      megaProducts.innerHTML = items
-        .map(
-          (p) =>
-            `<a href="solution.html?id=${p.id}" class="megamenu__product">
-               <span class="megamenu__product-sub">${p.sub}</span>
-               <span class="megamenu__product-name">${p.name}</span>
-             </a>`
-        )
-        .join('');
-    }
+  if (dropdownWrap && megaProducts && PRODUCTS.length) {
+    // single-column mega menu: capabilities listed directly (no category column)
+    const megaMenu = document.getElementById('megaMenu');
+    if (megaMenu) megaMenu.classList.add('megamenu--single');
+    if (megaCats) megaCats.remove();
 
-    megaCats.innerHTML = CATS.map(
-      (c, i) =>
-        `<li class="megamenu__cat${i === 0 ? ' is-active' : ''}" data-cat="${c.id}">
-           <span class="megamenu__cat-name">${c.name}</span>
-         </li>`
+    const fallbackIcon = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8l4 4-4 4"/></svg>';
+    megaProducts.innerHTML = PRODUCTS.map(
+      (p) =>
+        `<a href="solution.html?id=${p.id}" class="megamenu__product">
+           <span class="megamenu__product-name">${p.name}</span>
+           <span class="megamenu__product-ico" aria-hidden="true">${p.icon || fallbackIcon}</span>
+         </a>`
     ).join('');
-
-    renderProductsFor(CATS[0].id);
-
-    megaCats.querySelectorAll('.megamenu__cat').forEach((li) => {
-      li.addEventListener('mouseenter', () => {
-        megaCats.querySelectorAll('.megamenu__cat').forEach((x) => x.classList.remove('is-active'));
-        li.classList.add('is-active');
-        renderProductsFor(li.dataset.cat);
-      });
-      li.addEventListener('click', () => {
-        window.location.href = `solutions.html#cat-${li.dataset.cat}`;
-      });
-    });
 
     let closeTimer;
     function openMega() {
