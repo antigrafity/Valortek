@@ -199,8 +199,9 @@ section{ position:relative; }
 .hero__overlay{
   position:absolute; inset:0;
   background:
-    linear-gradient(90deg, rgba(5,6,10,.92) 0%, rgba(5,6,10,.68) 42%, rgba(5,6,10,.35) 70%, rgba(5,6,10,.55) 100%),
-    linear-gradient(180deg, rgba(5,6,10,.25) 0%, transparent 30%, rgba(5,6,10,.75) 100%);
+    linear-gradient(90deg, rgba(5,6,10,.96) 0%, rgba(5,6,10,.82) 38%, rgba(5,6,10,.5) 68%, rgba(5,6,10,.62) 100%),
+    radial-gradient(60% 90% at 88% 60%, rgba(203,116,41,.16), transparent 70%),
+    linear-gradient(180deg, rgba(5,6,10,.35) 0%, transparent 28%, rgba(5,6,10,.82) 100%);
 }
 .hero__content{ position:relative; z-index:3; max-width:var(--container); margin-inline:auto; padding:0 24px; width:100%; }
 .hero__eyebrow{
@@ -210,7 +211,7 @@ section{ position:relative; }
   background:rgba(203,116,41,.08); backdrop-filter:blur(4px);
 }
 .hero__title{ color:#fff; font-size:clamp(2.6rem,6.4vw,5rem); font-weight:800; max-width:15ch; }
-.hero__sub{ color:rgba(255,255,255,.78); font-size:clamp(1.05rem,1.6vw,1.3rem); max-width:56ch; margin:1.6rem 0 2.4rem; }
+.hero__sub{ color:rgba(255,255,255,.88); font-size:clamp(1.05rem,1.6vw,1.3rem); line-height:1.7; max-width:56ch; margin:1.6rem 0 2.4rem; }
 .hero__actions{ display:flex; gap:1rem; flex-wrap:wrap; }
 .hero__stats{ display:flex; gap:2.6rem; margin-top:3.4rem; flex-wrap:wrap; }
 .hero__stat b{ font-family:'Golos Text',system-ui,sans-serif; font-size:2.1rem; font-weight:700; color:#fff; display:block; }
@@ -262,11 +263,14 @@ section{ position:relative; }
 }
 .tag--light{ color:var(--copper-soft); background:rgba(203,116,41,.15); }
 .section__title{ font-size:clamp(1.9rem,4vw,3rem); font-weight:700; }
-.section__lead{ color:var(--muted); font-size:1.12rem; margin-top:1.1rem; }
+.section__lead{ color:var(--muted); font-size:1.12rem; line-height:1.7; margin-top:1.1rem; }
 .section__lead--light{ color:rgba(255,255,255,.72); }
 
 /* ---------- Cards ---------- */
 .cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+/* Auto-fit variant: rows fill evenly and a trailing card stays centered
+   (used for the 7-capability grid on the homepage). */
+.cards--auto{ grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); justify-content:center; }
 .card{
   background:var(--paper); border:1px solid var(--paper-3); border-radius:var(--r);
   padding:2.2rem; transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s;
@@ -310,12 +314,15 @@ section{ position:relative; }
 }
 .prod-banner__tag::before{ content:""; width:26px; height:3px; border-radius:3px; background:var(--grad); }
 @media (max-width:600px){ .prod-banner{ aspect-ratio:16/9; } }
-.card p{ color:var(--muted); font-size:.98rem; margin-bottom:1.3rem; }
+.card p{ color:var(--muted); font-size:.98rem; line-height:1.65; margin-bottom:1.3rem; }
 .card__more{ font-family:'Golos Text',system-ui,sans-serif; font-weight:600; color:var(--copper); font-size:.9rem; display:inline-flex; align-items:center; gap:.5rem; }
 .card__more .ico-arrow{ width:14px; }
 
 /* ---------- Industries ---------- */
 .industries{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; }
+/* Auto-fit variant: balanced rows with a centered trailing row
+   (homepage Approach = 7 items, Why Valortek = 6 items). */
+.industries--auto{ grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); justify-content:center; }
 .ind{
   background:#fff; border:1px solid var(--paper-3); border-radius:var(--r); padding:1.8rem 1.6rem;
   transition:transform .4s var(--ease), box-shadow .4s var(--ease), background .4s; position:relative; overflow:hidden;
@@ -325,7 +332,7 @@ section{ position:relative; }
 .ind:hover::after{ opacity:.18; inset:auto -20% -30% auto; }
 .ind__num{ font-family:'Golos Text',system-ui,sans-serif; font-weight:700; color:var(--copper); opacity:.5; font-size:.85rem; letter-spacing:.1em; }
 .ind h3{ font-size:1.12rem; margin:.5rem 0 .5rem; }
-.ind p{ color:var(--muted); font-size:.9rem; }
+.ind p{ color:var(--muted); font-size:.9rem; line-height:1.6; }
 
 /* ---------- Cases ---------- */
 .cases{ display:flex; flex-direction:column; gap:2rem; }
@@ -463,16 +470,18 @@ section{ position:relative; }
 /* ---------- Inner-page hero banner ---------- */
 .page-hero{
   position:relative; padding:clamp(9rem,16vw,12rem) 0 clamp(3.5rem,7vw,5.5rem);
+  min-height:620px; display:flex; align-items:center;
   background:radial-gradient(120% 130% at 75% 0%, #1b1e28 0%, var(--ink) 60%);
   color:#fff; overflow:hidden;
 }
+.page-hero__inner{ width:100%; }
 /* Optional background photo per page (set --hero-bg on [data-page]).
    Sits behind everything; a dark scrim keeps the text readable.
    If the image is missing, the radial gradient above shows instead. */
 .page-hero__bg{
   position:absolute; inset:0; z-index:0;
   background-image:linear-gradient(90deg, rgba(10,11,14,.92) 0%, rgba(10,11,14,.7) 45%, rgba(10,11,14,.45) 100%), var(--hero-bg, none);
-  background-size:cover; background-position:center; background-repeat:no-repeat;
+  background-size:cover, cover; background-position:center, center top; background-repeat:no-repeat, no-repeat;
 }
 .page-hero__grid{
   position:absolute; inset:0;
@@ -492,12 +501,12 @@ section{ position:relative; }
 .breadcrumb span{ opacity:.5; }
 .page-hero h1{ font-size:clamp(2.3rem,5.4vw,4rem); font-weight:800; max-width:18ch; }
 .page-hero p{ color:rgba(255,255,255,.75); font-size:clamp(1.05rem,1.6vw,1.25rem); max-width:60ch; margin-top:1.3rem; text-align:justify; }
-/* Per-page hero background images */
+/* Per-page hero background images (all 1942x809 — same size as Technology Ecosystem) */
 body[data-page="about"]      { --hero-bg:url('../assets/img/hero-about.jpg'); }
-body[data-page="solutions"]  { --hero-bg:url('../assets/img/hero-products.jpg'); }
-body[data-page="services"]   { --hero-bg:url('../assets/img/hero-services.jpg'); }
-body[data-page="industries"] { --hero-bg:url('../assets/img/hero-services.jpg'); }
-body[data-page="ecosystem"]  { --hero-bg:url('../assets/img/hero-products.jpg'); }
+body[data-page="solutions"]  { --hero-bg:url('../assets/img/hero-solutions.jpg'); }
+body[data-page="industries"] { --hero-bg:url('../assets/img/hero-industries.jpg'); }
+body[data-page="ecosystem"]  { --hero-bg:url('../assets/img/hero-ecosystem.jpg'); }
+body[data-page="contact"]    { --hero-bg:url('../assets/img/hero-contact.jpg'); }
 .page-hero__eyebrow{
   display:inline-block; color:var(--copper-soft); font-weight:600; letter-spacing:.16em;
   text-transform:uppercase; font-size:.78rem; margin-bottom:1.1rem;
@@ -562,6 +571,17 @@ body[data-page="ecosystem"]  { --hero-bg:url('../assets/img/hero-products.jpg');
   outline:0; border-color:var(--copper); background:#fff; box-shadow:0 0 0 4px rgba(203,116,41,.12);
 }
 .field textarea{ resize:vertical; min-height:120px; }
+
+/* Phone: country-code select + number input side by side */
+.phone-field{ display:flex; gap:.6rem; }
+.phone-field select{
+  flex:0 0 auto; width:auto; font-family:inherit; font-size:.95rem; padding:.85rem .8rem;
+  border:1px solid var(--paper-3); border-radius:12px; background:var(--paper-2); color:var(--text);
+  transition:.25s var(--ease); cursor:pointer;
+}
+.phone-field input{ flex:1 1 auto; }
+.phone-field select:focus{ outline:0; border-color:var(--copper); background:#fff; box-shadow:0 0 0 4px rgba(203,116,41,.12); }
+
 .form .btn{ width:100%; justify-content:center; margin-top:.4rem; }
 .form__note{ margin-top:1.1rem; padding:0; max-height:0; overflow:hidden; opacity:0; color:var(--copper); font-size:.92rem; transition:.4s var(--ease); }
 .form__note.show{ max-height:80px; opacity:1; padding-top:.2rem; }
