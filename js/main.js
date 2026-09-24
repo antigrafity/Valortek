@@ -63,10 +63,6 @@
           <a href="solution.html?id=immersive">Immersive &amp; Visualization</a>
           <a href="solution.html?id=cyber">Cyber Security</a>
         </div>
-        <div class="footer__col">
-          <h4>Get in Touch</h4>
-          <a href="mailto:info@valortek.co.id">info@valortek.co.id</a>
-        </div>
       </div>
       <div class="footer__bottom container">
         <span>© ${year} PT. Valortek Ratanika Utama. All rights reserved.</span>
