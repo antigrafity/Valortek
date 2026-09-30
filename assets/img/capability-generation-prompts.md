@@ -12,7 +12,7 @@ Abstract enterprise data foundation: scattered tiny translucent information frag
 
 ## assets/img/cap-geospatial.jpg
 
-Abstract civilian location intelligence: dark sculptural 3D terrain with finely detailed contour layers and a spatial copper mesh, elegant luminous location markers connected by fine routes across terrain and small abstract commercial building volumes. Elevated oblique view, main terrain island center-right, no labels, no targeting or surveillance.
+Abstract civilian location insight: dark sculptural 3D terrain with finely detailed contour layers and a spatial copper mesh, elegant luminous location markers connected by fine routes across terrain and small abstract commercial building volumes. Elevated oblique view, main terrain island center-right, no labels, no targeting or surveillance.
 
 ## assets/img/cap-analytics.jpg
 

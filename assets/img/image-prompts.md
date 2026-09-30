@@ -47,8 +47,8 @@ Large horizontal banners. A copper label sits at the BOTTOM-LEFT corner, so keep
 ### 4. Data Foundation — `cap-data.jpg`
 Abstract enterprise data foundation: scattered fragments of information converging from the left into one clean, structured, glowing copper data grid / unified database core on the right; connected nodes and streams; order emerging from fragmentation.
 
-### 5. Geospatial Intelligence — `cap-geospatial.jpg`
-Abstract location intelligence: a dark 3D terrain / stylized map surface with glowing copper location pins, route lines, and a spatial mesh; a subtle holographic map layer floating above assets and service areas.
+### 5. Geospatial Solutions — `cap-geospatial.jpg`
+Abstract location insight: a dark 3D terrain / stylized map surface with glowing copper location pins, route lines, and a spatial mesh; a subtle holographic map layer floating above assets and service areas.
 
 ### 6. Analytics & Insight — `cap-analytics.jpg`
 Abstract business analytics: floating holographic dashboards with copper line charts, bar graphs, and rising trend curves over a dark surface; clean data-visualization panels glowing with warm-orange highlights; a sense of insight and clarity.

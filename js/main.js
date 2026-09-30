@@ -56,7 +56,7 @@
         <div class="footer__col">
           <h4>Capabilities</h4>
           <a href="solution.html?id=data">Data Foundation</a>
-          <a href="solution.html?id=geospatial">Geospatial Intelligence</a>
+          <a href="solution.html?id=geospatial">Geospatial Solutions</a>
           <a href="solution.html?id=analytics">Analytics &amp; Insight</a>
           <a href="solution.html?id=digital">Digital Transformation</a>
           <a href="solution.html?id=resilience">Cyber Resilience</a>

@@ -68,16 +68,16 @@ window.VALORTEK_PRODUCTS = [
 
   /* ---------- 4.2 Geospatial ---------- */
   {
-    id: 'geospatial', cat: 'capabilities', sub: 'Geospatial Intelligence', name: 'Geospatial Intelligence', img: 'assets/img/cap-geospatial.jpg',
+    id: 'geospatial', cat: 'capabilities', sub: 'Geospatial Solutions', name: 'Geospatial Solutions', img: 'assets/img/cap-geospatial.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
-    tagline: 'Add location intelligence to the way your organization understands assets, operations, environments, and relationships.',
+    tagline: 'Add location insight to the way your organization understands assets, operations, environments, and relationships.',
     short: 'Use location-based information, mapping, spatial analysis, and geospatial visualization to understand assets, environments, operations, and relationships in place and space.',
-    full: 'Many business and operational questions have a spatial dimension: where assets are located, how locations relate to one another, where activity is concentrated, how service areas are structured, or how physical environments affect operations. Valortek helps organizations use geospatial data, mapping, spatial information, and location intelligence as part of broader enterprise solutions.',
+    full: 'Many business and operational questions have a spatial dimension: where assets are located, how locations relate to one another, where activity is concentrated, how service areas are structured, or how physical environments affect operations. Valortek helps organizations use geospatial data, mapping, spatial information, and location insight as part of broader enterprise solutions.',
     capabilities: [
       'Geospatial Data — organize and integrate location-based information relevant to assets, facilities, service areas, operations, or planning.',
       'Mapping — present spatial information in map-based interfaces that make geographic relationships easier to understand.',
       'Spatial Information Integration — connect geospatial information with enterprise, operational, and analytical data.',
-      'Location Intelligence — use spatial context to enrich analysis, planning, monitoring, and decision-making.',
+      'Location Insight — use spatial context to enrich analysis, planning, monitoring, and decision-making.',
       'Geospatial Visualization — create clear visual representations of location-based information for operational and management use.',
       'Enterprise Integration — connect geospatial capabilities with data platforms, analytics, digital workflows, and visualization environments.'
     ],
@@ -106,10 +106,10 @@ window.VALORTEK_PRODUCTS = [
     id: 'analytics', cat: 'capabilities', sub: 'Analytics & Insight', name: 'Analytics & Insight', img: 'assets/img/cap-analytics.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg>',
     tagline: 'Transform connected data into insight that supports better visibility, planning, and decisions.',
-    short: 'Turn data into useful insight through business intelligence, performance visibility, trend analysis, monitoring, and decision-support capabilities.',
-    full: 'Data creates value when people can interpret it and use it. Valortek helps organizations build analytics capabilities that turn enterprise information into clearer insight for decision-making, performance monitoring, operational visibility, business intelligence, trend identification, planning, and continuous improvement.',
+    short: 'Turn data into useful insight through business insight, performance visibility, trend analysis, monitoring, and decision-support capabilities.',
+    full: 'Data creates value when people can interpret it and use it. Valortek helps organizations build analytics capabilities that turn enterprise information into clearer insight for decision-making, performance monitoring, operational visibility, business insight, trend identification, planning, and continuous improvement.',
     capabilities: [
-      'Business Intelligence — organize and present relevant information to support management and operational decisions.',
+      'Business Insight — organize and present relevant information to support management and operational decisions.',
       'Performance Monitoring — track indicators and operational measures that help teams understand current performance.',
       'Operational Visibility — bring together information from multiple sources to provide a clearer view of activities and conditions.',
       'Trend Identification — analyze historical and current information to identify patterns, changes, and areas requiring attention.',
