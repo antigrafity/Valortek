@@ -1,10 +1,7 @@
 /* =========================================================
    Valortek — capability catalog (single source of truth)
-   Positioning: System Integrator & Enterprise Technology
-   Solutions Partner.
-
-   Content source: PT. Valortek Ratanika Utama — Corporate
-   Website Content (Section 4: Solutions & Services).
+   Positioning: Data, Geospatial, Analytics & Visualization
+   solutions for business decision-making.
 
    Used by:
    - solutions.html : grouped listing (short capability cards)
@@ -23,261 +20,248 @@
 window.VALORTEK_CATEGORIES = [
   {
     id: 'capabilities',
-    name: 'Integrated Technology Capabilities',
-    tagline: 'Seven core capabilities designed to address specific enterprise needs while remaining part of a broader system integration model. An engagement may focus on one capability or combine several into a connected solution.',
+    name: 'Data & Insight Building Blocks',
+    tagline: 'Seven building blocks that take information from scattered sources to clear, trusted business insight. Most projects start with the data foundation and add the blocks they need.',
     img: 'assets/img/cat-software.jpg'
   },
 ];
 
 window.VALORTEK_PRODUCTS = [
-  /* ---------- 4.1 Data ---------- */
+  /* ---------- Data Foundation ---------- */
   {
     id: 'data', cat: 'capabilities', sub: 'Data Foundation', name: 'Data Foundation', img: 'assets/img/cap-data.jpg',
     icon: '<svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>',
-    tagline: 'Turn enterprise data into a connected, accessible, and usable foundation for operations and decision-making.',
-    short: 'Connect, organize, manage, and improve access to enterprise data so information can support operations, applications, analytics, and decision-making.',
-    full: 'Organizations generate and depend on growing volumes of information, but value is limited when data is fragmented, inconsistent, difficult to access, or disconnected from the systems and teams that need it. Valortek helps organizations structure, integrate, manage, and enable data so it can support operational processes, analytics, digital services, and informed decision-making.',
+    tagline: 'One trusted place for the data your business runs on.',
+    short: 'Consolidate data from applications, files, and business units into a governed platform with consistent definitions and quality checks.',
+    full: 'Reports only agree when the data underneath them agrees. We consolidate information from your applications, spreadsheets, and departmental systems into a single data platform, define common terms, and put quality rules in place, so every team works from the same numbers.',
     capabilities: [
-      'Data Integration — connect information from relevant systems and sources so it can be used across the wider technology environment.',
-      'Data Management — support more structured approaches to organizing, maintaining, governing, and using enterprise data.',
-      'Data Platforms — help design and integrate environments that bring together data for access, processing, sharing, and downstream use.',
-      'Data Accessibility — improve how authorized users, applications, and analytical functions access the information they require.',
-      'Data Quality — support processes and controls that improve consistency, completeness, reliability, and usability of important data.',
-      'Data Enablement — prepare data to support analytics, digital workflows, geospatial use cases, visualization, and other enterprise capabilities.'
+      'Data Consolidation — bring data from ERP, CRM, finance, operational applications, and files into one platform.',
+      'Data Warehouse & Data Lake — design storage that fits your data volume, reporting needs, and budget.',
+      'Master Data — create consistent records for customers, products, locations, and facilities across systems.',
+      'Data Quality Rules — detect duplicates, gaps, and inconsistencies before they reach a report.',
+      'Data Governance — define ownership, definitions, access rights, and retention policies.',
+      'Data Catalog — document what data exists, where it comes from, and how it may be used.'
     ],
     challenges: [
-      'Information spread across disconnected systems or business units.',
-      'Difficulty obtaining a consistent view of important operational or business data.',
-      'Manual data movement and repetitive reconciliation between systems.',
-      'Limited confidence in data quality or consistency.',
-      'Slow access to information needed for reporting, analysis, or decisions.',
-      'New digital or analytical initiatives constrained by fragmented data foundations.'
+      'Different departments report different figures for the same metric.',
+      'Staff spend hours each month copying and reconciling spreadsheets.',
+      'Nobody is sure which version of a dataset is correct.',
+      'New dashboards or applications are delayed because data is hard to obtain.',
+      'Data ownership and access rights are unclear.'
     ],
-    value: 'A more connected data environment can improve information access, reduce fragmentation, support more consistent decision-making, and create a stronger foundation for analytics and digital initiatives. The objective is not simply to store more data, but to make relevant data easier to trust, connect, use, and govern within the organization.',
+    value: 'A governed data foundation reduces manual reconciliation, shortens reporting cycles, and gives management confidence that the numbers they see are accurate. It also makes every later project, from dashboards to maps, faster and cheaper to deliver.',
     useCases: [
-      'Integrating data from multiple enterprise systems into a more unified information environment.',
-      'Improving access to operational and management information across authorized teams.',
-      'Preparing and connecting data for dashboards, analytics, reporting, or planning.',
-      'Combining enterprise data with geospatial information for location-aware insight.',
-      'Supporting digital workflow modernization with more consistent information flows.',
-      'Improving data quality and usability for downstream applications and decision-support needs.'
+      'Consolidating sales, finance, and operational data for monthly management reporting.',
+      'Creating a single customer or facility register shared by several departments.',
+      'Replacing spreadsheet-based reporting with automated data pipelines.',
+      'Preparing clean, structured data for dashboards and geospatial applications.',
+      'Setting up data access policies that match organizational roles.'
     ],
-    integration: 'Data solutions often become more valuable when connected to analytics, digital workflows, geospatial information, visualization, and security requirements. Valortek considers how the data environment will support the broader technology ecosystem rather than treating data as an isolated repository.',
-    cta: 'Discuss Your Data Requirements'
+    integration: 'The data foundation feeds every other building block. Analytics, maps, 3D views, and digital forms all draw from it, which is why we usually start here.',
+    cta: 'Discuss Your Data Foundation'
   },
 
-  /* ---------- 4.2 Geospatial ---------- */
+  /* ---------- Geospatial ---------- */
   {
     id: 'geospatial', cat: 'capabilities', sub: 'Geospatial Solutions', name: 'Geospatial Solutions', img: 'assets/img/cap-geospatial.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
-    tagline: 'Add location insight to the way your organization understands assets, operations, environments, and relationships.',
-    short: 'Use location-based information, mapping, spatial analysis, and geospatial visualization to understand assets, environments, operations, and relationships in place and space.',
-    full: 'Many business and operational questions have a spatial dimension: where assets are located, how locations relate to one another, where activity is concentrated, how service areas are structured, or how physical environments affect operations. Valortek helps organizations use geospatial data, mapping, spatial information, and location insight as part of broader enterprise solutions.',
+    tagline: 'Put your business data on the map.',
+    short: 'Web GIS, spatial databases, and map-based applications that present facilities, service areas, and infrastructure in their geographic context.',
+    full: 'Many business questions are really questions about place: which branches perform best, where demand is growing, which facilities need maintenance, or how far customers are from a service point. We build GIS platforms and map-based applications that connect your business records to an accurate map, so these questions can be answered visually.',
     capabilities: [
-      'Geospatial Data — organize and integrate location-based information relevant to assets, facilities, service areas, operations, or planning.',
-      'Mapping — present spatial information in map-based interfaces that make geographic relationships easier to understand.',
-      'Spatial Information Integration — connect geospatial information with enterprise, operational, and analytical data.',
-      'Location Insight — use spatial context to enrich analysis, planning, monitoring, and decision-making.',
-      'Geospatial Visualization — create clear visual representations of location-based information for operational and management use.',
-      'Enterprise Integration — connect geospatial capabilities with data platforms, analytics, digital workflows, and visualization environments.'
+      'Web GIS Platforms — browser-based maps that authorized staff can view and update without specialist software.',
+      'Spatial Databases — store and manage location data alongside your business records.',
+      'Mobile Data Collection — capture field data and photos with location directly into the platform.',
+      'Spatial Analysis — catchment areas, coverage, distance, and density analysis for planning.',
+      'Asset & Facility Registers — map-based inventories of buildings, land, utilities, and equipment.',
+      'Map Integration — connect maps with dashboards, workflows, and existing enterprise applications.'
     ],
     challenges: [
-      'Limited visibility into the location and spatial relationships of assets or activities.',
-      'Geographic information maintained separately from enterprise systems and business data.',
-      'Difficulty understanding patterns that are clearer when viewed spatially.',
-      'Planning and operational decisions made without sufficient location context.',
-      'Complex geographic information that is difficult for non-specialist users to interpret.'
+      'Facility and land records are kept in tables with no map reference.',
+      'Location data is held by a separate team and is hard for others to use.',
+      'Planning decisions about new sites or service areas rely on assumptions.',
+      'Field data arrives late, on paper, or without accurate coordinates.',
+      'Existing maps are static files that are quickly out of date.'
     ],
-    value: 'By bringing spatial context into the enterprise information environment, organizations can gain a clearer view of where assets, activities, customers, facilities, resources, or service areas are located and how they relate. This can improve planning, operational visibility, resource coordination, and decision-making.',
+    value: 'Seeing data in its geographic context makes patterns obvious that are invisible in tables. Organizations use it to plan new locations, prioritize maintenance, balance service coverage, and present information clearly to stakeholders.',
     useCases: [
-      'Asset and facility mapping connected with enterprise records.',
-      'Location-based operational dashboards and management views.',
-      'Spatial analysis to identify patterns, relationships, or areas requiring attention.',
-      'Integration of location information with business and analytical data.',
-      'Geospatial visualization for infrastructure, service coverage, logistics, or planning contexts.',
-      'Interactive maps that support users in exploring complex information geographically.'
+      'Branch, outlet, or service-point performance mapping.',
+      'Land, building, and utility asset registers with maintenance history.',
+      'Market and catchment-area analysis for expansion planning.',
+      'Infrastructure and project progress mapping for management reporting.',
+      'Mobile field surveys that update the central map directly.'
     ],
-    integration: 'Geospatial capabilities can be integrated with enterprise data, analytics, digital workflows, visualization, and security controls to create a more complete view of assets, operations, locations, and relationships.',
-    cta: 'Discuss Your Geospatial Requirements'
+    integration: 'Maps become far more useful when they draw on the data foundation and feed analytics dashboards and 3D visualization. We design them to work together from the start.',
+    cta: 'Discuss Your Mapping Needs'
   },
 
-  /* ---------- 4.3 Analytics ---------- */
+  /* ---------- Analytics ---------- */
   {
     id: 'analytics', cat: 'capabilities', sub: 'Analytics & Insight', name: 'Analytics & Insight', img: 'assets/img/cap-analytics.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg>',
-    tagline: 'Transform connected data into insight that supports better visibility, planning, and decisions.',
-    short: 'Turn data into useful insight through business insight, performance visibility, trend analysis, monitoring, and decision-support capabilities.',
-    full: 'Data creates value when people can interpret it and use it. Valortek helps organizations build analytics capabilities that turn enterprise information into clearer insight for decision-making, performance monitoring, operational visibility, business insight, trend identification, planning, and continuous improvement.',
+    tagline: 'Answers to management questions, without waiting for a report.',
+    short: 'Dashboards, KPI tracking, trend analysis, and alerts that answer the questions management actually asks, without waiting for manual reports.',
+    full: 'Good analytics starts with the questions people need answered, not with charts. We work with each team to define its key questions and KPIs, then build dashboards and analytical models on top of your data foundation that update automatically and can be trusted.',
     capabilities: [
-      'Business Insight — organize and present relevant information to support management and operational decisions.',
-      'Performance Monitoring — track indicators and operational measures that help teams understand current performance.',
-      'Operational Visibility — bring together information from multiple sources to provide a clearer view of activities and conditions.',
-      'Trend Identification — analyze historical and current information to identify patterns, changes, and areas requiring attention.',
-      'Decision Support — structure information and analytical views so decision-makers can evaluate options with stronger context.',
-      'Planning & Improvement — use evidence and analytical insight to support planning, prioritization, and organizational improvement.'
+      'KPI Definition — agree on clear, measurable indicators with each business owner.',
+      'Executive Dashboards — concise views of organizational performance for leadership.',
+      'Operational Dashboards — daily views for managers and teams, with drill-down to detail.',
+      'Trend & Variance Analysis — compare actuals with targets, history, and forecasts.',
+      'Automated Alerts — notify the right people when a KPI moves outside its expected range.',
+      'Self-Service Reporting — let trained users explore data without IT support.'
     ],
     challenges: [
-      'Large volumes of data without clear, decision-ready insight.',
-      'Manual or slow reporting processes.',
-      'Limited visibility across functions, locations, or operational activities.',
-      'Difficulty identifying trends, exceptions, or performance gaps.',
-      'Decision-making based on fragmented or inconsistent information.',
-      'Analytics initiatives disconnected from operational systems and workflows.'
+      'Monthly reports take days to prepare and are outdated on arrival.',
+      'Management meetings are spent debating whose numbers are right.',
+      'Performance problems are noticed too late to act on.',
+      'Existing dashboards are rarely used because they do not answer real questions.',
+      'Analysts spend more time preparing data than analyzing it.'
     ],
-    value: 'Effective analytics can help decision-makers see what is happening, understand why it matters, identify patterns, and act with stronger information. The value comes from connecting the analytical layer with reliable data, appropriate context, clear visualization, and the processes in which decisions are made.',
+    value: 'Well-designed analytics shortens the time between something happening and someone acting on it. It also frees analysts from repetitive reporting so they can focus on deeper questions.',
     useCases: [
-      'Executive and management dashboards.',
-      'Operational performance monitoring and reporting.',
-      'Cross-functional analysis using integrated enterprise data.',
-      'Trend, exception, and pattern analysis.',
-      'Geospatial analytics combining business and location information.',
-      'Analytical views embedded within digital processes or operational applications.'
+      'Executive performance dashboards for board and management meetings.',
+      'Sales, revenue, and cost tracking by region, product, or branch.',
+      'Project portfolio and budget monitoring.',
+      'Service-level and customer-satisfaction reporting.',
+      'Location-based performance analysis combined with geospatial data.'
     ],
-    integration: 'Analytics depends on the quality and accessibility of underlying data and often needs to connect with operational systems, digital processes, geospatial information, and visualization interfaces. We design analytics as part of that wider environment.',
-    cta: 'Turn Data Into Useful Insight'
+    integration: 'Analytics depends on clean data from the foundation and becomes more powerful when combined with maps and visualization. We build all three on a shared data model.',
+    cta: 'Turn Your Data Into Answers'
   },
 
-  /* ---------- 4.4 Digital Transformation ---------- */
-  {
-    id: 'digital', cat: 'capabilities', sub: 'Digital Transformation', name: 'Digital Transformation', img: 'assets/img/cap-digital.jpg',
-    icon: '<svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="3"/></svg>',
-    tagline: 'Modernize technology, processes, information flows, and digital experiences with integration at the center.',
-    short: 'Modernize processes, technology environments, information flows, and digital experiences through practical, integrated change aligned with organizational priorities.',
-    full: 'Digital transformation is not simply replacing manual work with digital tools. It is the coordinated improvement of processes, technology environments, information flows, user experiences, and operating models so an organization can work more effectively. Valortek supports transformation initiatives by helping organizations connect modernization priorities with the systems, data, integration, analytics, security, and resilience required to make change sustainable.',
-    capabilities: [
-      'Process Modernization — review and improve workflows so technology supports more efficient and consistent ways of working.',
-      'Technology Modernization — help evolve technology environments to support current needs, integration requirements, and future digital capabilities.',
-      'Digital Workflows — connect information, users, and systems through structured digital processes.',
-      'Systems Integration — enable new and existing technologies to exchange information and operate as part of a broader environment.',
-      'Data-Driven Operations — connect digital processes with reliable data and analytical insight.',
-      'Digital Experiences — improve how employees, customers, or stakeholders interact with digital services and information.'
-    ],
-    challenges: [
-      'Manual processes that limit speed, consistency, or visibility.',
-      'Disconnected systems and duplicated information handling.',
-      'Legacy processes that make it difficult to introduce new digital capabilities.',
-      'Digital initiatives implemented without sufficient integration to existing environments.',
-      'Limited data visibility across end-to-end processes.',
-      'Modernization programs that need stronger security, resilience, and governance considerations.'
-    ],
-    value: 'A well-integrated transformation program can improve operational efficiency, information flow, user experience, visibility, and adaptability. Valortek focuses on practical modernization — connecting the changes that matter to the processes, systems, data, security, and people that make the organization work.',
-    useCases: [
-      'Digitizing and integrating multi-step business workflows.',
-      'Connecting new digital applications with existing enterprise systems.',
-      'Improving information flow across departments or operational functions.',
-      'Modernizing reporting and management visibility as part of process change.',
-      'Building data and analytics into redesigned digital operations.',
-      'Strengthening security and resilience as technology environments are modernized.'
-    ],
-    integration: 'Digital transformation frequently spans processes, data, applications, user experiences, integration, analytics, security, and resilience. Valortek helps connect these components so modernization creates a coherent operating environment rather than a collection of isolated digital projects.',
-    cta: 'Discuss Your Digital Transformation Priorities'
-  },
-
-  /* ---------- 4.5 Cyber Resilience ---------- */
-  {
-    id: 'resilience', cat: 'capabilities', sub: 'Cyber Resilience', name: 'Cyber Resilience', img: 'assets/img/cap-resilience.jpg',
-    icon: '<svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>',
-    tagline: 'Strengthen the organization\u2019s ability to prepare, protect, detect, respond, recover, and adapt.',
-    short: 'Strengthen the organization\u2019s ability to prepare for disruption, protect critical capabilities, detect issues, respond effectively, recover, and adapt.',
-    full: 'Cyber resilience is the ability to continue operating through technology-related disruption and to recover effectively when incidents occur. It goes beyond preventive security by considering how critical processes, systems, information, people, and recovery capabilities work together before, during, and after disruption. Valortek helps organizations approach resilience as part of the broader technology and business continuity environment.',
-    capabilities: [
-      'Prepare — understand important systems, information, dependencies, recovery needs, and resilience priorities.',
-      'Protect — apply appropriate safeguards within the wider technology environment to reduce exposure and limit impact.',
-      'Detect — support visibility and monitoring approaches that help identify issues requiring attention.',
-      'Respond — clarify processes, coordination, and technology requirements that support timely and structured response.',
-      'Recover — support the ability to restore critical capabilities and information in line with business priorities.',
-      'Adapt — use lessons, changing risks, and operational experience to improve resilience over time.'
-    ],
-    challenges: [
-      'Critical business processes that depend heavily on interconnected technology.',
-      'Unclear dependencies between systems, data, operations, and recovery requirements.',
-      'Security programs focused on prevention without sufficient attention to continuity and recovery.',
-      'Need for stronger coordination between technology operations, security, and business continuity activities.',
-      'Difficulty prioritizing which capabilities must be restored first following disruption.'
-    ],
-    value: 'A resilient organization is better prepared to manage disruption without relying on the assumption that every incident can be prevented. By connecting security, continuity, recovery, system dependencies, and operational priorities, organizations can improve their ability to sustain critical activities and restore capabilities in a controlled manner.',
-    useCases: [
-      'Reviewing technology dependencies that support critical business processes.',
-      'Strengthening coordination between cyber security, IT operations, and continuity requirements.',
-      'Improving recovery priorities for systems and information.',
-      'Integrating resilience considerations into digital transformation initiatives.',
-      'Reviewing gaps in protection, detection, response, and recovery capabilities.',
-      'Supporting continuous resilience improvement as technology environments evolve.'
-    ],
-    integration: 'Cyber resilience works across technology, operations, security, continuity, and recovery. We consider resilience in relation to the systems and information the organization depends on, and how those dependencies interact across the wider environment.',
-    cta: 'Strengthen Your Cyber Resilience'
-  },
-
-  /* ---------- 4.6 Immersive & Visualization Solutions ---------- */
+  /* ---------- Immersive & Visualization ---------- */
   {
     id: 'immersive', cat: 'capabilities', sub: 'Immersive & Visualization', name: 'Immersive & Visualization Solutions', img: 'assets/img/cap-immersive.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
-    tagline: 'Make complex information easier to understand through interactive, spatial, and immersive visual experiences.',
-    short: 'Make complex information, environments, processes, and scenarios easier to understand through interactive, 3D, digital, and immersive visualization.',
-    full: 'Some information is difficult to understand through tables, documents, or conventional interfaces alone. Immersive and visualization solutions can help users explore complex environments, relationships, processes, data, and scenarios in more intuitive ways. Valortek helps integrate visualization capabilities with the information and systems that give those visual experiences meaning.',
+    tagline: 'Make complex facilities and projects easy to understand.',
+    short: '3D models, digital twins, and interactive presentations that make complex facilities and projects easy to understand at a glance.',
+    full: 'Some information is hard to grasp from tables or flat maps: the layout of a large facility, the progress of a construction project, or how a planned development will look on site. We create 3D models, digital twins, and interactive presentations connected to your data, so stakeholders can understand them quickly.',
     capabilities: [
-      '3D Visualization — represent environments, assets, concepts, or information in three-dimensional visual form.',
-      'Interactive Visualization — allow users to explore information dynamically rather than through static presentation alone.',
-      'Immersive Experiences — create engaging digital environments that support understanding, communication, training, planning, or stakeholder engagement.',
-      'Virtual Environments — represent spaces, systems, or scenarios in digital environments that users can navigate or review.',
-      'Data Visualization — translate complex data into clear visual forms that support interpretation and decision-making.',
-      'Simulation-Oriented Visualization — visualize scenarios, processes, or changing conditions to support analysis, demonstration, planning, or learning.'
+      '3D Modeling — accurate models of buildings, facilities, and sites.',
+      'Digital Twins — 3D models linked to live data such as occupancy, maintenance status, or energy use.',
+      'Interactive Presentations — touch-screen and web experiences for exhibitions, showrooms, and stakeholder briefings.',
+      'Virtual Tours — navigable walkthroughs of facilities and planned developments.',
+      'Data Visualization Design — custom charts and visual layouts for complex datasets.',
+      'Large-Format Displays — content designed for meeting rooms, lobbies, and visitor centers.'
     ],
     challenges: [
-      'Complex information that is difficult to communicate through conventional reports or dashboards.',
-      'Need to understand environments, assets, or processes spatially and interactively.',
-      'Stakeholder engagement that benefits from more intuitive digital presentation.',
-      'Training or planning scenarios that require visual context.',
-      'Large or multi-dimensional datasets that need clearer visual interpretation.'
+      'Stakeholders struggle to understand technical drawings or plans.',
+      'Facility information is spread across drawings, documents, and systems.',
+      'Project progress is hard to communicate to management and investors.',
+      'Onboarding new staff to large or complex sites takes too long.',
+      'Standard charts cannot convey the full picture of complex data.'
     ],
-    value: 'Visualization can reduce cognitive complexity by presenting information in forms that are easier to explore and understand. When connected to enterprise data, analytics, geospatial information, or digital applications, visual and immersive experiences can provide a more intuitive interface to complex business and operational information.',
+    value: 'Visual, interactive information shortens explanations, improves stakeholder buy-in, and reduces misunderstandings in planning and facility management.',
     useCases: [
-      'Interactive 3D representation of facilities, assets, or environments.',
-      'Immersive environments for orientation, learning, communication, or stakeholder engagement.',
-      'Data-rich visualization combining operational and contextual information.',
-      'Geospatial and 3D visualization of location-based information.',
-      'Interactive scenario or process visualization for planning and analysis.',
-      'Visual interfaces that make complex analytical information easier for decision-makers to interpret.'
+      'Digital twins of office buildings, campuses, or industrial facilities for facility management.',
+      '3D visualization of property and infrastructure development projects.',
+      'Interactive company or product presentations for exhibitions and showrooms.',
+      'Virtual site tours for staff onboarding and visitor orientation.',
+      'Visual dashboards for meeting rooms and executive briefings.'
     ],
-    integration: 'Visualization can sit on top of data, analytics, geospatial information, digital applications, and simulation-oriented environments. Its value increases when the visual experience is connected to reliable information and the workflows in which users make decisions.',
-    cta: 'Explore Visualization Possibilities'
+    integration: 'Visualization is most valuable when connected to the data foundation, maps, and analytics, so what people see is always current.',
+    cta: 'Explore Visualization Options'
   },
 
-  /* ---------- 4.7 Cyber Security ---------- */
+  /* ---------- Digital Transformation ---------- */
+  {
+    id: 'digital', cat: 'capabilities', sub: 'Digital Transformation', name: 'Digital Transformation', img: 'assets/img/cap-digital.jpg',
+    icon: '<svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="3"/></svg>',
+    tagline: 'Capture data digitally, at the source.',
+    short: 'Replace paper forms and spreadsheet workflows with digital data capture, so information enters the platform clean and on time.',
+    full: 'Most data quality problems start at the point of entry: paper forms, emailed spreadsheets, and manual re-typing. We digitize these workflows with web and mobile forms, approvals, and integrations, so information is captured once, validated immediately, and flows straight into your data platform.',
+    capabilities: [
+      'Digital Forms — web and mobile forms with validation, photos, and location.',
+      'Workflow & Approvals — route requests and documents to the right people automatically.',
+      'Process Mapping — document current workflows and identify where data is lost or delayed.',
+      'Application Integration — connect new digital workflows with existing systems.',
+      'Document Digitization — convert archives into searchable, structured records.',
+      'User Adoption Support — training and guides that help teams switch from paper to digital.'
+    ],
+    challenges: [
+      'Reports depend on paper forms or spreadsheets sent by email.',
+      'The same data is typed into several systems by different people.',
+      'Approvals are slow and hard to trace.',
+      'Archived documents are difficult to search.',
+      'Previous digital initiatives were not adopted by users.'
+    ],
+    value: 'Digital capture improves data quality at the source, shortens process cycle times, and gives management real-time visibility into workflows that used to be invisible.',
+    useCases: [
+      'Mobile inspection and maintenance checklists.',
+      'Digital request, approval, and procurement workflows.',
+      'Field survey forms that update maps and dashboards automatically.',
+      'Digitization of land, asset, or personnel records.',
+      'Integration of new applications with existing finance or HR systems.'
+    ],
+    integration: 'Digital workflows feed clean data into the foundation, and their performance can be measured through analytics dashboards.',
+    cta: 'Discuss Your Workflow Needs'
+  },
+
+  /* ---------- Cyber Security ---------- */
   {
     id: 'cyber', cat: 'capabilities', sub: 'Cyber Security', name: 'Cyber Security', img: 'assets/img/cap-cyber.jpg',
     icon: '<svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>',
-    tagline: 'Protect enterprise information, applications, infrastructure, and digital operations as part of the wider technology environment.',
-    short: 'Protect information, applications, infrastructure, and digital operations through security assessment, architecture, integration, monitoring, risk management, and continuous improvement.',
-    full: 'Cyber security supports the confidentiality, integrity, and availability of the technology and information an organization depends on. Valortek approaches security as an integrated enterprise requirement — one that must align with systems, data, applications, users, operational processes, and business priorities rather than exist as an isolated technical layer.',
+    tagline: 'Protect the data you have worked hard to organize.',
+    short: 'Role-based access, encryption, and security reviews that protect business data and keep it accessible only to authorized users.',
+    full: 'Consolidating data creates value, and it also raises the stakes for protecting it. We design security into every data platform we deliver and help organizations review and strengthen protection for their existing data and applications, in line with good practice and applicable regulations such as Indonesia’s Personal Data Protection Law (UU PDP).',
     capabilities: [
-      'Security Assessment — review relevant technology environments, requirements, risks, and control gaps to support informed security improvement.',
-      'Security Architecture — help define how security controls and principles should fit within the broader solution and technology environment.',
-      'Protection — support appropriate safeguards for information, applications, infrastructure, identities, and digital operations.',
-      'Monitoring — support visibility into relevant security events and conditions requiring attention.',
-      'Risk Management — connect security priorities with business context, technology dependencies, and practical risk considerations.',
-      'Security Integration — integrate security requirements into digital platforms, data environments, applications, and broader technology solutions.',
-      'Security Operations — support structured approaches to ongoing security activities, coordination, and operational improvement.',
-      'Security Improvement — help organizations review gaps, strengthen controls, and evolve their security posture over time.'
+      'Access Management — role-based permissions so users see only the data they need.',
+      'Data Protection — encryption, masking, and secure handling of personal and sensitive data.',
+      'Security Assessment — review of applications, data platforms, and configurations against good practice.',
+      'Compliance Support — help aligning data practices with UU PDP and internal policies.',
+      'Audit Logging — records of who accessed or changed data, and when.',
+      'Security Awareness — practical guidance for staff who handle business data.'
     ],
     challenges: [
-      'Growing technology dependencies and expanding digital environments.',
-      'Security controls implemented inconsistently across systems or initiatives.',
-      'Limited visibility into security conditions across the technology environment.',
-      'New digital or integration projects that need security embedded from the design stage.',
-      'Difficulty prioritizing security improvements against business and operational requirements.',
-      'Need for stronger connection between cyber security and continuity or resilience planning.'
+      'Too many people have access to sensitive data.',
+      'Personal data is stored without clear protection or retention rules.',
+      'There is no record of who accessed or changed important data.',
+      'Preparing for UU PDP compliance without a clear starting point.',
+      'Security is considered only after a system goes live.'
     ],
-    value: 'Integrated security helps organizations protect important technology and information while enabling business operations. The objective is to apply appropriate security measures in the right places, align them with the wider architecture, and improve the organization\u2019s ability to manage risk as technology environments change.',
+    value: 'Built-in security protects the organization’s reputation, supports regulatory compliance, and gives stakeholders confidence to share and use data more widely.',
     useCases: [
-      'Security reviews for existing or planned technology environments.',
-      'Security architecture for integrated enterprise solutions.',
-      'Security requirements embedded within digital transformation initiatives.',
-      'Improving monitoring and operational visibility for security-relevant events.',
-      'Integrating security considerations with data, applications, infrastructure, and user access.',
-      'Connecting cyber security improvement with broader cyber resilience objectives.'
+      'Access control design for a new data platform or dashboard.',
+      'Personal data inventory and protection review.',
+      'Security assessment of existing business applications.',
+      'Audit trail implementation for sensitive records.',
+      'Data protection policies and staff guidance.'
     ],
-    integration: 'Cyber security should be integrated into the technology environment rather than added as an isolated layer. We consider how security requirements interact with data, applications, integration, digital transformation, operations, resilience, and user needs.',
-    cta: 'Discuss Your Cyber Security Requirements'
+    integration: 'Security is applied across every building block, from the data foundation to dashboards and mobile forms, rather than added at the end.',
+    cta: 'Review Your Data Security'
+  },
+
+  /* ---------- Cyber Resilience ---------- */
+  {
+    id: 'resilience', cat: 'capabilities', sub: 'Cyber Resilience', name: 'Cyber Resilience', img: 'assets/img/cap-resilience.jpg',
+    icon: '<svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>',
+    tagline: 'Keep your data and dashboards available when something goes wrong.',
+    short: 'Backup, recovery, and continuity planning so your data platform and dashboards stay available when something goes wrong.',
+    full: 'Once teams rely on a data platform every day, downtime and data loss become business problems. We help organizations plan backups, test recovery, and prepare continuity procedures so critical data and reporting can be restored quickly after a system failure, outage, or other disruption.',
+    capabilities: [
+      'Backup Strategy — define what to back up, how often, and where.',
+      'Recovery Testing — regularly verify that data and systems can actually be restored.',
+      'Continuity Planning — documented procedures for keeping key reporting running during an outage.',
+      'Dependency Mapping — identify which systems and data each business process relies on.',
+      'Recovery Priorities — agree which data and services must be restored first.',
+      'Post-Event Review — learn from each disruption and improve the plan.'
+    ],
+    challenges: [
+      'Backups exist but have never been tested.',
+      'It is unclear how long recovery would take after a system failure.',
+      'Critical reports stop when a single server or application is unavailable.',
+      'No agreed order for restoring systems after an outage.',
+      'Continuity plans are outdated or exist only on paper.'
+    ],
+    value: 'Tested backup and recovery reduce downtime, protect against data loss, and give management confidence that critical information will be available when it is needed.',
+    useCases: [
+      'Backup and recovery design for a new data platform.',
+      'Recovery testing for existing business applications.',
+      'Continuity procedures for management reporting.',
+      'Mapping system dependencies for critical business processes.',
+      'Annual review and update of recovery plans.'
+    ],
+    integration: 'Resilience complements cyber security: security reduces the chance of a problem, resilience reduces its impact. We plan both together for every platform we deliver.',
+    cta: 'Strengthen Your Recovery Plan'
   },
 ];

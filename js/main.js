@@ -27,7 +27,7 @@
             </div>
           </div>
           <a href="industries.html" class="nav__link" data-nav="industries">Industries</a>
-          <a href="technology-ecosystem.html" class="nav__link" data-nav="ecosystem">Technology Ecosystem</a>
+          <a href="technology-ecosystem.html" class="nav__link" data-nav="ecosystem">Technology &amp; Tools</a>
           <a href="contact.html"   class="nav__cta">Contact Us</a>
         </nav>
         <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
@@ -42,15 +42,15 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Valortek" class="footer__logo" />
-          <p>PT. Valortek Ratanika Utama — System Integrator &amp; Enterprise Technology Solutions Partner. We connect data, geospatial, analytics, digital, resilience, visualization, and security capabilities into practical, business-aligned technology environments.</p>
+          <p>PT. Valortek Ratanika Utama — data, geospatial, analytics, and visualization solutions that turn scattered information into clear, reliable business insight.</p>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
           <a href="about.html">About Us</a>
           <a href="about.html#vision-mission">Vision &amp; Mission</a>
-          <a href="index.html#approach">System Integration Approach</a>
+          <a href="index.html#approach">How We Work</a>
           <a href="industries.html">Industries</a>
-          <a href="technology-ecosystem.html">Technology Ecosystem</a>
+          <a href="technology-ecosystem.html">Technology &amp; Tools</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer__col">

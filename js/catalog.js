@@ -100,7 +100,7 @@
       return;
     }
 
-    document.title = p.name + ' | Valortek — Enterprise Technology Capabilities';
+    document.title = p.name + ' | Valortek Data & Geospatial Solutions';
 
     // hero
     detail.appendChild(el(
