@@ -1022,3 +1022,4 @@ body:not([data-page="home"]) .nav{ background:rgba(12,11,10,.94); border-bottom-
 
 @media (min-width:1100px){ #approach .industries--auto{ grid-template-columns:repeat(5,1fr); } }
 [data-reveal]{ opacity:1 !important; transform:none !important; }
+.footer__bottom{ color:var(--muted); }
