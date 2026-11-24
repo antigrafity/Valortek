@@ -227,7 +227,7 @@ window.VALORTEK_PRODUCTS = [
       'Audit trail implementation for sensitive records.',
       'Data protection policies and staff guidance.'
     ],
-    integration: 'Security covers everything we build, from the data foundation to dashboards and mobile forms, rather than added at the end.',
+    integration: 'Security is part of everything we build, from the data foundation to dashboards and mobile forms. It is never bolted on at the end.',
     cta: 'Review Your Data Security'
   },
 
