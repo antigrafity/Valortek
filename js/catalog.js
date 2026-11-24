@@ -104,13 +104,15 @@
 
     // hero
     detail.appendChild(el(
-      '<section class="page-hero"><div class="page-hero__grid" aria-hidden="true"></div>' +
+      '<section class="page-hero">' +
+      ((p.img || (cat && cat.img)) ? '<div class="page-hero__bg" aria-hidden="true" style="background-image:linear-gradient(90deg,rgba(12,11,10,.95) 0%,rgba(12,11,10,.7) 50%,rgba(12,11,10,.3) 100%),url(\'' + esc(p.img || cat.img) + '\')"></div>' : '') +
+      '<div class="page-hero__grid" aria-hidden="true"></div>' +
       '<div class="page-hero__glow" aria-hidden="true"></div><div class="page-hero__inner">' +
       '<nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>' +
       '<a href="solutions.html">Solutions &amp; Services</a><span>/</span>' + esc(p.name) + '</nav>' +
       '<span class="page-hero__eyebrow">Capability</span>' +
       '<h1>' + esc(p.name) + '</h1>' +
-      '<p class="detail__code">' + esc(p.sub) + '</p></div></section>'
+      (p.tagline ? '<p>' + esc(p.tagline) + '</p>' : '') + '</div></section>'
     ));
 
     // body
