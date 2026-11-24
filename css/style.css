@@ -996,3 +996,5 @@ p{ text-align:left; text-wrap:pretty; }
   .cards--auto{ grid-template-columns:repeat(4,1fr); }
   #approach .industries--auto{ grid-template-columns:repeat(5,1fr); }
 }
+:root{ --copper:#a5561a; }
+.btn--primary:hover{ background:#8a4714; }
