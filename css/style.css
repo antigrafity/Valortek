@@ -799,12 +799,7 @@ body[data-page="contact"]    { --hero-bg:url('../assets/img/hero-contact.jpg'); 
 
 
 
-/* =========================================================
-   2026 redesign — "editorial luxe"
-   Black + logo orange. Manrope set large and light, orange
-   hairlines, square corners, lots of air. Photo-led hero,
-   services as an editorial index, Indonesia dot-map band.
-   ========================================================= */
+/* -- theme -- */
 :root{
   --bg:#0c0b0a; --bg-2:#141210; --bg-3:#1c1915; --hair:#2b2722; --hair-2:#3a342d;
   --ink:#0c0b0a; --text:#f4efe8; --muted:#a89e92; --dim:#7d746a;
