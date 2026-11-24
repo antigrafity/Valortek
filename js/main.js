@@ -20,14 +20,14 @@
           <a href="index.html"    class="nav__link" data-nav="home">Home</a>
           <a href="about.html"     class="nav__link" data-nav="about">About</a>
           <div class="nav__dropdown" id="navProductsDropdown">
-            <a href="solutions.html" class="nav__link nav__link--caret" data-nav="solutions">Solutions &amp; Services</a>
+            <a href="solutions.html" class="nav__link nav__link--caret" data-nav="solutions">Solutions</a>
             <div class="megamenu" id="megaMenu">
               <ul class="megamenu__cats" id="megaCats"></ul>
               <div class="megamenu__products" id="megaProducts"></div>
             </div>
           </div>
           <a href="industries.html" class="nav__link" data-nav="industries">Industries</a>
-          <a href="technology-ecosystem.html" class="nav__link" data-nav="ecosystem">Technology &amp; Tools</a>
+          <a href="technology-ecosystem.html" class="nav__link" data-nav="ecosystem">Technology</a>
           <a href="contact.html"   class="nav__cta">Contact Us</a>
         </nav>
         <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
@@ -42,7 +42,7 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Valortek" class="footer__logo" />
-          <p>PT. Valortek Ratanika Utama — data, geospatial, analytics, and visualization solutions that turn scattered information into clear, reliable business insight.</p>
+          <p>PT. Valortek Ratanika Utama builds technology around real business problems: applications, data, maps, monitoring, automation, and AI.</p>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
@@ -50,18 +50,20 @@
           <a href="about.html#vision-mission">Vision &amp; Mission</a>
           <a href="index.html#approach">How We Work</a>
           <a href="industries.html">Industries</a>
-          <a href="technology-ecosystem.html">Technology &amp; Tools</a>
+          <a href="technology-ecosystem.html">Technology</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer__col">
-          <h4>Capabilities</h4>
-          <a href="solution.html?id=data">Data Foundation</a>
-          <a href="solution.html?id=geospatial">Geospatial Solutions</a>
-          <a href="solution.html?id=analytics">Analytics &amp; Dashboards</a>
-          <a href="solution.html?id=digital">Digital Forms &amp; Workflows</a>
-          <a href="solution.html?id=resilience">Backup &amp; Recovery</a>
-          <a href="solution.html?id=immersive">3D &amp; Visualization</a>
-          <a href="solution.html?id=cyber">Data Security</a>
+          <h4>Solutions</h4>
+          <a href="solution.html?id=apps">Custom Business Applications</a>
+          <a href="solution.html?id=digital">Field &amp; Mobile Apps</a>
+          <a href="solution.html?id=data">Data Platform &amp; Dashboards</a>
+          <a href="solution.html?id=geospatial">Maps &amp; Location Analytics</a>
+          <a href="solution.html?id=iot">IoT &amp; Asset Monitoring</a>
+          <a href="solution.html?id=automation">Workflow Automation &amp; Integration</a>
+          <a href="solution.html?id=ai">AI for Documents &amp; Everyday Work</a>
+          <a href="solution.html?id=immersive">3D &amp; Digital Twins</a>
+          <a href="solution.html?id=cloud">Cloud, Security &amp; Backup</a>
         </div>
       </div>
       <div class="footer__bottom container">

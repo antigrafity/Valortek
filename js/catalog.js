@@ -26,7 +26,7 @@
 
     // quick-jump dropdown: lists the capabilities themselves (no categories)
     if (categorySelect) {
-      categorySelect.appendChild(el('<option value="all">All Capabilities</option>'));
+      categorySelect.appendChild(el('<option value="all">All Solutions</option>'));
       PRODUCTS.forEach(function (p) {
         categorySelect.appendChild(el('<option value="' + p.id + '">' + esc(p.name) + '</option>'));
       });
@@ -92,7 +92,7 @@
       detail.innerHTML =
         '<section class="page-hero"><div class="page-hero__grid"></div><div class="page-hero__glow"></div>' +
         '<div class="page-hero__inner"><nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>' +
-        '<a href="solutions.html">Solutions &amp; Services</a><span>/</span>Not found</nav>' +
+        '<a href="solutions.html">Solutions</a><span>/</span>Not found</nav>' +
         '<h1>Solution not found</h1><p>The solution you are looking for is unavailable.</p>' +
         '<a href="solutions.html" class="btn btn--primary" style="margin-top:1.4rem">Back to Solutions <i class="ico-arrow"></i></a>' +
         '</div></section>';
@@ -100,7 +100,7 @@
       return;
     }
 
-    document.title = p.name + ' | Valortek Data & Geospatial Solutions';
+    document.title = p.name + ' | Valortek';
 
     // hero
     detail.appendChild(el(
@@ -109,8 +109,8 @@
       '<div class="page-hero__grid" aria-hidden="true"></div>' +
       '<div class="page-hero__glow" aria-hidden="true"></div><div class="page-hero__inner">' +
       '<nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>' +
-      '<a href="solutions.html">Solutions &amp; Services</a><span>/</span>' + esc(p.name) + '</nav>' +
-      '<span class="page-hero__eyebrow">Capability</span>' +
+      '<a href="solutions.html">Solutions</a><span>/</span>' + esc(p.name) + '</nav>' +
+      '<span class="page-hero__eyebrow">Solution</span>' +
       '<h1>' + esc(p.name) + '</h1>' +
       (p.tagline ? '<p>' + esc(p.tagline) + '</p>' : '') + '</div></section>'
     ));
@@ -128,7 +128,7 @@
     detail.appendChild(el(
       '<section class="section"><div class="container"><div class="detail">' +
         '<div class="detail__main">' +
-          '<span class="tag">Capability</span>' +
+          '<span class="tag">Solution</span>' +
           '<h2>' + esc(p.name) + '</h2>' +
           tagline +
           '<p class="detail__full">' + esc(p.full) + '</p>' +
@@ -150,8 +150,8 @@
                '<ul class="ticks">' + lis + '</ul>' +
              '</div>';
     }
-    var caps = listBlock('Key Capabilities', p.capabilities);
-    var uses = listBlock('Example Applications / Use Cases', p.useCases);
+    var caps = listBlock('What It Covers', p.capabilities);
+    var uses = listBlock('Typical Projects', p.useCases);
     if (caps || uses) {
       detail.appendChild(el(
         '<section class="section section--alt"><div class="container">' +
@@ -168,8 +168,8 @@
                '<p class="detail__full">' + esc(body) + '</p>' +
              '</div>';
     }
-    var challenges = listBlock('Business Challenges Addressed', p.challenges);
-    var valueCol = textBlock('Customer Value', p.value) + textBlock('Integration Perspective', p.integration);
+    var challenges = listBlock('Sounds Familiar?', p.challenges);
+    var valueCol = textBlock('What Changes', p.value) + textBlock('Works Well With', p.integration);
     if (challenges || valueCol) {
       detail.appendChild(el(
         '<section class="section"><div class="container">' +
@@ -178,8 +178,20 @@
       ));
     }
 
+    // FAQ
+    if (p.faq && p.faq.length) {
+      var qa = p.faq.map(function (f) {
+        return '<details class="faq__item"><summary>' + esc(f[0]) + '</summary><p>' + esc(f[1]) + '</p></details>';
+      }).join('');
+      detail.appendChild(el(
+        '<section class="section section--alt"><div class="container faq">' +
+        '<div class="section__head"><span class="tag">Questions</span>' +
+        '<h2 class="section__title">Common Questions</h2></div>' + qa + '</div></section>'
+      ));
+    }
+
     // related
-    var related = PRODUCTS.filter(function (x) { return x.cat === p.cat && x.id !== p.id; });
+    var related = PRODUCTS.filter(function (x) { return x.cat === p.cat && x.id !== p.id; }).slice(0, 3);
     if (related.length) {
       var relGrid = '';
       related.forEach(function (r) {
@@ -192,9 +204,9 @@
           '</a>';
       });
       detail.appendChild(el(
-        '<section class="section section--alt"><div class="container">' +
+        '<section class="section"><div class="container">' +
         '<div class="section__head"><span class="tag">Explore More</span>' +
-        '<h2 class="section__title">Other Capabilities</h2></div>' +
+        '<h2 class="section__title">Other Solutions</h2></div>' +
         '<div class="cards pgrid">' + relGrid + '</div></div></section>'
       ));
     }

@@ -980,7 +980,7 @@ body:not([data-page="home"]) .nav{ background:rgba(12,11,10,.94); border-bottom-
 .page-hero__grid,.page-hero__glow{ display:none; }
 .page-hero h1{ font-weight:300; font-size:clamp(3rem,6.4vw,5.8rem); line-height:.98; letter-spacing:-.045em; color:#fff; max-width:14ch; }
 .page-hero p{ color:#c9c0b4; font-size:1.15rem; }
-.breadcrumb,.breadcrumb a{ color:var(--dim); }
+.breadcrumb,.breadcrumb a{ color:var(--muted); }
 .breadcrumb a:hover{ color:var(--copper-soft); }
 .detail__code,.detail__tagline{ color:var(--copper-soft); }
 
@@ -1018,3 +1018,15 @@ body:not([data-page="home"]) .nav{ background:rgba(12,11,10,.94); border-bottom-
 @media (min-width:1100px){ #approach .industries--auto{ grid-template-columns:repeat(5,1fr); } }
 [data-reveal]{ opacity:1 !important; transform:none !important; }
 .footer__bottom{ color:var(--muted); }
+
+/* solution FAQ */
+.faq .faq__item{ max-width:900px; }
+.detail__block + .detail__block{ margin-top:2.2rem; }
+.faq .section__head{ text-align:left; margin-left:0; }
+.faq__item{ border-top:1px solid var(--hair-2); }
+.faq__item:last-child{ border-bottom:1px solid var(--hair-2); }
+.faq__item summary{ list-style:none; cursor:pointer; padding:1.25rem 2.5rem 1.25rem 0; position:relative; font-size:1.08rem; font-weight:600; color:var(--text); }
+.faq__item summary::-webkit-details-marker{ display:none; }
+.faq__item summary::after{ content:'+'; position:absolute; right:.2rem; top:50%; transform:translateY(-50%); color:var(--copper); font-size:1.5rem; font-weight:300; }
+.faq__item[open] summary::after{ content:'\2013'; }
+.faq__item p{ margin:0 0 1.4rem; color:var(--muted); max-width:68ch; line-height:1.7; }
