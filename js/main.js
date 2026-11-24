@@ -57,11 +57,11 @@
           <h4>Capabilities</h4>
           <a href="solution.html?id=data">Data Foundation</a>
           <a href="solution.html?id=geospatial">Geospatial Solutions</a>
-          <a href="solution.html?id=analytics">Analytics &amp; Insight</a>
-          <a href="solution.html?id=digital">Digital Transformation</a>
-          <a href="solution.html?id=resilience">Cyber Resilience</a>
-          <a href="solution.html?id=immersive">Immersive &amp; Visualization</a>
-          <a href="solution.html?id=cyber">Cyber Security</a>
+          <a href="solution.html?id=analytics">Analytics &amp; Dashboards</a>
+          <a href="solution.html?id=digital">Digital Forms &amp; Workflows</a>
+          <a href="solution.html?id=resilience">Backup &amp; Recovery</a>
+          <a href="solution.html?id=immersive">3D &amp; Visualization</a>
+          <a href="solution.html?id=cyber">Data Security</a>
         </div>
       </div>
       <div class="footer__bottom container">

@@ -20,8 +20,8 @@
 window.VALORTEK_CATEGORIES = [
   {
     id: 'capabilities',
-    name: 'Data & Insight Building Blocks',
-    tagline: 'Seven building blocks that take information from scattered sources to clear, trusted business insight. Most projects start with the data foundation and add the blocks they need.',
+    name: 'What We Build',
+    tagline: 'Seven services that take information from scattered sources to clear, reliable reporting. Most projects start with the data foundation and add what they need from there.',
     img: 'assets/img/cat-software.jpg'
   },
 ];
@@ -57,7 +57,7 @@ window.VALORTEK_PRODUCTS = [
       'Preparing clean, structured data for dashboards and geospatial applications.',
       'Setting up data access policies that match organizational roles.'
     ],
-    integration: 'The data foundation feeds every other building block. Analytics, maps, 3D views, and digital forms all draw from it, which is why we usually start here.',
+    integration: 'Every other service draws on the data foundation. Analytics, maps, 3D views, and digital forms all draw from it, which is why we usually start here.',
     cta: 'Discuss Your Data Foundation'
   },
 
@@ -97,7 +97,7 @@ window.VALORTEK_PRODUCTS = [
 
   /* ---------- Analytics ---------- */
   {
-    id: 'analytics', cat: 'capabilities', sub: 'Analytics & Insight', name: 'Analytics & Insight', img: 'assets/img/cap-analytics.jpg',
+    id: 'analytics', cat: 'capabilities', sub: 'Analytics & Dashboards', name: 'Analytics & Dashboards', img: 'assets/img/cap-analytics.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg>',
     tagline: 'Answers to management questions, without waiting for a report.',
     short: 'Dashboards, KPI tracking, trend analysis, and alerts that answer the questions management actually asks, without waiting for manual reports.',
@@ -117,7 +117,7 @@ window.VALORTEK_PRODUCTS = [
       'Existing dashboards are rarely used because they do not answer real questions.',
       'Analysts spend more time preparing data than analyzing it.'
     ],
-    value: 'Well-designed analytics shortens the time between something happening and someone acting on it. It also frees analysts from repetitive reporting so they can focus on deeper questions.',
+    value: 'Good dashboards shorten the time between something happening and someone doing something about it. It also frees analysts from repetitive reporting so they can focus on deeper questions.',
     useCases: [
       'Executive performance dashboards for board and management meetings.',
       'Sales, revenue, and cost tracking by region, product, or branch.',
@@ -129,9 +129,9 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Turn Your Data Into Answers'
   },
 
-  /* ---------- Immersive & Visualization ---------- */
+  /* ---------- 3D & Visualization ---------- */
   {
-    id: 'immersive', cat: 'capabilities', sub: 'Immersive & Visualization', name: 'Immersive & Visualization Solutions', img: 'assets/img/cap-immersive.jpg',
+    id: 'immersive', cat: 'capabilities', sub: '3D & Visualization', name: '3D & Visualization', img: 'assets/img/cap-immersive.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
     tagline: 'Make complex facilities and projects easy to understand.',
     short: '3D models, digital twins, and interactive presentations that make complex facilities and projects easy to understand at a glance.',
@@ -151,7 +151,7 @@ window.VALORTEK_PRODUCTS = [
       'Onboarding new staff to large or complex sites takes too long.',
       'Standard charts cannot convey the full picture of complex data.'
     ],
-    value: 'Visual, interactive information shortens explanations, improves stakeholder buy-in, and reduces misunderstandings in planning and facility management.',
+    value: 'When people can see a site or project for themselves, explanations get shorter, approvals come faster, and there are fewer misunderstandings later.',
     useCases: [
       'Digital twins of office buildings, campuses, or industrial facilities for facility management.',
       '3D visualization of property and infrastructure development projects.',
@@ -163,9 +163,9 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Explore Visualization Options'
   },
 
-  /* ---------- Digital Transformation ---------- */
+  /* ---------- Digital Forms & Workflows ---------- */
   {
-    id: 'digital', cat: 'capabilities', sub: 'Digital Transformation', name: 'Digital Transformation', img: 'assets/img/cap-digital.jpg',
+    id: 'digital', cat: 'capabilities', sub: 'Digital Forms & Workflows', name: 'Digital Forms & Workflows', img: 'assets/img/cap-digital.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2"/><circle cx="12" cy="12" r="3"/></svg>',
     tagline: 'Capture data digitally, at the source.',
     short: 'Replace paper forms and spreadsheet workflows with digital data capture, so information enters the platform clean and on time.',
@@ -197,9 +197,9 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Discuss Your Workflow Needs'
   },
 
-  /* ---------- Cyber Security ---------- */
+  /* ---------- Data Security ---------- */
   {
-    id: 'cyber', cat: 'capabilities', sub: 'Cyber Security', name: 'Cyber Security', img: 'assets/img/cap-cyber.jpg',
+    id: 'cyber', cat: 'capabilities', sub: 'Data Security', name: 'Data Security', img: 'assets/img/cap-cyber.jpg',
     icon: '<svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>',
     tagline: 'Protect the data you have worked hard to organize.',
     short: 'Role-based access, encryption, and security reviews that protect business data and keep it accessible only to authorized users.',
@@ -227,13 +227,13 @@ window.VALORTEK_PRODUCTS = [
       'Audit trail implementation for sensitive records.',
       'Data protection policies and staff guidance.'
     ],
-    integration: 'Security is applied across every building block, from the data foundation to dashboards and mobile forms, rather than added at the end.',
+    integration: 'Security covers everything we build, from the data foundation to dashboards and mobile forms, rather than added at the end.',
     cta: 'Review Your Data Security'
   },
 
-  /* ---------- Cyber Resilience ---------- */
+  /* ---------- Backup & Recovery ---------- */
   {
-    id: 'resilience', cat: 'capabilities', sub: 'Cyber Resilience', name: 'Cyber Resilience', img: 'assets/img/cap-resilience.jpg',
+    id: 'resilience', cat: 'capabilities', sub: 'Backup & Recovery', name: 'Backup & Recovery', img: 'assets/img/cap-resilience.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg>',
     tagline: 'Keep your data and dashboards available when something goes wrong.',
     short: 'Backup, recovery, and continuity planning so your data platform and dashboards stay available when something goes wrong.',
@@ -261,7 +261,7 @@ window.VALORTEK_PRODUCTS = [
       'Mapping system dependencies for critical business processes.',
       'Annual review and update of recovery plans.'
     ],
-    integration: 'Resilience complements cyber security: security reduces the chance of a problem, resilience reduces its impact. We plan both together for every platform we deliver.',
+    integration: 'Security and backup work as a pair: one lowers the chance of a problem, the other limits the damage if one happens. We plan both together for every platform we deliver.',
     cta: 'Strengthen Your Recovery Plan'
   },
 ];
