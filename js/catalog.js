@@ -24,54 +24,68 @@
     var searchInput = document.getElementById('catalogSearch');
     var emptyMsg = document.getElementById('catalogEmpty');
 
-    // quick-jump dropdown: lists the capabilities themselves (no categories)
+    // filter dropdown: product categories
     if (categorySelect) {
-      categorySelect.appendChild(el('<option value="all">All Solutions</option>'));
-      PRODUCTS.forEach(function (p) {
-        categorySelect.appendChild(el('<option value="' + p.id + '">' + esc(p.name) + '</option>'));
+      categorySelect.appendChild(el('<option value="all">All categories</option>'));
+      CATS.forEach(function (c) {
+        categorySelect.appendChild(el('<option value="' + c.id + '">' + esc(c.name) + '</option>'));
       });
     }
 
-    // one large banner per capability: banner -> title/desc -> View details
-    var wrap = el('<div class="caplist" id="capabilityList"></div>');
-    PRODUCTS.forEach(function (p) {
-      var hay = (p.name + ' ' + p.sub + ' ' + p.short).toLowerCase();
-      var img = p.img
-        ? '<img src="' + p.img + '" alt="' + esc(p.name) + '" loading="lazy" onerror="this.style.display=\'none\'" />'
-        : '';
-      wrap.appendChild(el(
-        '<article class="capitem" id="cap-' + p.id + '" data-hay="' + esc(hay) + '" data-id="' + p.id + '">' +
-          '<a class="capitem__banner" href="solution.html?id=' + p.id + '" aria-label="' + esc(p.name) + '">' +
-            img +
-            '<span class="capitem__label">' + esc(p.name) + '</span>' +
-          '</a>' +
+    function card(p) {
+      var hay = (p.name + ' ' + p.sub + ' ' + p.short + ' ' + (p.type || '') + ' ' + (catName[p.cat] || '')).toLowerCase();
+      var img = p.img ? '<img src="' + p.img + '" alt="" loading="lazy" onerror="this.style.display=\'none\'" />' : '';
+      return el(
+        '<article class="capitem" id="cap-' + p.id + '" data-hay="' + esc(hay) + '" data-cat="' + p.cat + '">' +
+          '<a class="capitem__banner" href="solution.html?id=' + p.id + '" aria-label="' + esc(p.name) + '">' + img +
+            '<span class="capitem__label">' + esc(p.name) + '</span></a>' +
+          '<p class="capitem__meta"><span class="typebadge">' + esc(p.type || 'Solution') + '</span></p>' +
           '<p class="capitem__desc">' + esc(p.short) + '</p>' +
           '<a class="capitem__more" href="solution.html?id=' + p.id + '">View details <i class="ico-arrow"></i></a>' +
-        '</article>'
-      ));
+        '</article>');
+    }
+
+    // one group per category, each with its products
+    var wrap = el('<div class="catgroups" id="capabilityList"></div>');
+    CATS.forEach(function (c) {
+      var items = PRODUCTS.filter(function (p) { return p.cat === c.id; });
+      if (!items.length) return;
+      var g = el('<section class="catgroup" id="cat-' + c.id + '" data-cat="' + c.id + '">' +
+        '<header class="catgroup__head"><h3>' + esc(c.name) + '</h3><p>' + esc(c.tagline || '') + '</p></header>' +
+        '<div class="caplist"></div></section>');
+      var list = g.querySelector('.caplist');
+      items.forEach(function (p) { list.appendChild(card(p)); });
+      wrap.appendChild(g);
     });
     listing.appendChild(wrap);
 
-    // filtering (search + capability quick-jump)
     var activeId = 'all';
     function apply() {
       var q = (searchInput && searchInput.value || '').trim().toLowerCase();
       var anyVisible = false;
-      wrap.querySelectorAll('.capitem').forEach(function (card) {
-        var matchId = activeId === 'all' || card.getAttribute('data-id') === activeId;
-        var matchQ = !q || card.getAttribute('data-hay').indexOf(q) !== -1;
-        var show = matchId && matchQ;
-        card.style.display = show ? '' : 'none';
-        if (show) anyVisible = true;
+      wrap.querySelectorAll('.catgroup').forEach(function (g) {
+        var groupOn = activeId === 'all' || g.getAttribute('data-cat') === activeId;
+        var shown = 0;
+        g.querySelectorAll('.capitem').forEach(function (card) {
+          var show = groupOn && (!q || card.getAttribute('data-hay').indexOf(q) !== -1);
+          card.style.display = show ? '' : 'none';
+          if (show) shown++;
+        });
+        g.style.display = shown ? '' : 'none';
+        if (shown) anyVisible = true;
       });
       if (emptyMsg) emptyMsg.hidden = anyVisible;
+    }
+    if (location.hash.indexOf('#cat-') === 0 && categorySelect) {
+      var h = location.hash.slice(5);
+      if (catName[h]) { categorySelect.value = h; activeId = h; }
     }
 
     if (categorySelect) {
       categorySelect.addEventListener('change', function () {
         activeId = categorySelect.value;
         apply();
-        var target = activeId === 'all' ? wrap : document.getElementById('cap-' + activeId);
+        var target = activeId === 'all' ? wrap : document.getElementById('cat-' + activeId);
         if (target) {
           window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 150, behavior: 'smooth' });
         }
@@ -92,9 +106,9 @@
       detail.innerHTML =
         '<section class="page-hero"><div class="page-hero__grid"></div><div class="page-hero__glow"></div>' +
         '<div class="page-hero__inner"><nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>' +
-        '<a href="solutions.html">Solutions</a><span>/</span>Not found</nav>' +
+        '<a href="solutions.html">Products &amp; Services</a><span>/</span>Not found</nav>' +
         '<h1>Solution not found</h1><p>The solution you are looking for is unavailable.</p>' +
-        '<a href="solutions.html" class="btn btn--primary" style="margin-top:1.4rem">Back to Solutions <i class="ico-arrow"></i></a>' +
+        '<a href="solutions.html" class="btn btn--primary" style="margin-top:1.4rem">Back to Catalog <i class="ico-arrow"></i></a>' +
         '</div></section>';
       document.title = 'Solution not found | Valortek';
       return;
@@ -109,8 +123,8 @@
       '<div class="page-hero__grid" aria-hidden="true"></div>' +
       '<div class="page-hero__glow" aria-hidden="true"></div><div class="page-hero__inner">' +
       '<nav class="breadcrumb"><a href="index.html">Home</a><span>/</span>' +
-      '<a href="solutions.html">Solutions</a><span>/</span>' + esc(p.name) + '</nav>' +
-      '<span class="page-hero__eyebrow">Solution</span>' +
+      '<a href="solutions.html">Products &amp; Services</a><span>/</span>' + esc(p.name) + '</nav>' +
+      '<span class="page-hero__eyebrow">' + esc((p.type || 'Solution') + ' · ' + (catName[p.cat] || '')) + '</span>' +
       '<h1>' + esc(p.name) + '</h1>' +
       (p.tagline ? '<p>' + esc(p.tagline) + '</p>' : '') + '</div></section>'
     ));
@@ -128,13 +142,13 @@
     detail.appendChild(el(
       '<section class="section"><div class="container"><div class="detail">' +
         '<div class="detail__main">' +
-          '<span class="tag">Solution</span>' +
+          '<span class="tag">' + esc(p.type || 'Solution') + '</span>' +
           '<h2>' + esc(p.name) + '</h2>' +
           tagline +
           '<p class="detail__full">' + esc(p.full) + '</p>' +
           '<div class="detail__actions">' +
             '<a href="contact.html" class="btn btn--primary">' + esc(p.cta || 'Request Information') + ' <i class="ico-arrow"></i></a>' +
-            '<a href="solutions.html" class="btn btn--ghost btn--dark">Back to Solutions</a>' +
+            '<a href="solutions.html" class="btn btn--ghost btn--dark">Back to Catalog</a>' +
           '</div>' +
         '</div>' +
         media +
@@ -151,6 +165,10 @@
              '</div>';
     }
     var caps = listBlock('What It Covers', p.capabilities);
+    if (p.specs && p.specs.length) {
+      caps += '<div class="detail__block"><h3 class="detail__block-title">At a Glance</h3><dl class="specs">' +
+        p.specs.map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>'; }).join('') + '</dl></div>';
+    }
     var uses = listBlock('Typical Projects', p.useCases);
     if (caps || uses) {
       detail.appendChild(el(
@@ -206,7 +224,7 @@
       detail.appendChild(el(
         '<section class="section"><div class="container">' +
         '<div class="section__head"><span class="tag">Explore More</span>' +
-        '<h2 class="section__title">Other Solutions</h2></div>' +
+        '<h2 class="section__title">More in ' + esc(catName[p.cat] || 'This Category') + '</h2></div>' +
         '<div class="cards pgrid">' + relGrid + '</div></div></section>'
       ));
     }

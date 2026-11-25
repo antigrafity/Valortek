@@ -20,7 +20,7 @@
           <a href="index.html"    class="nav__link" data-nav="home">Home</a>
           <a href="about.html"     class="nav__link" data-nav="about">About</a>
           <div class="nav__dropdown" id="navProductsDropdown">
-            <a href="solutions.html" class="nav__link nav__link--caret" data-nav="solutions">Solutions</a>
+            <a href="solutions.html" class="nav__link nav__link--caret" data-nav="solutions">Products &amp; Services</a>
             <div class="megamenu" id="megaMenu">
               <ul class="megamenu__cats" id="megaCats"></ul>
               <div class="megamenu__products" id="megaProducts"></div>
@@ -42,7 +42,7 @@
       <div class="container footer__inner">
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Valortek" class="footer__logo" />
-          <p>PT. Valortek Ratanika Utama builds technology around real business problems: applications, data, maps, monitoring, automation, and AI.</p>
+          <p>PT. Valortek Ratanika Utama supplies and builds business technology: software, devices, data platforms, and the services that make them work.</p>
         </div>
         <div class="footer__col">
           <h4>Company</h4>
@@ -54,16 +54,9 @@
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer__col">
-          <h4>Solutions</h4>
-          <a href="solution.html?id=apps">Custom Business Applications</a>
-          <a href="solution.html?id=digital">Field &amp; Mobile Apps</a>
-          <a href="solution.html?id=data">Data Platform &amp; Dashboards</a>
-          <a href="solution.html?id=geospatial">Maps &amp; Location Analytics</a>
-          <a href="solution.html?id=iot">IoT &amp; Asset Monitoring</a>
-          <a href="solution.html?id=automation">Workflow Automation &amp; Integration</a>
-          <a href="solution.html?id=ai">AI for Documents &amp; Everyday Work</a>
-          <a href="solution.html?id=immersive">3D &amp; Digital Twins</a>
-          <a href="solution.html?id=cloud">Cloud, Security &amp; Backup</a>
+          <h4>Products &amp; Services</h4>
+          ${(window.VALORTEK_CATEGORIES || []).map((c) => `<a href="solutions.html#cat-${c.id}">${c.name}</a>`).join('')}
+          <a href="solutions.html">All Products &amp; Services</a>
         </div>
       </div>
       <div class="footer__bottom container">
@@ -109,6 +102,34 @@
     );
   }
 
+  /* ---------- Home: category cards from the catalog ---------- */
+  const homeCats = document.getElementById('homeCats');
+  if (homeCats) {
+    homeCats.innerHTML = (window.VALORTEK_CATEGORIES || []).map((c, i) => {
+      const items = (window.VALORTEK_PRODUCTS || []).filter((p) => p.cat === c.id);
+      return `<a class="catcard" href="solutions.html#cat-${c.id}" data-reveal>
+          <span class="catcard__num">${String(i + 1).padStart(2, '0')}</span>
+          <h3>${c.name}</h3>
+          <p>${c.tagline || ''}</p>
+          <ul>${items.map((p) => `<li><span>${p.type || ''}</span>${p.name}</li>`).join('')}</ul>
+          <span class="catcard__more">${items.length} items <i class="ico-arrow"></i></span>
+        </a>`;
+    }).join('');
+  }
+
+  /* ---------- Contact form: interest options from the catalog ---------- */
+  const interest = document.getElementById('interest');
+  if (interest && PRODUCTS_ALL().length) {
+    const keep = interest.querySelector('option:last-child');
+    interest.querySelectorAll('option').forEach((o) => { if (o.dataset.fromCatalog === '1') o.remove(); });
+    (window.VALORTEK_CATEGORIES || []).forEach((c) => {
+      const g = document.createElement('optgroup'); g.label = c.name;
+      PRODUCTS_ALL().filter((p) => p.cat === c.id).forEach((p) => { const o = document.createElement('option'); o.textContent = p.name; g.appendChild(o); });
+      interest.insertBefore(g, keep);
+    });
+  }
+  function PRODUCTS_ALL() { return window.VALORTEK_PRODUCTS || []; }
+
   /* ---------- Products mega menu (hover: category -> products) ---------- */
   const dropdownWrap = document.getElementById('navProductsDropdown');
   const megaCats = document.getElementById('megaCats');
@@ -123,13 +144,17 @@
     if (megaCats) megaCats.remove();
 
     const fallbackIcon = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8l4 4-4 4"/></svg>';
-    megaProducts.innerHTML = PRODUCTS.map(
-      (p) =>
-        `<a href="solution.html?id=${p.id}" class="megamenu__product">
-           <span class="megamenu__product-name">${p.name}</span>
-           <span class="megamenu__product-ico" aria-hidden="true">${p.icon || fallbackIcon}</span>
-         </a>`
-    ).join('');
+    megaProducts.innerHTML = CATS.map((c) => {
+      const items = PRODUCTS.filter((p) => p.cat === c.id);
+      if (!items.length) return '';
+      return `<a href="solutions.html#cat-${c.id}" class="megamenu__group">${c.name}</a>` + items.map(
+        (p) =>
+          `<a href="solution.html?id=${p.id}" class="megamenu__product">
+             <span class="megamenu__product-name">${p.name}</span>
+             <span class="megamenu__product-ico" aria-hidden="true">${p.icon || fallbackIcon}</span>
+           </a>`
+      ).join('');
+    }).join('');
 
     let closeTimer;
     function openMega() {

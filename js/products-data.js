@@ -1,16 +1,18 @@
-/* Solution catalog. Read by solutions.html, solution.html (?id=) and the nav menu. */
+/* Valortek catalog.
+   To add a product or service: copy one entry in VALORTEK_PRODUCTS, give it a new id,
+   pick a cat from VALORTEK_CATEGORIES, and set type to 'Hardware', 'Software', or 'Service'.
+   It then appears in the menu, the catalog, its own detail page, and the contact form.
+   Optional fields: specs (list of [label, value]), faq (list of [question, answer]). */
 window.VALORTEK_CATEGORIES = [
-  {
-    id: 'capabilities',
-    name: 'Solutions',
-    tagline: 'Nine solutions, each built around a problem businesses run into every day.',
-    img: 'assets/img/cat-software.jpg'
-  },
+  { id: 'operations', name: 'Run Operations', tagline: 'Tools and devices that make daily work faster and less manual.', img: 'assets/img/cap-digital.jpg' },
+  { id: 'insight', name: 'See & Decide', tagline: 'Data, maps, and AI that turn information into decisions.', img: 'assets/img/cap-analytics.jpg' },
+  { id: 'customers', name: 'Serve Customers', tagline: 'Portals, kiosks, and screens for the people you sell to.', img: 'assets/img/service-software.jpg' },
+  { id: 'protect', name: 'Stay Protected', tagline: 'Cloud, security, and backup that keep everything running.', img: 'assets/img/cap-resilience.jpg' },
 ];
 
 window.VALORTEK_PRODUCTS = [
   {
-    id: 'apps', cat: 'capabilities', sub: 'Custom Business Applications', name: 'Custom Business Applications', img: 'assets/img/service-software.jpg',
+    id: 'apps', cat: 'operations', type: 'Software', sub: 'Custom Business Applications', name: 'Custom Business Applications', img: 'assets/img/service-software.jpg',
     icon: '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14l-2 2 2 2M16 14l2 2-2 2"/></svg>',
     tagline: 'Software shaped around the way your team already works.',
     short: 'Web and internal applications built for your own process, for when off-the-shelf software forces you to work around it.',
@@ -45,7 +47,7 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Talk About Your Application'
   },
   {
-    id: 'digital', cat: 'capabilities', sub: 'Field & Mobile Apps', name: 'Field & Mobile Apps', img: 'assets/img/cap-digital.jpg',
+    id: 'digital', cat: 'operations', type: 'Software', sub: 'Field & Mobile Apps', name: 'Field & Mobile Apps', img: 'assets/img/cap-digital.jpg',
     icon: '<svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>',
     tagline: 'For the people who do their work away from a desk.',
     short: 'Mobile apps for inspections, deliveries, sales visits, and site reports, including places where the signal is weak.',
@@ -80,7 +82,7 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Discuss a Field App'
   },
   {
-    id: 'data', cat: 'capabilities', sub: 'Data Platform & Dashboards', name: 'Data Platform & Dashboards', img: 'assets/img/cap-analytics.jpg',
+    id: 'data', cat: 'insight', type: 'Software', sub: 'Data Platform & Dashboards', name: 'Data Platform & Dashboards', img: 'assets/img/cap-analytics.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3"/></svg>',
     tagline: 'One set of numbers that everyone agrees on.',
     short: 'Bring data from your applications and spreadsheets into one place, then turn it into dashboards that update on their own.',
@@ -115,7 +117,7 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Book a Data Review'
   },
   {
-    id: 'geospatial', cat: 'capabilities', sub: 'Maps & Location Analytics', name: 'Maps & Location Analytics', img: 'assets/img/cap-geospatial.jpg',
+    id: 'geospatial', cat: 'insight', type: 'Software', sub: 'Maps & Location Analytics', name: 'Maps & Location Analytics', img: 'assets/img/cap-geospatial.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>',
     tagline: 'See your business on a map, not just in a table.',
     short: 'Web maps of your sites, assets, customers, and service areas, connected to the business data behind them.',
@@ -150,7 +152,7 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Talk About Your Map'
   },
   {
-    id: 'iot', cat: 'capabilities', sub: 'IoT & Asset Monitoring', name: 'IoT & Asset Monitoring', img: 'assets/img/cat-connected.jpg',
+    id: 'iot', cat: 'operations', type: 'Hardware', sub: 'IoT & Asset Monitoring', name: 'IoT & Asset Monitoring', img: 'assets/img/cat-connected.jpg',
     icon: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 7.8a6 6 0 0 1 0 8.4M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14"/></svg>',
     tagline: 'Know how your equipment is doing without walking over to check.',
     short: 'Sensors and monitoring for machines, cold storage, energy use, and vehicles, with alerts when something needs attention.',
@@ -185,7 +187,7 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Plan a Monitoring Pilot'
   },
   {
-    id: 'automation', cat: 'capabilities', sub: 'Workflow Automation & Integration', name: 'Workflow Automation & Integration', img: 'assets/img/service-integration.jpg',
+    id: 'automation', cat: 'operations', type: 'Software', sub: 'Workflow Automation & Integration', name: 'Workflow Automation & Integration', img: 'assets/img/service-integration.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M4 7h11l-3-3M20 17H9l3 3"/><circle cx="18" cy="7" r="2"/><circle cx="6" cy="17" r="2"/></svg>',
     tagline: 'Let your systems talk to each other so people don\'t have to.',
     short: 'Connect the applications you already use and automate the repetitive steps between them.',
@@ -220,7 +222,7 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Map Out Your Workflow'
   },
   {
-    id: 'ai', cat: 'capabilities', sub: 'AI for Documents & Everyday Work', name: 'AI for Documents & Everyday Work', img: 'assets/img/cap-data.jpg',
+    id: 'ai', cat: 'insight', type: 'Software', sub: 'AI for Documents & Everyday Work', name: 'AI for Documents & Everyday Work', img: 'assets/img/cap-data.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>',
     tagline: 'Practical AI for the paperwork that slows everyone down.',
     short: 'Read invoices, contracts, and forms automatically, search internal documents in plain language, and draft routine replies.',
@@ -255,7 +257,7 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Try an AI Pilot'
   },
   {
-    id: 'immersive', cat: 'capabilities', sub: '3D & Digital Twins', name: '3D & Digital Twins', img: 'assets/img/cap-immersive.jpg',
+    id: 'immersive', cat: 'insight', type: 'Service', sub: '3D & Digital Twins', name: '3D & Digital Twins', img: 'assets/img/cap-immersive.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>',
     tagline: 'Show a building or site in a way anyone can understand.',
     short: '3D models of buildings, plants, and project sites, linked to live data for operations and presentations.',
@@ -290,7 +292,7 @@ window.VALORTEK_PRODUCTS = [
     cta: 'Discuss a 3D Project'
   },
   {
-    id: 'cloud', cat: 'capabilities', sub: 'Cloud, Security & Backup', name: 'Cloud, Security & Backup', img: 'assets/img/cap-resilience.jpg',
+    id: 'cloud', cat: 'protect', type: 'Service', sub: 'Cloud, Security & Backup', name: 'Cloud, Security & Backup', img: 'assets/img/cap-resilience.jpg',
     icon: '<svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/><path d="M10 14l1.5 1.5L15 12"/></svg>',
     tagline: 'A solid base under everything else you run.',
     short: 'Moving applications to the cloud, setting up access and security properly, and making sure data can be restored when something goes wrong.',
@@ -323,5 +325,64 @@ window.VALORTEK_PRODUCTS = [
       ['Can you look after it after the migration?', 'Yes, through a support agreement, or we can hand it over to your IT team with full documentation.']
     ],
     cta: 'Review Your Setup'
+  },
+
+  {
+    id: 'devices', cat: 'operations', type: 'Hardware', sub: 'Rugged Tablets & Field Devices', name: 'Rugged Tablets & Field Devices', img: 'assets/img/cap-digital.jpg',
+    icon: '<svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 18h6M8 7h8"/></svg>',
+    tagline: 'Devices that survive the places your team actually works.',
+    short: 'Rugged tablets, handheld scanners, and printers for warehouses, sites, and field teams, supplied and set up with your apps.',
+    full: 'Consumer phones crack, overheat, and run out of battery halfway through a shift. We supply rugged tablets, barcode scanners, mobile printers, and accessories chosen for your environment, then load them with your apps, lock them down, and hand them over ready to use. When something breaks, we handle the repair or swap.',
+    capabilities: ['Rugged tablets and phones for outdoor and industrial use.', 'Handheld barcode and RFID scanners.', 'Mobile receipt and label printers.', 'Device setup with your apps and settings preloaded.', 'Central management to lock, update, or wipe devices.', 'Repair and replacement handling.'],
+    challenges: ['Staff phones break or go missing in the field.', 'Scanning and printing slow down every delivery or stock count.', 'Each device is set up differently and nobody tracks them.', 'Batteries do not last a full shift.'],
+    value: 'Fewer broken devices, faster scanning and printing, and a fleet you can manage from one place.',
+    useCases: ['Scanners and printers for a warehouse team.', 'Rugged tablets for site inspections.', 'Proof-of-delivery devices for drivers.', 'Shared tablets for a production line.'],
+    integration: 'Pairs with Field & Mobile Apps, and feeds data into Data Platform & Dashboards.',
+    specs: [['Supply', 'New devices from major manufacturers'], ['Setup', 'Apps, accounts, and security preloaded'], ['Support', 'Repair, swap, and warranty handling']],
+    faq: [['Can you work with devices we already own?', 'Yes. We can manage existing devices and add new ones over time.'], ['Do you offer rental?', 'Ask us. For some projects, rental or installment options make more sense than buying.']],
+    cta: 'Ask About Devices'
+  },
+  {
+    id: 'portals', cat: 'customers', type: 'Software', sub: 'Customer & Dealer Portals', name: 'Customer & Dealer Portals', img: 'assets/img/service-software.jpg',
+    icon: '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5"/></svg>',
+    tagline: 'Let customers help themselves, any time of day.',
+    short: 'Online portals where customers and dealers place orders, track deliveries, download invoices, and raise requests.',
+    full: 'Every order status asked by phone and every invoice resent by email is time your team could spend elsewhere. A portal gives customers and dealers their own login to see prices, place orders, track deliveries, and download documents, with the information coming straight from your existing systems.',
+    capabilities: ['Online ordering with customer-specific prices.', 'Order and delivery tracking.', 'Invoice and document downloads.', 'Service and complaint requests.', 'Connection to your ERP or accounting system.', 'Mobile-friendly design.'],
+    challenges: ['The sales team spends hours answering status questions.', 'Orders arrive by chat and are retyped.', 'Dealers ask for the same documents again and again.', 'Customers want to order outside office hours.'],
+    value: 'Fewer calls and messages, cleaner orders, and customers who can get what they need without waiting.',
+    useCases: ['A dealer ordering portal for a distributor.', 'A customer account area for a service company.', 'A spare-parts ordering site.', 'A complaint and warranty tracking portal.'],
+    integration: 'Connects to Workflow Automation & Integration so orders flow straight into your back office.',
+    faq: [['Will it work with our ERP?', 'Usually yes. We check the connection options before quoting.'], ['Can each dealer see different prices?', 'Yes. Prices, products, and documents can be set per customer.']],
+    cta: 'Plan a Portal'
+  },
+  {
+    id: 'kiosks', cat: 'customers', type: 'Hardware', sub: 'Kiosks & Digital Signage', name: 'Kiosks & Digital Signage', img: 'assets/img/cap-immersive.jpg',
+    icon: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="12" rx="1.5"/><path d="M12 15v6M8 21h8"/></svg>',
+    tagline: 'Screens that inform, queue, and sell for you.',
+    short: 'Self-service kiosks, queue systems, and digital signage for lobbies, outlets, and showrooms, with content you can update remotely.',
+    full: 'Printed posters go out of date and front desks get crowded. We supply and install self-service kiosks, queue displays, and digital signage screens, connect them to a simple content system, and set them up so your team can change what is shown from a browser, across one site or a hundred.',
+    capabilities: ['Self-service kiosks for check-in, ordering, or registration.', 'Queue number and calling displays.', 'Digital signage screens and video walls.', 'Remote content scheduling across locations.', 'Installation, mounting, and cabling.', 'Maintenance and screen health monitoring.'],
+    challenges: ['Long queues at the front desk or counter.', 'Promotions are printed and quickly outdated.', 'Each outlet shows different, unmanaged content.', 'Visitors cannot find information without asking staff.'],
+    value: 'Shorter queues, consistent messaging across every location, and content that changes in minutes instead of weeks.',
+    useCases: ['A visitor check-in kiosk for an office lobby.', 'Queue displays for a service center.', 'Menu and promotion screens across outlets.', 'Product showcase screens in a showroom.'],
+    integration: 'Kiosks can feed Customer & Dealer Portals and Data Platform & Dashboards with visit and order data.',
+    specs: [['Formats', 'Floor-standing, wall-mounted, and countertop'], ['Content', 'Updated remotely from a browser'], ['Service', 'Installation and maintenance included on request']],
+    faq: [['Can you install in several cities?', 'Yes. We plan rollouts across multiple locations.'], ['Can we use our own content?', 'Yes. Your team uploads and schedules it, or we can do it for you.']],
+    cta: 'Discuss a Kiosk or Screen'
+  },
+  {
+    id: 'identity', cat: 'protect', type: 'Software', sub: 'Access & Identity Management', name: 'Access & Identity Management', img: 'assets/img/cap-cyber.jpg',
+    icon: '<svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>',
+    tagline: 'The right people in, everyone else out.',
+    short: 'One sign-in for company systems, multi-factor login, and a clear record of who can access what.',
+    full: 'As companies add applications, passwords multiply and former employees keep access longer than they should. We set up single sign-on, multi-factor login, and simple processes for adding and removing people, so access is controlled from one place and reviewed regularly.',
+    capabilities: ['Single sign-on across business applications.', 'Multi-factor login for staff and partners.', 'Joiner and leaver processes.', 'Role-based access rules.', 'Regular access reviews and reports.', 'Password manager rollout.'],
+    challenges: ['Staff juggle too many passwords.', 'Former employees still have accounts.', 'Nobody can say who has access to what.', 'Auditors ask for access records you cannot produce.'],
+    value: 'Less password hassle, faster onboarding, and access you can prove is under control.',
+    useCases: ['Company-wide single sign-on.', 'Multi-factor login for remote access.', 'Automatic account removal when staff leave.', 'Quarterly access review reports.'],
+    integration: 'Part of the Cloud, Security & Backup foundation, and protects every other solution in the catalog.',
+    faq: [['Does this work with Microsoft 365 or Google Workspace?', 'Yes, and with most modern business applications.'], ['Is it hard for staff?', 'Most find it easier: one sign-in instead of many passwords.']],
+    cta: 'Tighten Access Control'
   },
 ];
